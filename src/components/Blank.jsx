@@ -2,7 +2,7 @@
 
 function Blank() {
     return (
-        <div className="blank">
+        <div id="blank">
 
         </div>
     )

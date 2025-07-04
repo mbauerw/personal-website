@@ -6,11 +6,8 @@ import Sections from "./Sections";
 function Body() {
    
   return (
-    <body>
-      <header>
-        <Header></Header>
-      </header>
-      <div id="content-box">
+    
+      <div id="page-content">
         <First id="veryfirst"></First>
         <Blank></Blank>
         <First></First>
@@ -18,9 +15,7 @@ function Body() {
             <p>&copy; 2025 Your Company. All rights reserved.</p>
         </footer>
       </div>
-            
-            
-    </body>
+
   )
 }
 

@@ -8,37 +8,42 @@ import About from './pages/About';
 import Portfolio from './pages/Portfolio';
 import Music from './pages/Music';
 import Contact from './pages/Contact';
-import ExpandableDiv from './components/ExpandableWindow'
+import ExpandableDiv from './components/ExpandableDiv'
+import Body from './components/Body';
+import NavBar from './components/NavBar';
+import First from './components/First';
+import Header from './components/Header';
+import Layout from './Layout';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-        <ExpandableDiv></ExpandableDiv>
-      </div>
-      <h1 className='text-9xl font-serif italic text-red-200'>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} /> {/* Default content for "/" */}
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
+        
+        </Route>
+      </Routes>
+      
+    </BrowserRouter>
   )
 }
 
 export default App
+
+
+{/* <div id="body" class="flex align-top"> 
+        <Header></Header>
+        <div id="page-content">
+
+        </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/music" element={<Music />} />
+          <Route path="/contact" element={<Contact />} />
+      </Routes>
+      </div> */}
