@@ -1,20 +1,5 @@
 
 
-
-
-
-
-#nav-wrap-inner {
-  width: 1200px;
-  min-width: 1000px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-  padding: 10px;
-
-}
-
 /* Navigation bar styling */
 nav {
   background-color: #333;
@@ -64,16 +49,6 @@ nav ul li a:hover {
 
 }
 
-
-
-
-#blank {
-  opacity: 0;
-  height: 300px;
-}
-
-
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -88,6 +63,28 @@ body {
   background-size: cover;
   background-position-y: 105%;
 } 
+
+/* IDS */
+
+#nav-wrap-inner {
+  width: 1200px;
+  min-width: 1000px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  padding: 10px;
+
+}
+
+#expanded-photo {
+  height: 50%
+}
+
+#blank {
+  opacity: 0;
+  height: 300px;
+}
 
 #content-box {
   padding-top: 60px;

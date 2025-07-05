@@ -8,8 +8,8 @@ function Layout() {
       <div id="header-wrap">
         <Header></Header>
       </div>
-      <main class="pt-18">
-        <Outlet />
+      <main class="pt-20">
+        <Outlet/>
       </main>
     </div>
   )
