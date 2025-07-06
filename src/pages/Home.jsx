@@ -30,7 +30,7 @@ function Home() {
 
   return (
     <div id="content-wrap" 
-      class="h-400 w-95/100 place-self-center flex flex-row gap-3 p-2
+      className="h-400 w-95/100 place-self-center flex flex-row gap-3 p-2
       shadow-md rounded-sm">
       <ExpandableDiv
         label="History"
