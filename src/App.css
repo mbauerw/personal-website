@@ -18,7 +18,7 @@ nav ul {
 }
 
 nav ul li {
-  margin: 0 1em;
+  /* margin: 0 1em; */
 }
 
 nav ul li a:hover {
@@ -30,7 +30,7 @@ nav ul li a:hover {
 .nav-link {
   color: grey;
   text-decoration: none;
-  padding: 0.5em 1em;
+  padding: 0.25em;
   display: block;
 }
 

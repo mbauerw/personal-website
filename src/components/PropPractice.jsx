@@ -3,7 +3,7 @@ import { getImageUrl } from "./utils";
 function Landscape({image, size}) {
   return (
 		<img
-			class="h-200 w-400 mr-4"
+			class="h-150 w-320"
 			src={getImageUrl(image)}
 			alt={image.name}
 			// width={size}
