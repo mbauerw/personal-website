@@ -3,19 +3,13 @@
 /* Navigation bar styling */
 nav {
   background-color: #333;
-  padding: .2em;
-  width:100%;
-  align-self: right;
+  padding: 0em;
+
   /* min-width: 400px; */
   border: 2px black solid;
 
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-}
 
 nav ul li {
   /* margin: 0 1em; */
@@ -61,12 +55,13 @@ body {
   background-attachment:fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: 105%;
+  background-position-y: 50%;
+
 } 
 
 /* IDS */
 
-#nav-wrap-inner {
+/* #nav-wrap-inner {
   width: 1200px;
   min-width: 1000px;
   position: relative;
@@ -75,7 +70,7 @@ body {
   align-items: center; 
   padding: 10px;
 
-}
+} */
 
 #expanded-photo {
   height: 50%

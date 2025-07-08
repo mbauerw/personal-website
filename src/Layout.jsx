@@ -8,7 +8,7 @@ function Layout() {
       <div id="header-wrap">
         <Header></Header>
       </div>
-      <main class="pt-20">
+      <main class="pt-50">
         <Outlet/>
       </main>
     </div>

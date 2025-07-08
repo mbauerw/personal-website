@@ -10,7 +10,7 @@ function Home() {
 
   return (
     <div id="content-wrap" 
-      className="h-400 w-95/100 place-self-center flex flex-row gap-3 p-2
+      className="h-400 w-95/100 place-self-center flex flex-row gap-3 p-2 pb-0
       shadow-md rounded-sm">
       <ExpandableDiv
         index="1"
