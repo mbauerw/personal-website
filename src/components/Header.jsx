@@ -41,16 +41,17 @@ function Header() {
       >
       <div 
         id="header-wrap-inner"
-        className={`w-full shadow-lg fixed  bg-neutral-600 flex border-b-2 z-20 transition-all transition-discrete
-         duration-1000 ${showElement ? 'h-14' : 'h-2 opacity-50'} `}
+        className={`w-full shadow-lg shadow-gray-350 fixed flex flex-col bg-zinc-300 flex  z-50 transition-all transition-discrete
+         duration-1000 ${showElement ? 'h-44 opacity-100' : 'h-2 opacity-50'} `}
         >
         <div
           id="logo-wrap" 
-          className="w-1/3 h-full">
-          <img src="src/images/logo2.png" className="w-70 h-full p-1" id="logo-image" />
+          className="h-1/2 w-full flex justify-center relative">
+          <img src="src/images/logo2.png" className="w-80 h-4/5 p-1 absolute bottom-0" id="logo-image" />
         </div>        
-        <div id="nav-wrap-inner" className={`transition-all transition-discrete
-         duration-1000 ${showElement ? 'visible' : 'invisible' }`}>
+        <div 
+          id="nav-wrap-inner" 
+          className={`h-1/2 w-full flex justify-center content-end relative transition-all transition-discrete duration-1000  ${showElement ? 'visible' : 'invisible' }`}>
           <NavBar showElement={showElement}></NavBar>
         </div> 
       </div> 
