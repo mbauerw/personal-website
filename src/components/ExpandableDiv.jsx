@@ -19,8 +19,8 @@ function ExpandableDiv({index, label, imgId, sendState, isActive}) {
       onClick={toggleExpand}
       onMouseEnter={mouseEnter}
       onMouseLeave={mouseLeave}
-      className={`transition-[width, colors, text] duration-600 overflow-hidden cursor-pointer bg-neutral-200 rounded
-        h-200 hover:border-2 hover:border-black shadow-xl shadow-neutral-400
+      className={`h-200 min-w-24 transition-[width, colors, text] duration-600 overflow-hidden cursor-pointer bg-neutral-200 rounded
+        hover:border-2 hover:border-black shadow-xl shadow-neutral-400
         ${expanded ? 'w-308' : 'w-24'} ${expanded ? 'hover:none' : 'hover:bg-blue-200'}
         ${expanded ? 'flex flex-col' : ''}`}
     >

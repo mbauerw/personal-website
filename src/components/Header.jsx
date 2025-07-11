@@ -1,5 +1,6 @@
 import NavBar from "./NavBar";
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom"
 import "../App.css"
 
 
@@ -35,19 +36,21 @@ function Header() {
   return (
     <div 
       id="header-wrap" 
-      className="w-full"
+      className={`w-full`}
       onMouseEnter={mouseEnter}
       onMouseLeave={mouseLeave}
       >
       <div 
         id="header-wrap-inner"
-        className={`w-full shadow-lg shadow-gray-350 fixed flex flex-col bg-zinc-300 flex  z-50 transition-all transition-discrete
-         duration-1000 ${showElement ? 'h-44 opacity-100' : 'h-2 opacity-50'} `}
+        className={`w-full shadow-lg fixed flex flex-col  flex  z-50 transition-all transition-discrete border-b-2
+         duration-1000 ${showElement ? 'h-44 opacity-100 bg-zinc-300 shadow-zinc-400' : 'h-8  bg-zinc-700 shadow-zinc-300'} `}
         >
         <div
           id="logo-wrap" 
           className="h-1/2 w-full flex justify-center relative">
-          <img src="src/images/logo2.png" className="w-80 h-4/5 p-1 absolute bottom-0" id="logo-image" />
+          <Link to="/about" className = {`w-90 h-7/8 p-1 absolute bottom-0 transition-all transition-discrete duration-1000 ${showElement ? 'opacity-100 duration-2000' : 'opacity-0 fill-neutral-800' }`}>
+            <img src="src/images/logo_darkgray.png" className={`w-full ${showElement ? 'opacity-100 duration-1200 h-full' : 'opacity-0 h-0 duration-1000' }`} id="logo-image" />
+          </Link>
         </div>        
         <div 
           id="nav-wrap-inner" 
