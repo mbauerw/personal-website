@@ -1,19 +1,29 @@
 import NavBar from "./NavBar";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom"
-import "../App.css"
+
 
 
 function Header() {
 
   const [showElement, setShowElement] = useState(true);
   const [pastScroll, setPastScroll] = useState(false);
+  
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      setShowElement(scrollTop < 30);
-      setPastScroll(scrollTop > 30); 
+      if(scrollTop > 50){
+        setShowElement(false);
+        setPastScroll(true)
+
+      }
+
+      if(scrollTop < 50){
+        setShowElement(true);
+        setPastScroll(false);
+
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -26,13 +36,13 @@ function Header() {
 
   const mouseEnter = () => setShowElement(true);
   const mouseLeave = () => {
-    if (pastScroll) {
+    if(pastScroll){
       setShowElement(false);
     }
+    
   }
+         
  
-
-
   return (
     <div 
       id="header-wrap" 
@@ -42,8 +52,8 @@ function Header() {
       >
       <div 
         id="header-wrap-inner"
-        className={`w-full shadow-lg fixed flex flex-col  flex  z-50 transition-all transition-discrete border-b-2
-         duration-1000 ${showElement ? 'h-44 opacity-100 bg-zinc-300 shadow-zinc-400' : 'h-8  bg-zinc-700 shadow-zinc-300'} `}
+        className={`w-full fixed flex flex-col  flex  z-50 transition-all transition-discrete 
+         duration-1400 ${showElement ? 'h-44 opacity-100 bg-zinc-200 shadow-zinc-300' : 'h-12 opacity-0  bg-zinc-700 shadow-lg shadow-none border-none'} `}
         >
         <div
           id="logo-wrap" 
