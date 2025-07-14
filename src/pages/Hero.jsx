@@ -4,7 +4,7 @@ function Hero(){
   return (
     <div 
       id="hero-wrap"
-      className={`w-full h-400 bg-zinc-500 flex flex-row justify-left mt-240 p-15`}>
+      className={`w-full h-400 bg-zinc-500 flex flex-row justify-left mt-240 p-15 `}>
         <div 
           id="blurb-wrap"
           className='h-full w-1/2 flex flex-row justify-center content-center'

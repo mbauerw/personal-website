@@ -7,28 +7,27 @@ import { Link } from "react-router-dom"
 
 function Layout() {
 
-  // setBack(() => {
-  //     const handleScroll = () => {
-  //       const scrollTop = window.scrollY;
-  //       setPastScroll(scrollTop > 30); 
-  //     };
-  
-  //     window.addEventListener("scroll", handleScroll);
-  
-  //     // Cleanup
-  //     return () => {
-  //       window.removeEventListener("scroll", handleScroll);
-  //     };
-  //   }, []);
-
-    const [showElement, setShowElement] = useState(true);
+    const [imageBank, setImageBank] = useState(0);
     const [pastScroll, setPastScroll] = useState(false);
+
+    const backgrounds = [
+      "src/images/background/black_bench_full.avif",
+      "src/images/background/african-safari-sunset.jpg",
+      "src/images/background/time_lapse_sky_mountains.avif"
+    ]
   
     useEffect(() => {
       const handleScroll = () => {
         const scrollTop = window.scrollY;
-        setShowElement(scrollTop < 30);
-        setPastScroll(scrollTop > 30); 
+        if(scrollTop < 1200){
+          setImageBank(0);
+        }
+        if(scrollTop > 1200){
+          setImageBank(1);
+        }
+        if(scrollTop > 3200){
+          setImageBank(2);
+        }
       };
   
       window.addEventListener("scroll", handleScroll);
@@ -39,11 +38,19 @@ function Layout() {
       };
     }, []);
 
+
+
+
+
   return (
     <div
       id="full-page-wrap"
-      className='absolute bg-[url("src/images/background/black_bench_full.avif")] bg-fixed bg-cover bg-no-repeat
-      bg-position-[center_bottom_2rem]'
+      className={` absolute  bg-fixed bg-cover bg-no-repeat bg-position-[center_bottom_2rem] 
+        ${imageBank == 0 ? 'bg-[url("src/images/background/black_bench_full.avif")]' : ''}
+        ${imageBank == 1 ? 'bg-[url("src/images/background/african-safari-sunset.jpg")]' : ''}
+        ${imageBank == 2 ? 'bg-[url("src/images/background/time_lapse_sky_mountains.avif")]' : ''}
+        
+        `}
 
     >    
       <div className={`relative flex flex-col`}>
@@ -61,3 +68,6 @@ function Layout() {
 }
 
 export default Layout;
+
+// Background image
+// bg-[url("src/images/background/black_bench_full.avif")]

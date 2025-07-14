@@ -53,7 +53,7 @@ function Header() {
       <div 
         id="header-wrap-inner"
         className={`w-full fixed flex flex-col  flex  z-50 transition-all transition-discrete 
-         duration-1400 ${showElement ? 'h-44 opacity-100 bg-zinc-200 shadow-zinc-300' : 'h-12 opacity-0  bg-zinc-700 shadow-lg shadow-none border-none'} `}
+         duration-1400 ${showElement ? 'h-44 opacity-100 bg-zinc-700 shadow-zinc-300' : 'h-12 opacity-0  bg-zinc-700 shadow-lg shadow-none border-none'} `}
         >
         <div
           id="logo-wrap" 
