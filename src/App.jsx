@@ -32,18 +32,3 @@ function App() {
 }
 
 export default App
-
-
-{/* <div id="body" class="flex align-top"> 
-        <Header></Header>
-        <div id="page-content">
-
-        </div>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/music" element={<Music />} />
-          <Route path="/contact" element={<Contact />} />
-      </Routes>
-      </div> */}

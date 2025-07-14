@@ -1,6 +1,4 @@
-import Body from "../components/Body";
 import ExpandableDiv from "../components/ExpandableDiv";
-import First from "../components/First";
 import React, {useState} from "react";
 
 function Home() {

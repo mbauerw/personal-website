@@ -49,13 +49,29 @@ h1 {
 
 body {
   font-family: Arial, sans-serif;
-  background-image:url(./images/background/trippy-skyline-grey.avif);
+  /* background-image:url(./images/background/brick_and_door.png);
   background-attachment:fixed;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position-y: 50%;
+  background-position: top;
+  background-size: contain ;  */
 
 } 
+
+.p1 {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.p2 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.p3 {
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.monospace {
+  font-family: "Lucida Console", Courier, monospace;
+}
 
 /* IDs */
 
