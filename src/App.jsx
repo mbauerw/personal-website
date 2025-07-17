@@ -3,7 +3,6 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
-import Home from './pages/Home';
 import About from './pages/About';
 import Portfolio from './pages/Portfolio';
 import Music from './pages/Music';
@@ -16,12 +15,19 @@ import Header from './components/Header';
 import Layout from './Layout';
 
 function App() {
+
+  const backgrounds = [
+    "src/images/background/black_bench_full.avif",
+    "src/images/background/african-safari-sunset.jpg",
+    "src/images/background/time_lapse_sky_mountains.avif"
+  ]
+
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} /> {/* Default content for "/" */}
-          <Route path="about" element={<About />} />
+          <Route index element={<About />} /> {/* Default content for "/" */}
+          <Route path="about" element={<Music />} />
           <Route path="contact" element={<Contact />} />
         
         </Route>
