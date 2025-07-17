@@ -13,13 +13,15 @@ function Header() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      if(scrollTop > 50){
+      const clientHeight = document.body.offsetHeight;
+      const scrollRatio = scrollTop/clientHeight;
+      if(scrollTop > 20){
         setShowElement(false);
         setPastScroll(true)
 
       }
 
-      if(scrollTop < 50){
+      if(scrollTop < 20){
         setShowElement(true);
         setPastScroll(false);
 
@@ -28,7 +30,6 @@ function Header() {
 
     window.addEventListener("scroll", handleScroll);
 
-    // Cleanup
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -41,8 +42,7 @@ function Header() {
     }
     
   }
-         
- 
+    
   return (
     <div 
       id="header-wrap" 
@@ -52,8 +52,8 @@ function Header() {
       >
       <div 
         id="header-wrap-inner"
-        className={`w-full fixed flex flex-col  flex  z-50 transition-all transition-discrete 
-         duration-1400 ${showElement ? 'h-44 opacity-100 bg-zinc-700 shadow-zinc-300' : 'h-12 opacity-0  bg-zinc-700 shadow-lg shadow-none border-none'} `}
+        className={`w-full fixed flex flex-col  flex  z-50 transition-[height,_opacity] transition-discrete border-b-2
+         duration-1400 ${showElement ? 'h-44 opacity-100 bg-zinc-700 shadow-zinc-300' : 'h-3  bg-zinc-700 shadow-none border-none shadow-zinc-400'} `}
         >
         <div
           id="logo-wrap" 

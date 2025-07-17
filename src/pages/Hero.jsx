@@ -1,39 +1,52 @@
 import React, {useEffect, useState} from 'react';
+import Portfolio from './Portfolio';
+import Portrait from '../components/Portrait';
 
-function Hero(){
+
+
+
+function Hero({
+  height=600,
+  minHeight=600,
+  className=""
+
+}){
+
+
   return (
     <div 
       id="hero-wrap"
-      className={`w-full h-400 bg-zinc-500 flex flex-row justify-left mt-240 p-15 `}>
+      className={`w-full h-200 bg-zinc-300 flex flex-row justify-left mt-250 p-15 ${className}`}
+      style={{
+        height: `${height}px`,
+        minHeight: `${minHeight}px`
+      }}>
         <div 
           id="blurb-wrap"
-          className='h-full w-1/2 flex flex-row justify-center content-center'
+          className='h-full w-1/2 flex flex-col justify-center content-center'
           >
             <p
               id="blurb"
               className='p3 text-xl antialiased'
               >
-                Hello, I'm Max. <br></br>
-                  Passions: Music, learning, web development, Guitar (electic == classical), Piano, Tennis, Parfait
+                Hello, I'm Max. 
+                <br></br>
+                <br></br>
+                  Passions: Music, learning, web development, 
+                  <br></br>
+                  Guitar (electic == classical), Piano, Tennis, Parfait 
+                  <br></br>
+                  <br></br>
                     Loves: Family, Friends, Pets 
             </p>
 
         </div>
-        <div 
-          id="portrait-wrap"
+        <div
           className='h-full w-1/2 flex flex-row justify-center content-center'
-          >
-            <div
-              id="portrait-background"
-              className='w-150 h-200 rounded-full bg-white'
-              >
-                {/* <img className='w-full h-3/5' src='src/images/headshot_1.png'></img> */}
-              </div>
-
-
+        >
+          <Portrait image={"src/images/headshot_tr"} width={500} height={650}></Portrait>
         </div>
-
-
+        
 
     </div>
   )
