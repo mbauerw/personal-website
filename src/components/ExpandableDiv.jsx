@@ -19,19 +19,21 @@ function ExpandableDiv({index, label, imgId, sendState, isActive}) {
       onClick={toggleExpand}
       onMouseEnter={mouseEnter}
       onMouseLeave={mouseLeave}
-      className={`h-200 min-w-24 transition-[width, colors, text] duration-600 overflow-hidden cursor-pointer bg-neutral-200 rounded
-        hover:border-2 hover:border-black shadow-xl shadow-neutral-400
+      className={`h-200 min-w-24 transition-all ease-in-out duration-800 outline-1 outline-neutral-200 overflow-hidden cursor-pointer bg-neutral-200 rounded
+        shadow-xl shadow-neutral-400 hover:outline-1 hover:outline-black
         ${expanded ? 'w-308' : 'w-24'} ${expanded ? 'hover:none' : 'hover:bg-blue-200'}
-        ${expanded ? 'flex flex-col' : ''}`}
+        ${expanded ? 'flex flex-col' : ''}
+        `}
     >
       {!expanded && <p className="font-bold [writing-mode:vertical-lr] rotate-180 text-6xl p-4">{label}</p>}
       {expanded && <div class="h-1/2 w-400 overflow-hidden"><Photo imgId={imgId}></Photo></div>}
       
       {expanded && <div class="h-1/2 w-full">asdfasdfasdfa</div>} 
-      {/* {hovered && <p> This box is being hovered</p>} */}
+      
       
     </div>
   )
 }
 
 export default ExpandableDiv;
+

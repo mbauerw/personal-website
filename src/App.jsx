@@ -16,12 +16,6 @@ import Layout from './Layout';
 
 function App() {
 
-  const backgrounds = [
-    "src/images/background/black_bench_full.avif",
-    "src/images/background/african-safari-sunset.jpg",
-    "src/images/background/time_lapse_sky_mountains.avif"
-  ]
-
   return (
     <BrowserRouter>
       <Routes>

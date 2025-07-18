@@ -16,7 +16,7 @@ function Hero({
   return (
     <div 
       id="hero-wrap"
-      className={`w-full h-200 bg-zinc-300 flex flex-row justify-left mt-250 p-15 ${className}`}
+      className={`w-full h-200  flex flex-row justify-left p-15 bg-none ${className}`}
       style={{
         height: `${height}px`,
         minHeight: `${minHeight}px`

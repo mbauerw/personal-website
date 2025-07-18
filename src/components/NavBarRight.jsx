@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-function NavBar({showElement}) {
+function NavBarRight({showElement}) {
     return (
       <nav 
         className={`nav-bar w-3/4 h-2/5 bg-logo absolute bottom-5 ${showElement ? 'opacity-100 transition-all duration-1600' : 'opacity-0 transition-all duration-400'}`}>

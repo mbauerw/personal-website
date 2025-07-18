@@ -11,7 +11,6 @@ node_modules
 dist
 dist-ssr
 *.local
-src/images/
 
 # Editor directories and files
 .vscode/*
@@ -23,3 +22,7 @@ src/images/
 *.njsproj
 *.sln
 *.sw?
+
+
+# added
+src/images/
