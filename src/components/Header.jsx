@@ -15,13 +15,13 @@ function Header() {
       const scrollTop = window.scrollY;
       const clientHeight = document.body.offsetHeight;
       const scrollRatio = scrollTop/clientHeight;
-      if(scrollTop > 20){
+      if(scrollTop > 5){
         setShowElement(false);
         setPastScroll(true)
 
       }
 
-      if(scrollTop < 20){
+      if(scrollTop < 5){
         setShowElement(true);
         setPastScroll(false);
 
@@ -52,19 +52,13 @@ function Header() {
       >
       <div 
         id="header-wrap-inner"
-        className={`w-full fixed flex flex-col  flex  z-50 transition-[height,_opacity] transition-discrete border-b-2
-         duration-1400 ${showElement ? 'h-44 opacity-100 bg-zinc-700 shadow-zinc-300' : 'h-3  bg-zinc-700 shadow-none border-none shadow-zinc-400'} `}
+        className={`w-full fixed flex flex-col justify-center  z-50 transition-[height,_opacity] transition-discrete border-b-2
+         duration-1200 ${showElement ? 'h-12 opacity-100 bg-zinc-700 shadow-zinc-300' : 'h-8 opacity-0 bg-zinc-700 shadow-none border-none shadow-zinc-400'} `}
         >
-        <div
-          id="logo-wrap" 
-          className="h-1/2 w-full flex justify-center relative">
-          <Link to="/about" className = {`w-90 h-7/8 p-1 absolute bottom-0 transition-all transition-discrete duration-1000 ${showElement ? 'opacity-100 duration-2000' : 'opacity-0 fill-neutral-800' }`}>
-            <img src="src/images/logo_darkgray.png" className={`w-full ${showElement ? 'opacity-100 duration-1200 h-full' : 'opacity-0 h-0 duration-1000' }`} id="logo-image" />
-          </Link>
-        </div>        
+        
         <div 
           id="nav-wrap-inner" 
-          className={`h-1/2 w-full flex justify-center content-end relative transition-all transition-discrete duration-1000  ${showElement ? 'visible' : 'invisible' }`}>
+          className={`h-5/9 w-full flex justify-center content-end relative transition-all transition-discrete duration-1000  ${showElement ? 'visible' : 'invisible' }`}>
           <NavBar showElement={showElement}></NavBar>
         </div> 
       </div> 

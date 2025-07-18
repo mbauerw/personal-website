@@ -12,7 +12,7 @@ function About({
 
   return (
     <div id="about-wrap" 
-      className={`w-100/100 place-self-center flex flex-row justify-center gap-3 p-5 pb-0 bg-zinc-700 shadow-md rounded-sm ${className}`}
+      className={`w-100/100 place-self-center flex flex-row justify-center gap-3 p-5 pb-0 bg-none shadow-md rounded-sm ${className}`}
       style={{
         height: `${height}px`,
         minHeight: `${minHeight}px`

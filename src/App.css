@@ -20,26 +20,13 @@ nav ul li a:hover {
 }
 
 
-.nav-link {
- 
-  text-decoration: none;
-  padding: 0.25em;
-  
-}
-
 .nav-link:hover {
   border-radius: 4px;
 }
 
 
-/* Section Styling */
 
-.first-section {
-  padding: 2vw;
-  background-color: #888;
-  min-height: 550px;
 
-}
 
 h1 {
   font-size: 3.2em;
