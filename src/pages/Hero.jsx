@@ -1,18 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import React, {forwardRef, useEffect, useState, useRef} from 'react';
 import Portfolio from './Portfolio';
 import Portrait from '../components/Portrait';
 
 
 
 
-function Hero({
-  height=600,
-  minHeight=600,
-  className=""
-
-}){
-
-
+const Hero = forwardRef(({ height=600, minHeight=600, className=""}, ref) => {
   return (
     <div 
       id="hero-wrap"
@@ -20,7 +13,9 @@ function Hero({
       style={{
         height: `${height}px`,
         minHeight: `${minHeight}px`
-      }}>
+      }}
+      ref={ref}
+      >
         <div 
           id="blurb-wrap"
           className='h-full w-1/2 flex flex-col justify-center content-center'
@@ -51,6 +46,6 @@ function Hero({
     </div>
   )
 
-}
+});
 
 export default Hero;

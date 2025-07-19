@@ -1,5 +1,12 @@
-import React, { useRef, useState, useEffect } from "react";
-
+import React, { useRef, useState, useEffect, forwardRef } from "react";
+import { Outlet } from 'react-router-dom';
+import Header from './components/Header';
+import Hero from "./pages/Hero";
+import Blank from './components/Blank';
+import About from './pages/About';
+import { Link } from "react-router-dom"
+import Portfolio from './pages/Portfolio';
+import BouncingArrow from './components/BouncingArrow';
 
 function Layout( ) {
 
@@ -22,6 +29,13 @@ function Layout( ) {
       height: window.innerHeight
     });
 
+    const scrollToSection = (ref) => {
+      ref.current?.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start' 
+      });
+    };
+
     console.log("Viewport height: " + viewportSize.height);
     console.log("Viewport width: " + viewportSize.width);
     
@@ -40,7 +54,6 @@ function Layout( ) {
 
     }, []);
 
-
   return (
     <div
       id="full-page-wrap"
@@ -48,25 +61,35 @@ function Layout( ) {
     >    
       <div className={`relative flex flex-col`}>
         <div id="header-wrap">
-          <Header></Header>
+          <Header
+            heroRef={heroRef}
+            aboutRef={aboutRef}
+          ></Header>
         </div>
         <main  className="">
           <Blank 
             height={viewportSize.height + 100} 
-            background={backgrounds[0]}
-            >
+            background={backgrounds[0]}>
             <BouncingArrow></BouncingArrow>
           </Blank>
           <Hero 
             height={800} 
             minHeight={viewportSize.height} 
             className={'bg-zinc-300'} 
-            ref={heroRef}
-            >
+            ref={heroRef}>
             </Hero>
-          <Blank height={400} background={backgrounds[1]}></Blank>
-          <About className={`bg-zinc-700`} ref={aboutRef}></About>
-          <Blank height={400} background={backgrounds[2]}></Blank>
+          <Blank 
+            height={400} 
+            background={backgrounds[1]}
+            ></Blank>
+          <About 
+            className={`bg-zinc-700`} 
+            ref={aboutRef}>
+            </About>
+          <Blank 
+            height={400} 
+            background={backgrounds[2]}
+            ></Blank>
           <Portfolio></Portfolio>
         </main>
       </div>

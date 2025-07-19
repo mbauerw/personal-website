@@ -1,10 +1,10 @@
 import NavBar from "./NavBar";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, forwardRef } from "react";
 import { Link } from "react-router-dom"
 
 
 
-function Header({navRefs}) {
+const Header = ({heroRef, aboutRef}) => {
 
   const [showElement, setShowElement] = useState(true);
   const [pastScroll, setPastScroll] = useState(false);
@@ -17,7 +17,7 @@ function Header({navRefs}) {
       const scrollRatio = scrollTop/clientHeight;
       if(scrollTop > 5){
         setShowElement(false);
-        setPastScroll(true)
+        setPastScroll(true);
 
       }
 
@@ -55,11 +55,11 @@ function Header({navRefs}) {
         className={`w-full fixed flex flex-col justify-center  z-50 transition-[height,_opacity] transition-discrete border-b-2
          duration-1200 ${showElement ? 'h-12 opacity-100 bg-zinc-700 shadow-zinc-300' : 'h-8 opacity-0 bg-zinc-700 shadow-none border-none shadow-zinc-400'} `}
         >
-        
         <div 
           id="nav-wrap-inner" 
-          className={`h-5/9 w-full flex justify-center content-end relative transition-all transition-discrete duration-1000  ${showElement ? 'visible' : 'invisible' }`}>
-          <NavBar showElement={showElement} navRefs={navRefs}></NavBar>
+          className={`h-5/9 w-full flex justify-center content-end relative transition-all transition-discrete duration-1000  ${showElement ? 'visible' : 'invisible' }`}
+          >
+          <NavBar showElement={showElement} heroRef={heroRef} ></NavBar>
         </div> 
       </div> 
     </div>

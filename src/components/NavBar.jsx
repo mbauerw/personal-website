@@ -1,10 +1,19 @@
 import { Link } from "react-router-dom"
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, forwardRef } from "react";
 
-function NavBar({showElement, navRefs}) {
+
+
+function NavBar({showElement, heroRef}) {
 
     const linkStyle = "text-neutral-300 hover:bg-neutral-900 hover:rounded-sm hover:"
+    const [smoothScroll, setSmoothScroll] = useState(true);
 
+    const scrollToSection = (ref) => {
+      ref.current?.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start' 
+      });
+    };
 
     return (
       <nav 
@@ -13,7 +22,7 @@ function NavBar({showElement, navRefs}) {
         <ul 
           className={`transition-all transition-discrete flex justify-around ${showElement ? 'opacity-100 duration-1000' : 'opacity-0 duration-800'} `}>
           <Link to="/" className={linkStyle}>HOME</Link>
-          <Link to="/about" className={linkStyle}>ABOUT</Link>
+          <Link to="/about" className={linkStyle} onClick={() => scrollToSection(heroRef)}>ABOUT</Link>
           <Link to="/portfolio" className={linkStyle}>PORTFOLIO</Link>
           <Link to="/Music" className={linkStyle}>MUSIC</Link>
           <Link to="/Contact" className={linkStyle}>CONTACT</Link>
@@ -25,16 +34,6 @@ function NavBar({showElement, navRefs}) {
   export default NavBar;
 
 
-  // ref stuff
-  // onClick={() => scrollToSection(navRefs)} 
-      // Scroll to section
 
-      // const [smoothScroll, setSmoothScroll] = useState(true);
 
-      // const scrollToSection = (ref) => { 
-      //   ref.current?.scrollIntoView({
-      //     behavior: smoothScroll ? 'smooth' : 'auto',
-      //     block: 'start',
-      //     inline: 'nearest'
-      //   });
-      // };
+      
