@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 
 
 
-function Header() {
+function Header({navRefs}) {
 
   const [showElement, setShowElement] = useState(true);
   const [pastScroll, setPastScroll] = useState(false);
@@ -59,7 +59,7 @@ function Header() {
         <div 
           id="nav-wrap-inner" 
           className={`h-5/9 w-full flex justify-center content-end relative transition-all transition-discrete duration-1000  ${showElement ? 'visible' : 'invisible' }`}>
-          <NavBar showElement={showElement}></NavBar>
+          <NavBar showElement={showElement} navRefs={navRefs}></NavBar>
         </div> 
       </div> 
     </div>

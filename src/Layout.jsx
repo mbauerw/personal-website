@@ -1,17 +1,13 @@
-import { Outlet } from 'react-router-dom';
-import Header from './components/Header';
-import Hero from './pages/Hero';
-import Blank from './components/Blank';
-import About from './pages/About';
 import React, { useRef, useState, useEffect } from "react";
-import { Link } from "react-router-dom"
-import Portfolio from './pages/Portfolio';
-import BouncingArrow from './components/BouncingArrow';
+
 
 function Layout( ) {
 
-
+    // section refs
     const bodyRef = useRef(null);
+    const heroRef = useRef(null);
+    const aboutRef = useRef(null);
+
 
     // background images
     const backgrounds = [
@@ -43,7 +39,7 @@ function Layout( ) {
       return () => window.removeEventListener('resize', handleResize);
 
     }, []);
-   
+
 
   return (
     <div
@@ -55,12 +51,21 @@ function Layout( ) {
           <Header></Header>
         </div>
         <main  className="">
-          <Blank height={viewportSize.height + 100} background={backgrounds[0]}>
-            <BouncingArrow />
+          <Blank 
+            height={viewportSize.height + 100} 
+            background={backgrounds[0]}
+            >
+            <BouncingArrow></BouncingArrow>
           </Blank>
-          <Hero height={800} minHeight={viewportSize.height} className={'bg-zinc-300'}></Hero>
+          <Hero 
+            height={800} 
+            minHeight={viewportSize.height} 
+            className={'bg-zinc-300'} 
+            ref={heroRef}
+            >
+            </Hero>
           <Blank height={400} background={backgrounds[1]}></Blank>
-          <About className={`bg-zinc-700`} ></About>
+          <About className={`bg-zinc-700`} ref={aboutRef}></About>
           <Blank height={400} background={backgrounds[2]}></Blank>
           <Portfolio></Portfolio>
         </main>
