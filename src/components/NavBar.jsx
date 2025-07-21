@@ -3,10 +3,9 @@ import React, { useRef, useState, useEffect, forwardRef } from "react";
 
 
 
-function NavBar({showElement, heroRef}) {
+function NavBar({showElement, heroRef, refs}) {
 
     const linkStyle = "text-neutral-300 hover:bg-neutral-900 hover:rounded-sm hover:"
-    const [smoothScroll, setSmoothScroll] = useState(true);
 
     const scrollToSection = (ref) => {
       ref.current?.scrollIntoView({ 

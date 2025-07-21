@@ -22,10 +22,16 @@ const Hero = forwardRef(({ height=600, minHeight=600, className=""}, ref) => {
           >
             <p
               id="blurb"
-              className='p3 text-xl antialiased'
+              className='p3 text-xl antialiased border-gray-200 border-4 border-b-gray-400 p-6 rounded-xl relative'
               >
                 Hello, I'm Max. 
                 <br></br>
+                <br></br>
+            <p
+              className='p3 text-xl antialiased border-gray-200 border-4 border-b-gray-400 p-6 rounded-xl relative'
+            >
+              Passions: Music, learning, web development, 
+            </p>
                 <br></br>
                   Passions: Music, learning, web development, 
                   <br></br>
@@ -34,6 +40,25 @@ const Hero = forwardRef(({ height=600, minHeight=600, className=""}, ref) => {
                   <br></br>
                     Loves: Family, Friends, Pets 
             </p>
+            <div className="max-w-2xl mx-auto">
+    <div className="bg-white border border-gray-200 border-b-4 border-b-gray-400 p-6 rounded-xl relative">
+      <h3 className="text-lg font-semibold text-gray-900 mb-3">
+        Elevated Section
+      </h3>
+      <p className="elevated-paragraph text-gray-700 leading-relaxed">
+        This paragraph section appears elevated from the background using 
+        Tailwind's border utilities and background contrast. The thicker 
+        bottom border creates depth without needing box shadows.
+      </p>
+    </div>
+  </div>
+  <div className="bg-white border border-gray-200 border-b-4 border-b-gray-300 p-5 rounded-lg">
+    <p className="text-gray-800 elevated-paragraph2">
+      Your paragraph content goes here. This elevated section uses border 
+      and background contrast instead of shadows for a clean, performant look.
+    </p>
+  </div>
+
 
         </div>
         <div

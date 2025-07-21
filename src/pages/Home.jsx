@@ -1,14 +1,12 @@
-import React, { useRef, useState, useEffect, forwardRef } from "react";
-import { Outlet } from 'react-router-dom';
+import React, { useRef, useState, useEffect, forwardRef, useImperativeHandle } from "react";
 import Header from './components/Header';
 import Hero from "./pages/Hero";
 import Blank from './components/Blank';
 import About from './pages/About';
-import { Link } from "react-router-dom"
 import Portfolio from './pages/Portfolio';
 import BouncingArrow from './components/BouncingArrow';
 
-function Layout( ) {
+const Home = forwardRef(({children}, ref) =>  {
 
     // section refs
     const bodyRef = useRef(null);
@@ -105,6 +103,6 @@ function Layout( ) {
       </div>
     </div>
   )
-}
+});
 
 export default Layout;
