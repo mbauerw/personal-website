@@ -1,22 +1,11 @@
 import React, { useRef, useState, useEffect, forwardRef, useImperativeHandle } from "react";
-import Header from './components/Header';
-import Hero from "./pages/Hero";
-import Blank from './components/Blank';
-import About from './pages/About';
-import Portfolio from './pages/Portfolio';
-import BouncingArrow from './components/BouncingArrow';
+import Hero from "./Hero";
+import Blank from "../components/Blank";
+import About from "./About";
+import Portfolio from "./Portfolio";
+import BouncingArrow from "../components/BouncingArrow";
 
-const Home = forwardRef(({children}, ref) =>  {
-
-    // section refs
-    const bodyRef = useRef(null);
-    const heroRef = useRef(null);
-    const aboutRef = useRef(null);
-
-    const refs = [
-      bodyRef, heroRef, aboutRef
-    ]
-
+const Home = forwardRef(({heroRef, aboutRef, children}, ref) =>  {
 
     // background images
     const backgrounds = [
@@ -57,18 +46,7 @@ const Home = forwardRef(({children}, ref) =>  {
     }, []);
 
   return (
-    <div
-      id="full-page-wrap"
-      ref={bodyRef}
-    >    
-      <div className={`relative flex flex-col`}>
-        <div id="header-wrap">
-          <Header
-            refs={refs}
-            heroRef={heroRef}
-            aboutRef={aboutRef}
-          ></Header>
-        </div>
+
         <main  className="">
           <Blank 
             height={viewportSize.height + 100} 
@@ -100,8 +78,7 @@ const Home = forwardRef(({children}, ref) =>  {
             ></Blank>
           <Portfolio></Portfolio>
         </main>
-      </div>
-    </div>
+
   )
 });
 

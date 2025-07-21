@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect, forwardRef } from "react";
 import { Outlet } from 'react-router-dom';
 import Header from './components/Header';
+import Home from './pages/Home';
 import Hero from "./pages/Hero";
 import Blank from './components/Blank';
 import About from './pages/About';
@@ -11,9 +12,9 @@ import BouncingArrow from './components/BouncingArrow';
 function Layout( ) {
 
     // section refs
-    const bodyRef = useRef(null);
-    const heroRef = useRef(null);
-    const aboutRef = useRef(null);
+    const bodyRef = useRef();
+    const heroRef = useRef();
+    const aboutRef = useRef();
 
     const refs = [
       bodyRef, heroRef, aboutRef
@@ -71,37 +72,12 @@ function Layout( ) {
             aboutRef={aboutRef}
           ></Header>
         </div>
-        <main  className="">
-          <Blank 
-            height={viewportSize.height + 100} 
-            background={backgrounds[0]}
-            >
-            <BouncingArrow 
-              ref={heroRef}
-              onClick={(ref) => scrollToSection(ref)}
-
-            ></BouncingArrow>
-          </Blank>
-          <Hero 
-            height={800} 
-            minHeight={viewportSize.height} 
-            className={'bg-zinc-300'} 
-            ref={heroRef}>
-            </Hero>
-          <Blank 
-            height={400} 
-            background={backgrounds[1]}
-            ></Blank>
-          <About 
-            className={`bg-zinc-700`} 
-            ref={aboutRef}>
-            </About>
-          <Blank 
-            height={400} 
-            background={backgrounds[2]}
-            ></Blank>
-          <Portfolio></Portfolio>
-        </main>
+        <Home
+          heroRef={heroRef}
+          aboutRef={aboutRef}
+          >
+      
+        </Home>
       </div>
     </div>
   )
