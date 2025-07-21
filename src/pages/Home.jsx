@@ -79,7 +79,6 @@ const Home = ({children}) =>  {
             height={400} 
             background={backgrounds[2]}
             ></Blank>
-          <Portfolio></Portfolio>
         </main>
 
   )

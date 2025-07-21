@@ -8,6 +8,7 @@ import About from './pages/About';
 import { Link } from "react-router-dom"
 import Portfolio from './pages/Portfolio';
 import BouncingArrow from './components/BouncingArrow';
+import Footer from "./pages/Footer";
 
 function Layout( ) {
 
@@ -72,6 +73,7 @@ function Layout( ) {
         </div>
         <Outlet context={refs}></Outlet>   
       </div>
+      <Footer />
     </div>
   )
 }
