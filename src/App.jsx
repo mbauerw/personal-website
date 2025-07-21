@@ -3,6 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import Home from './pages/Home';
+import Hero from './pages/Hero';
 import About from './pages/About';
 import Portfolio from './pages/Portfolio';
 import Music from './pages/Music';
@@ -20,8 +22,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<About />} /> {/* Default content for "/" */}
-          <Route path="about" element={<Music />} />
+          <Route index element={<Home />} /> 
+          <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
         
         </Route>

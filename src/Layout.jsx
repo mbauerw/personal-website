@@ -12,14 +12,13 @@ import BouncingArrow from './components/BouncingArrow';
 function Layout( ) {
 
     // section refs
-    const bodyRef = useRef();
     const heroRef = useRef();
     const aboutRef = useRef();
 
-    const refs = [
-      bodyRef, heroRef, aboutRef
-    ]
-
+    const refs = {
+      heroRef, aboutRef
+    };
+    
 
     // background images
     const backgrounds = [
@@ -62,22 +61,16 @@ function Layout( ) {
   return (
     <div
       id="full-page-wrap"
-      ref={bodyRef}
-    >    
+    >   
       <div className={`relative flex flex-col`}>
         <div id="header-wrap">
           <Header
             refs={refs}
             heroRef={heroRef}
             aboutRef={aboutRef}
-          ></Header>
+          />
         </div>
-        <Home
-          heroRef={heroRef}
-          aboutRef={aboutRef}
-          >
-      
-        </Home>
+        <Outlet context={refs}></Outlet>   
       </div>
     </div>
   )

@@ -21,7 +21,7 @@ function NavBar({showElement, heroRef, refs}) {
         <ul 
           className={`transition-all transition-discrete flex justify-around ${showElement ? 'opacity-100 duration-1000' : 'opacity-0 duration-800'} `}>
           <Link to="/" className={linkStyle}>HOME</Link>
-          <Link to="/about" className={linkStyle} onClick={() => scrollToSection(heroRef)}>ABOUT</Link>
+          <Link className={linkStyle} onClick={() => scrollToSection(heroRef)}>ABOUT</Link>
           <Link to="/portfolio" className={linkStyle}>PORTFOLIO</Link>
           <Link to="/Music" className={linkStyle}>MUSIC</Link>
           <Link to="/Contact" className={linkStyle}>CONTACT</Link>

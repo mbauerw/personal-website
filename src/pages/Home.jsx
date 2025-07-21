@@ -1,11 +1,14 @@
 import React, { useRef, useState, useEffect, forwardRef, useImperativeHandle } from "react";
+import { useOutletContext } from 'react-router-dom';
 import Hero from "./Hero";
 import Blank from "../components/Blank";
 import About from "./About";
 import Portfolio from "./Portfolio";
 import BouncingArrow from "../components/BouncingArrow";
 
-const Home = forwardRef(({heroRef, aboutRef, children}, ref) =>  {
+const Home = ({children}) =>  {
+
+    const {heroRef, aboutRef} = useOutletContext();
 
     // background images
     const backgrounds = [
@@ -80,6 +83,6 @@ const Home = forwardRef(({heroRef, aboutRef, children}, ref) =>  {
         </main>
 
   )
-});
+}
 
-export default Layout;
+export default Home;
