@@ -22,7 +22,7 @@ const Footer = () => {
               max.bauer.wd@gmail.com
             </a>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-gray-600 transition-colors">
+              <a href="" className="text-gray-400 hover:text-gray-600 transition-colors">
                 <Github className="w-5 h-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-gray-600 transition-colors">
