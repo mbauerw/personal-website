@@ -9,11 +9,13 @@ function Portrait({
 }) {
   return(
     <div
-      className={`inline-block rounded-full bg-white shadow-xl shadow-black overflow-hidden ${className}`}
+      id="portrait"
+      className={`rounded-full bg-white shadow-xl shadow-black opacity-60 ${className} portrait`}
       style={{
         width: `${width}px`, 
         height: `${height}px`,
         padding: '8px'
+        
       }}
       >
       <img
