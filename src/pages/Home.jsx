@@ -62,7 +62,6 @@ const Home = ({children}) =>  {
             ></BouncingArrow>
           </Blank>
           <Hero 
-            height={viewportSize.height} 
             minHeight={900} 
             className={'bg-zinc-300'} 
             ref={heroRef}>
