@@ -13,7 +13,7 @@ const Footer = () => {
               <span className="text-white text-2xl font-bold">MB</span>
             </div>
             {/* <h3 className="text-2xl font-semibold text-neutral-800 mb-2">Max Bauer</h3> */}
-            <p className="text-gray-400">Product Designer • Web Developer • Music Enthusiast</p>
+            <p className="text-gray-400">Computer Scientist • Web Developer • Music Enthusiast</p>
           </div>
           
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8 mb-8">

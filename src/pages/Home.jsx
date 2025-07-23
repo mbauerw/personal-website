@@ -13,7 +13,7 @@ const Home = ({children}) =>  {
     // background images
     const backgrounds = [
       'bg-[url("src/images/background/blueish_stars.jpg")]',
-      'bg-[url("src/images/background/purple_castle.jpg")]',
+      'bg-[url("src/images/background/stars_clouds_deep_blue.jpg")]',
       'bg-[url("src/images/background/time_lapse_sky_mountains.avif")]',
       'bg-[url("src/images/background/misty_woods.avif")'
     ]
@@ -63,7 +63,7 @@ const Home = ({children}) =>  {
           </Blank>
           <Hero 
             minHeight={900} 
-            className={'bg-zinc-300'} 
+            className={'bg-zinc-800/20'} 
             ref={heroRef}>
             </Hero>
           <Blank 

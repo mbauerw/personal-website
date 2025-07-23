@@ -45,7 +45,15 @@ body {
 } 
 
 
+/* --------------- Image Stuff -------------- */
 
+.cropped-image {
+  clip-path: inset(40% 20% 30% 20%); /* top right bottom left */
+}
+
+.shadow-image {
+  box-shadow: 0 12px 14px rgba(0, 0, 0, 0.9);
+}
 
 /* --------------- Fonts -------------------*/
 
@@ -69,9 +77,6 @@ body {
 /* IDs */
 
 
-#expanded-photo {
-  height: 50%
-}
 
 #blank {
   opacity: 0;
@@ -80,12 +85,4 @@ body {
 
 #content-box {
   padding-top: 60px;
-}
-
-@media (max-width: 768px) {
-  .portrait {
-    width: 50px;
-    height: 50px;
-    padding: 4px;
-  }
 }
