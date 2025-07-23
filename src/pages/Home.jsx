@@ -53,7 +53,7 @@ const Home = ({children}) =>  {
         <main  className="">
           <Blank 
             height={viewportSize.height + 100} 
-            background={backgrounds[0]}
+            background={""}
             >
             <BouncingArrow 
               ref={heroRef}
