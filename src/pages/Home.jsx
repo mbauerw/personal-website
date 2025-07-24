@@ -1,10 +1,13 @@
 import React, { useRef, useState, useEffect, forwardRef, useImperativeHandle } from "react";
-import { useOutletContext } from 'react-router-dom';
+import { useOutletContext, useLocation } from 'react-router-dom';
 import Hero from "./Hero";
 import Blank from "../components/Blank";
 import About from "./About";
 import Portfolio from "./Portfolio";
 import BouncingArrow from "../components/BouncingArrow";
+import { SECTIONS } from "../constants/sections";
+
+
 
 const Home = ({children}) =>  {
 
@@ -13,7 +16,7 @@ const Home = ({children}) =>  {
     // background images
     const backgrounds = [
       'bg-[url("src/images/background/blueish_stars.jpg")]',
-      'bg-[url("src/images/background/stars_clouds_deep_blue.jpg")]',
+      'bg-[url("src/images/background/purple_castle.jpg")]',
       'bg-[url("src/images/background/time_lapse_sky_mountains.avif")]',
       'bg-[url("src/images/background/misty_woods.avif")'
     ]
@@ -48,6 +51,20 @@ const Home = ({children}) =>  {
 
     }, []);
 
+    // hash scrolling
+    const location = useLocation();
+  
+    useEffect(() => {
+      if (location.hash) {
+        setTimeout(() => {
+          const element = document.getElementById(location.hash.substring(1));
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      }
+    }, [location.hash]);
+
   return (
 
         <main  className="">
@@ -61,21 +78,28 @@ const Home = ({children}) =>  {
 
             ></BouncingArrow>
           </Blank>
-          <Hero 
-            minHeight={900} 
-            className={'bg-zinc-800/20'} 
-            ref={heroRef}>
-            </Hero>
+          <div id={SECTIONS.HOME.HERO}>
+            <Hero 
+              minHeight={900} 
+              className={'bg-gray-800/80'} 
+              ref={heroRef}>
+              </Hero>
+          </div>
+          
           <Blank 
-            height={400} 
+            height={400}
+            offset={300} 
             background={backgrounds[1]}
             ></Blank>
+          <div id={SECTIONS.HOME.ABOUT}>
           <About 
             className={`bg-zinc-700`} 
             ref={aboutRef}>
             </About>
+          </div>         
           <Blank 
             height={400} 
+            offset={500}
             background={backgrounds[2]}
             ></Blank>
         </main>

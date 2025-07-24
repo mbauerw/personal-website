@@ -11,7 +11,7 @@ function Portrait({
   return(
     <div
       id="portrait"
-      className={`flex justify-center items-center rounded-full shadow-xl bg-white shadow-black pb-10 ${className}`}
+      className={`flex justify-center items-center rounded-full shadow-2xl bg-zinc-300 shadow-black ${className}`}
       style={{
         width: `${width}px`, 
         height: `${height}px`
@@ -19,12 +19,12 @@ function Portrait({
       }}
       >
       <div 
-        className={`flex justify-center rounded-xl h-3/4 w-3/5 ${background} bg-[100%_100%] overflow-visible`}
+        className={`flex justify-center rounded-full h-full w-full pt-20 ${background} bg-[100%_100%] overflow-hidden`}
        >
           <img
           src={image}
           alt={alt}
-          className="absolute pt-5"
+          className=""
           style={{
             width: `${width-100}px`, 
             height: `${height-100}px`

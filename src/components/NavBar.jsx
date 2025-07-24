@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import React, { useRef, useState, useEffect, forwardRef } from "react";
+import { SECTIONS } from '../constants/sections';
 
 
 
@@ -21,7 +22,7 @@ function NavBar({showElement, heroRef, refs}) {
         <ul 
           className={`transition-all transition-discrete flex justify-around ${showElement ? 'opacity-100 duration-1000' : 'opacity-0 duration-800'} `}>
           <Link to="/" className={linkStyle}>HOME</Link>
-          <Link className={linkStyle} onClick={() => scrollToSection(heroRef)}>ABOUT</Link>
+          <Link to={`/#${SECTIONS.HOME.HERO}`} className={linkStyle} onClick={() => scrollToSection(heroRef)}>ABOUT</Link>
           <Link to="/portfolio" className={linkStyle}>PORTFOLIO</Link>
           <Link to="/Music" className={linkStyle}>MUSIC</Link>
           <Link to="/Contact" className={linkStyle}>CONTACT</Link>

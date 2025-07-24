@@ -55,6 +55,10 @@ body {
   box-shadow: 0 12px 14px rgba(0, 0, 0, 0.9);
 }
 
+.blend-bg{
+  background-blend-mode: lighten;
+}
+
 /* --------------- Fonts -------------------*/
 
 .p1 {
@@ -73,6 +77,113 @@ body {
   font-family: "Lucida Console", Courier, monospace;
 }
 
+/* System Fonts */
+.a1 { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+.a2 { font-family: Arial, sans-serif; }
+.a3 { font-family: Helvetica, Arial, sans-serif; }
+.a4 { font-family: 'Times New Roman', Times, serif; }
+.a5 { font-family: Georgia, serif; }
+.a6 { font-family: 'Courier New', Courier, monospace; }
+.a7 { font-family: Verdana, Geneva, sans-serif; }
+.a8 { font-family: 'Trebuchet MS', Helvetica, sans-serif; }
+
+/* Google Fonts - Sans Serif */
+.b1 { font-family: 'Inter', sans-serif; }
+.b2 { font-family: 'Roboto', sans-serif; }
+.b3 { font-family: 'Open Sans', sans-serif; }
+.b4 { font-family: 'Lato', sans-serif; }
+.b5 { font-family: 'Montserrat', sans-serif; }
+.b6 { font-family: 'Source Sans Pro', sans-serif; }
+.b7 { font-family: 'Poppins', sans-serif; }
+.b8 { font-family: 'Raleway', sans-serif; }
+.b9 { font-family: 'Nunito', sans-serif; }
+.b10 { font-family: 'Oswald', sans-serif; }
+
+/* Google Fonts - Serif */
+.c1 { font-family: 'Playfair Display', serif; }
+.c2 { font-family: 'Merriweather', serif; }
+
+/* Google Fonts - Monospace */
+.c3 { font-family: 'Source Code Pro', monospace; }
+.c4 { font-family: 'Fira Code', monospace; }
+.c5 { font-family: 'JetBrains Mono', monospace; }
+
+/* Font Weights */
+.weight-100 { font-weight: 100; }
+.weight-200 { font-weight: 200; }
+.weight-300 { font-weight: 300; }
+.weight-400 { font-weight: 400; }
+.weight-500 { font-weight: 500; }
+.weight-600 { font-weight: 600; }
+.weight-700 { font-weight: 700; }
+.weight-800 { font-weight: 800; }
+.weight-900 { font-weight: 900; }
+
+/* Font Styles */
+.italic { font-style: italic; }
+.oblique { font-style: oblique; }
+
+/* Font Sizes */
+.text-xs { font-size: 0.75rem; }
+.text-sm { font-size: 0.875rem; }
+.text-base { font-size: 1rem; }
+.text-lg { font-size: 1.125rem; }
+.text-xl { font-size: 1.25rem; }
+.text-2xl { font-size: 1.5rem; }
+.text-3xl { font-size: 1.875rem; }
+.text-4xl { font-size: 2.25rem; }
+.text-5xl { font-size: 3rem; }
+
+/* Text Transforms */
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+.capitalize { text-transform: capitalize; }
+
+/* Letter Spacing */
+.tracking-tight { letter-spacing: -0.025em; }
+.tracking-normal { letter-spacing: 0em; }
+.tracking-wide { letter-spacing: 0.025em; }
+.tracking-wider { letter-spacing: 0.05em; }
+.tracking-widest { letter-spacing: 0.1em; }
+
+/* Line Height */
+.leading-tight { line-height: 1.25; }
+.leading-snug { line-height: 1.375; }
+.leading-normal { line-height: 1.5; }
+.leading-relaxed { line-height: 1.625; }
+.leading-loose { line-height: 2; }
+
+
+/* System Fonts */
+.font-system { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+.font-arial { font-family: Arial, sans-serif; }
+.font-helvetica { font-family: Helvetica, Arial, sans-serif; }
+.font-times { font-family: 'Times New Roman', Times, serif; }
+.font-georgia { font-family: Georgia, serif; }
+.font-courier { font-family: 'Courier New', Courier, monospace; }
+.font-verdana { font-family: Verdana, Geneva, sans-serif; }
+.font-trebuchet { font-family: 'Trebuchet MS', Helvetica, sans-serif; }
+
+/* Google Fonts - Sans Serif */
+.font-inter { font-family: 'Inter', sans-serif; }
+.font-roboto { font-family: 'Roboto', sans-serif; }
+.font-open-sans { font-family: 'Open Sans', sans-serif; }
+.font-lato { font-family: 'Lato', sans-serif; }
+.font-montserrat { font-family: 'Montserrat', sans-serif; }
+.font-source-sans { font-family: 'Source Sans Pro', sans-serif; }
+.font-poppins { font-family: 'Poppins', sans-serif; }
+.font-raleway { font-family: 'Raleway', sans-serif; }
+.font-nunito { font-family: 'Nunito', sans-serif; }
+.font-oswald { font-family: 'Oswald', sans-serif; }
+
+/* Google Fonts - Serif */
+.font-playfair { font-family: 'Playfair Display', serif; }
+.font-merriweather { font-family: 'Merriweather', serif; }
+
+/* Google Fonts - Monospace */
+.font-source-code { font-family: 'Source Code Pro', monospace; }
+.font-fira-code { font-family: 'Fira Code', monospace; }
+.font-jetbrains { font-family: 'JetBrains Mono', monospace; }
 
 /* IDs */
 

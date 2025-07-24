@@ -10,12 +10,17 @@ const Hero = forwardRef(({ height=900, minHeight=900, className=""}, ref) => {
   return (
     <div 
       id="hero-wrap"
-      className={`w-full flex lg:h-screen lg:flex-row lg:justify-left flex-col justify-around h-400 items-center px-5 py-5 bg-none ${className}`}
+      className={`relative w-full flex lg:h-screen lg:flex-row lg:justify-evenly flex-col justify-center h-400 items-center bg-none ${className}`}
       style={{
         minHeight: `${minHeight}px`
       }}
       ref={ref}>
-      <div className='lg:h-full lg:w-2/5 h-1/2 w-3/4 flex flex-col justify-center content-center'>
+      <div className='absolute top-8 bg-linear-to-br from-amber-500 to-yellow-500 h-16 w-103'>
+        <p className='text-8xl text-white mt-3 ml-7 w-120 a6 weight-500 '>
+          About   Me
+        </p>
+      </div>
+      <div className='lg:h-full lg:w-3/5 h-1/2 w-3/4 px-8 flex flex-col justify-center content-center'>
         <p className='group p3 text-4xl shadow-lg shadow-black bg-neutral-100 antialiased border-gray-300 border-4 border-b-gray-400 p-12 rounded-xl relative z-0 hover:z-10 '>
           Hello, I'm  <a className="group-hover:text-blue-800 group-hover:font-semibold group-hover:text-6xl"> Max </a> 
           <br />
@@ -34,8 +39,8 @@ const Hero = forwardRef(({ height=900, minHeight=900, className=""}, ref) => {
         Loves: Family, Friends, Pets 
         </p>
       </div>
-      <div className='lg:h-3/4 lg:w-1/2 lg:border-l-1 lg:border-gray-400 lg:border-t-0 h-1/2 w-full flex flex-col border-t-1 justify-center items-center '>
-        <Portrait image={"src/images/headshot_trim.png"} background='bg-[url("src/images/portrait_light.jpg")]' height={500} width={350}></Portrait>
+      <div className='lg:h-3/4 lg:w-3/10 lg:border-l-1 lg:border-gray-400 lg:border-t-0 h-1/3 w-3/4 pt-20 flex flex-col border-t-1 justify-center items-center '>
+        <Portrait image={"src/images/headsho.png"} background='bg-[url("src/images/background/purple_smudge.jpg")]' height={500} width={350}></Portrait>
       </div>
   </div>
   )
@@ -44,22 +49,9 @@ const Hero = forwardRef(({ height=900, minHeight=900, className=""}, ref) => {
 
 export default Hero;
 
-          {/* <div className="max-w-2xl mx-auto">
-  <div className="bg-white border border-gray-200 border-b-4 border-b-gray-400 p-6 rounded-xl relative">
-    <h3 className="text-lg font-semibold text-gray-900 mb-3">
-      Elevated Section
-    </h3>
-    <p className="elevated-paragraph text-gray-700 leading-relaxed">
-      This paragraph section appears elevated from the background using 
-      Tailwind's border utilities and background contrast. The thicker 
-      bottom border creates depth without needing box shadows.
-    </p>
-  </div>
-</div>
-<div className="bg-white border border-gray-200 border-b-4 border-b-gray-300 p-5 rounded-lg">
-  <p className="text-gray-800 elevated-paragraph2">
-    Your paragraph content goes here. This elevated section uses border 
-    and background contrast instead of shadows for a clean, performant look.
-  </p>
-</div> */}
+ /*  Banner Color Options
 
+ from-blue-500 to-blue-400
+from-amber-500 to-yellow-500
+
+*/

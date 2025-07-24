@@ -2,10 +2,10 @@ import React, { useState, useEffect, forwardRef } from "react";
 import { Github, Linkedin, Twitter, Mail, Heart, Coffee, MapPin, Calendar, ExternalLink, Download } from 'lucide-react';
 
 
-const Logos = ({position}) => {
+const Logos = ({position, showElement}) => {
 
   return (
-    <div className={`flex space-x-4 absolute ${position}`}>
+    <div className={`flex space-x-4 absolute transition-all duration-800 ${position} ${showElement ? 'opacity-100' : 'opacity-0'}`}>
         <a href="https://github.com/mbauerw" className="text-gray-400 hover:text-gray-600 transition-colors">
           <Github className="w-5 h-5" />
         </a>
