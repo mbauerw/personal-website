@@ -64,7 +64,7 @@ function Layout( ) {
     <div
       id="full-page-wrap"
     >   
-      <div className={`relative flex flex-col`}>
+      <div className={`relative flex flex-col min-h-screen`}>
         <div id="header-wrap">
           <Header
             refs={refs}
@@ -72,9 +72,10 @@ function Layout( ) {
             aboutRef={aboutRef}
           />
         </div>
-        <Outlet context={refs}></Outlet>   
+        <Outlet context={refs}></Outlet>
+        <Footer className="mt-auto"/>
       </div>
-      <Footer />
+      
     </div>
   )
 }

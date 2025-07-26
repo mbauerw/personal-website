@@ -55,8 +55,46 @@ body {
   box-shadow: 0 12px 14px rgba(0, 0, 0, 0.9);
 }
 
+.soft-edges {
+  box-shadow: 100px 100px 80px 80px rgba(0,0,0,0.5);
+}
+
 .blend-bg{
-  background-blend-mode: lighten;
+  background-blend-mode: hard-light;
+}
+
+.fade-edges {
+  mask-image: radial-gradient(ellipse at center, black 20%, transparent 20%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 70%, transparent 50%);
+}
+
+.fade-horizontal {
+  mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+}
+
+.clip-fade {
+  clip-path: ellipse(80% 80% at center);
+}
+
+.rounded-fade {
+  clip-path: inset(10px round 20px);
+}
+
+.gradient-1 {
+  background-image: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+}
+.gradient-2 {
+  background-image: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+}
+.gradient-3 {
+  background-image: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
+}
+.gradient-4 {
+  background-image: linear-gradient(45deg, #43e97b 0%, #38f9d7 100%);
+}
+.gradient-5 {
+  background-image: linear-gradient(45deg, #fa709a 0%, #fee140 100%);
 }
 
 /* --------------- Fonts -------------------*/

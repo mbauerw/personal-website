@@ -40,7 +40,7 @@ const Hero = forwardRef(({ height=900, minHeight=900, className=""}, ref) => {
         </p>
       </div>
       <div className='lg:h-3/4 lg:w-3/10 lg:border-l-1 lg:border-gray-400 lg:border-t-0 h-1/3 w-3/4 pt-20 flex flex-col border-t-1 justify-center items-center '>
-        <Portrait image={"src/images/headsho.png"} background='bg-[url("src/images/background/purple_smudge.jpg")]' height={500} width={350}></Portrait>
+        <Portrait image={"src/images/headshot_trim.png"} background='bg-[url("src/images/background/purple_smudge.jpg")]' height={420} width={300}></Portrait>
       </div>
   </div>
   )

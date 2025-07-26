@@ -2,10 +2,10 @@ import React from 'react';
 import { Github, Linkedin, Twitter, Mail, Heart, Coffee, MapPin, Calendar, ExternalLink, Download } from 'lucide-react';
 
 
-const Footer = () => {
+const Footer = ({className}) => {
 
   return (
-  <div className="space-y-4">
+  <div className={`space-y-4 ${className}`}>
       <footer className="bg-zinc-700 border-t border-black py-7">
         <div className="max-w-3xl mx-auto px-4">
           <div className="text-center mb-8">
