@@ -16,7 +16,7 @@ const Home = ({children}) =>  {
     // background images
     const backgrounds = [
       'bg-[url("src/images/background/blueish_stars.jpg")]',
-      'bg-[url("src/images/background/purple_castle.jpg")]',
+      'bg-[url("src/images/background/cat_watching_city.jpg")]',
       'bg-[url("src/images/background/time_lapse_sky_mountains.avif")]',
       'bg-[url("src/images/background/misty_woods.avif")'
     ]
@@ -88,12 +88,12 @@ const Home = ({children}) =>  {
           
           <Blank 
             height={400}
-            offset={300} 
+            offset={200} 
             background={backgrounds[1]}
             ></Blank>
           <div id={SECTIONS.HOME.ABOUT}>
           <About 
-            className={`bg-gray-800/80`} 
+            className={`bg-slate-900/90`} 
             ref={aboutRef}>
             </About>
           </div>         
