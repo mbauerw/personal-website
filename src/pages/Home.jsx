@@ -93,7 +93,7 @@ const Home = ({children}) =>  {
             ></Blank>
           <div id={SECTIONS.HOME.ABOUT}>
           <About 
-            className={`bg-zinc-700`} 
+            className={`bg-gray-800/80`} 
             ref={aboutRef}>
             </About>
           </div>         

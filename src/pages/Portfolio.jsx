@@ -59,7 +59,7 @@ function Portfolio() {
                       <a href="#" class="bg-white bg-opacity-90 text-slate-700 px-5 py-2.5 rounded-full font-medium no-underline hover:bg-white transition-colors duration-300">View Project</a>
                     </div>
                     <div className="h-1/2 flex flex-col justify-start items-center pt-2">
-                      <p className="opacity-100 text-white px-8 text-align-center"> Website for the local art supporter The East Lansing Film Festival  </p>
+                      <p className="opacity-100 text-white px-8 text-align-center"> Website for the non-profit film contributor The East Lansing Film Festival  </p>
                     </div>
                   </div>
                 </div>

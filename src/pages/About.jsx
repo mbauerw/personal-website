@@ -12,12 +12,14 @@ function About({
 
   return (
     <div id="about-wrap" 
-      className={`w-100/100 place-self-center flex flex-row justify-center gap-3 p-5 pb-0 bg-none shadow-md rounded-sm ${className}`}
+      className={`w-100/100 place-self-center flex flex-row justify-between gap-3 pr-20 p-5 pb-0 bg-none shadow-md rounded-sm ${className}`}
       style={{
         height: `${height}px`,
         minHeight: `${minHeight}px`
       }}
       >
+      <img src="src/images/studio.jpg" className="h-[90%]"></img>
+      <div className="w-3/4 h-full flex flex-row justify-end gap-3 bg-none shadow-md rounded-sm  ">
       <ExpandableDiv
         index="1"
         label="History"
@@ -45,7 +47,7 @@ function About({
       >
 
       </ExpandableDiv>
-
+      </div>
     </div>
       
 

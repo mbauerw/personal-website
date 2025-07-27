@@ -30,33 +30,35 @@ function Portrait({
   const setSpin = () => setShouldIncrement(prev => !prev);
 
   return(
-    <div
-      id="portrait"
-      className={`flex justify-center items-center rounded-full shadow-2xl shadow-black ${background} ${className}`}
-      onClick={setSpin}
-      style={{
-        backgroundPosition: `${offset}px`,
-        width: `${width}px`, 
-        height: `${height}px`
-      }}     
-      >
-      <div 
-        className={`flex justify-center items-center rounded-full h-6/9 w-6/10 ${"bg-white"}  -mt-4 `}
-        
-       >
-          <img
-          src={image}
-          alt={alt}
-          className="absolute rounded-full mt-4 pointer-events-none"
-          style={{
-            width: `${width-80}px`, 
-            height: `${height-100}px`
-          }}
-          />  
+    <div className={`bg-neutral-200/40 lg:h-full h-150 w-full flex flex-col justify-center items-center p-5 ${className}`}>
+      <div
+        id="portrait"
+        className={`flex justify-center items-center rounded-full shadow-2xl shadow-black ${background}`}
+        onClick={setSpin}
+        style={{
+          backgroundPosition: `${offset}px`,
+          width: `${width}px`, 
+          height: `${height}px`
+        }}     
+        >
+        <div 
+          className={`flex justify-center items-center rounded-full h-6/9 w-6/10 ${"bg-[url('src/images/portrait_clouds.jpg')]"}  -mt-4 `}
+          
+        >
+            <img
+            src={image}
+            alt={alt}
+            className="absolute rounded-full mt-4 pointer-events-none"
+            style={{
+              width: `${width-80}px`, 
+              height: `${height-100}px`
+            }}
+            />  
 
 
-        </div>
-        
+          </div>
+          
+      </div>
     </div>
   )
 }

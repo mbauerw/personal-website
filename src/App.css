@@ -1,3 +1,16 @@
+/* --- Grid Layouts --- */
+.grid-container {
+  display: grid;
+  grid-template-columns: 800px minmax(0, 700px)  ; 
+  grid-template-rows: auto;
+}
+
+.small-container {
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
 
 /* --- Shadow CSS --- */
 

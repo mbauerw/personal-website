@@ -54,7 +54,7 @@ const Header = ({heroRef, aboutRef, refs}) => {
       <div 
         id="header-wrap-inner"
         className={`w-full fixed flex flex-col justify-center  z-50 transition-[height,_opacity] transition-discrete border-b border-black border-none
-         duration-1200 ${showElement ? 'h-12 opacity-100 bg-zinc-700 shadow-zinc-300' : 'h-2 opacity-100 bg-zinc-700 shadow-none border-none shadow-zinc-400'} `}
+         duration-1000 ${showElement ? 'h-12 opacity-100 bg-zinc-700 shadow-zinc-300' : 'h-8 opacity-0 bg-zinc-700 shadow-none border-none shadow-zinc-400'} `}
         >
         <div 
           id="nav-wrap-inner" 
