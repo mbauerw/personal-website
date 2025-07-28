@@ -26,38 +26,42 @@ const Hero = forwardRef(({ height = 900, minHeight = 900, className = "" }, ref)
         </div>
       </div>
       {/* blurbs   */}
-      <div className='col-span-1 row-span-1 bg-neutral-200/40 lg:content-start w-[95%] h-[95%] px-5 justify-self-center content-start pt-5'>
-        <p className='group relative z-0 hover:z-10 p3 text-4xl shadow-lg shadow-black bg-neutral-100 antialiased border-gray-300 border-4 border-b-gray-400 lg:p-12 p-5 rounded-xl lg:-ml-8 lg:mr-8 lg:mt-2 -mt-0 -ml-8 mr-8 '>
+      <div className='col-span-1 row-span-1 grid grid-cols-1 grid-rows-5 bg-neutral-200/40 lg:content-start w-[95%] h-[95%] px-5 justify-self-center content-start pt-5'>
+        <p className='group relative z-0 hover:z-10 p3 text-4xl shadow-lg shadow-black bg-neutral-100 antialiased border-gray-300 border-4 border-b-gray-400 rounded-xl row-span-1 col-span-1 p-10 -mt-0 lg:-ml-8 lg:mr-8 -ml-8 mr-3  '>
           Hello, I'm  <a className="group-hover:text-blue-800 group-hover:font-semibold group-hover:text-6xl"> Max </a>
-          <br />
+        
         </p>
-        <p className='group relative z-1 hover:z-10 p3 text-4xl bg-neutral-100 shadow-lg shadow-black antialiased border-gray-300 border-4 border-b-gray-400 lg:p-12 p-5 rounded-xl relative -mt-8 lg:-ml-4 lg:mr-4 -ml-3 mr-3  '>
+        <p className='group relative z-1 hover:z-10 p3 text-4xl bg-neutral-100 shadow-lg shadow-black antialiased border-gray-300 border-4 border-b-gray-400 p-10 rounded-xl -mt-8 lg:-ml-4 lg:mr-4 -ml-3 mr-3 '>
           Passions: <a className="group-hover:underline group-hover:text-red-600">Music</a>, learning, <Link to="/portfolio" className="group-hover:underline group-hover:decoration-wavy group-hover:text-emerald-500">web development</Link>, reading
 
           <br />
         </p>
-        <p className='relative z-2 hover:z-10 p3 text-4xl bg-neutral-100 shadow-lg shadow-black antialiased border-gray-300 border-4 border-b-gray-400 lg:p-12 p-5 rounded-xl -mt-8 lg:ml-0 lg:-mr-0 ml-2 -mr-2'>
+        <p className='relative z-2 hover:z-10 p3 text-4xl bg-neutral-100 shadow-lg shadow-black antialiased border-gray-300 border-4 border-b-gray-400 rounded-xl row-span-1 col-span-1 p-10'>
           Guitar (electic == classical), Piano, Tennis, Greek Yogurt
         </p>
-        <p className='relative z-3 hover:z-10 p3 text-4xl bg-neutral-100 shadow-lg shadow-black antialiased border-gray-200 border-4 border-b-gray-400 lg:p-12 p-5 rounded-xl -mt-8 lg:ml-4 lg:-mr-4 ml-7 -mr-7'>
+        <p className='relative z-3 hover:z-10 p3 text-4xl bg-neutral-100 shadow-lg shadow-black antialiased border-gray-200 border-4 border-b-gray-400 rounded-xl row-span-1 col-span-1 p-10'>
           Loves: Family, Friends, Pets
         </p>
-        {!hovered ? (
-          <p className='absolute z-3 hover:z-10 p3 text-4xl bg-neutral-100 shadow-lg shadow-black antialiased border-gray-200 border-4 border-b-gray-400 p-5 rounded-xl -mt-8 lg:ml-8 lg:-mr-8 ml-12 lg:w-[calc(61%)] w-[calc(90%)]'
-            onMouseEnter={mouseEnter}
-            onMouseLeave={mouseLeave} >
-            Strengths: Flexibility, creativity, perseverance <br />
-            Weaknesses: <span className="text-bold text-blue-800 text-7xl"> ... </span>
-          </p>
+        <div className='relative z-3 hover:z-10 p3 text-4xl bg-neutral-100 shadow-lg shadow-black antialiased rounded-xl row-span-1 col-span-1'>
+          {!hovered ? (
+            <p className='absolute z-3 hover:z-10 p3 text-4xl bg-neutral-100 shadow-lg shadow-black antialiased border-gray-200 border-4 border-b-gray-400 rounded-xl w-full h-full p-2'
+              onMouseEnter={mouseEnter}
+              onMouseLeave={mouseLeave} >
+              Strengths: Flexibility, creativity, perseverance <br />
+              Weaknesses: <span className="text-bold text-blue-800 text-7xl"> ... </span>
+            </p>
 
-        ) : (
-          <p className='absolute z-3 hover:z-10 p3 text-4xl bg-neutral-100 shadow-lg shadow-black antialiased border-gray-200 border-4 border-b-gray-400 p-5 rounded-xl -mt-8 lg:ml-8 lg:-mr-8 ml-12 lg:w-[calc(61%)] w-[calc(90%)] '
-            onMouseEnter={mouseEnter}
-            onMouseLeave={mouseLeave} >
-            Strengths: Flexibility, creativity, perseverance <br />
-            Weaknesses: Unconsciously setting down what I'm holding in my hand while in the process of looking for something I've lost and then, having found what I was originally looking for, needing to spend even more time looking for what I just had in my hand
-          </p>
-        )}
+          ) : (
+            <p className='absolute z-3 hover:z-10 p3 text-4xl bg-neutral-100 shadow-lg shadow-black antialiased border-gray-200 border-4 border-b-gray-400 rounded-xl w-full h-auto'
+              onMouseEnter={mouseEnter}
+              onMouseLeave={mouseLeave} >
+              Strengths: Flexibility, creativity, perseverance <br />
+              Weaknesses: Unconsciously setting down what I'm holding in my hand while in the process of looking for something I've lost and then, having found what I was originally looking for, needing to spend even more time looking for what I just had in my hand
+            </p>
+          )}
+
+        </div>
+        
 
       </div>
       {/* line */}
@@ -78,5 +82,7 @@ export default Hero;
 
 from-blue-500 to-blue-400
 from-amber-500 to-yellow-500
+
+lg:p-12 p-5 rounded-xl relative -mt-8 lg:-ml-4 lg:mr-4 -ml-3 mr-3  
 
 */
