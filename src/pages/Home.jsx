@@ -12,6 +12,7 @@ import { SECTIONS } from "../constants/sections";
 const Home = ({children}) =>  {
 
     const {heroRef, aboutRef} = useOutletContext();
+    const [offset, setOffset] = useState(0);
 
     // background images
     const backgrounds = [
@@ -51,9 +52,6 @@ const Home = ({children}) =>  {
         block: 'start' 
       });
     };
-
-    console.log("Viewport height: " + viewportSize.height);
-    console.log("Viewport width: " + viewportSize.width);
     
     // viewport size listener to determine blank sizes
     useEffect(() => {
@@ -84,6 +82,7 @@ const Home = ({children}) =>  {
       }
     }, [location.hash]);
 
+
   return (
 
         <main  className="">
@@ -112,9 +111,9 @@ const Home = ({children}) =>  {
           
           <Blank 
             height={800}
-            offset={0} 
+            offset={offset} 
             label={"Second"}
-            background={backgrounds[3]} // block[2] 
+            background={block1[2]} // block[2] 
             className="opacity-90"
             >
 
@@ -128,7 +127,7 @@ const Home = ({children}) =>  {
           <Blank 
             height={600}
             label={"Third"}
-            offset={0}
+            offset={offset}
             background={backgrounds[11]}
             className="opacity-90"
             ></Blank>

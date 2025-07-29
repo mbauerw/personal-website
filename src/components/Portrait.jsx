@@ -30,7 +30,7 @@ function Portrait({
   const setSpin = () => setShouldIncrement(prev => !prev);
 
   return(
-    <div className={`bg-neutral-200/40 lg:h-full h-150 w-full flex flex-col justify-center items-center p-5 ${className}`}>
+    <div className={`bg-neutral-200/40 rounded-sm lg:h-full h-150 w-full flex flex-col justify-center items-center p-5 ${className}`}>
       <div
         id="portrait"
         className={`flex justify-center items-center rounded-full shadow-2xl shadow-black ${background}`}
@@ -42,7 +42,7 @@ function Portrait({
         }}     
         >
         <div 
-          className={`flex justify-center items-center rounded-full h-1/2 w-5/10 ${"bg-[url('src/images/portrait_clouds.jpg')]"}  -mt-4 `}
+          className={`flex justify-center items-center rounded-full h-3/5 w-6/10 ${"bg-[url('src/images/portrait_clouds.jpg')]"}  -mt-4 `}
           
         >
             <img
@@ -50,8 +50,8 @@ function Portrait({
             alt={alt}
             className="absolute rounded-full pointer-events-none"
             style={{
-              width: `${width-180}px`, 
-              height: `${height-250}px`
+              width: `${width-100}px`, 
+              height: `${height-140}px`
             }}
             />  
 

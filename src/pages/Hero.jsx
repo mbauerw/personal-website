@@ -26,7 +26,7 @@ const Hero = forwardRef(({ height = 900, minHeight = 900, className = "" }, ref)
         </div>
       </div>
       {/* blurbs   */}
-      <div className='col-span-1 row-span-1 grid grid-cols-1 grid-rows-5 bg-neutral-200/40 lg:content-start w-[95%] h-[95%] px-5 justify-self-center content-start pt-5'>
+      <div className='col-span-1 rounded-sm row-span-1 grid grid-cols-1 grid-rows-5 bg-neutral-200/40 lg:content-start w-[95%] h-[95%] px-5 justify-self-center content-start pt-5'>
         <p className='group relative z-0 hover:z-10 p3 text-4xl shadow-lg shadow-black bg-neutral-100 antialiased border-gray-300 border-4 border-b-gray-400 rounded-xl row-span-1 col-span-1 p-10 -mt-0 lg:-ml-8 lg:mr-8 -ml-8 mr-3  '>
           Hello, I'm  <a className="group-hover:text-blue-800 group-hover:font-semibold group-hover:text-6xl"> Max </a>
         
@@ -65,11 +65,11 @@ const Hero = forwardRef(({ height = 900, minHeight = 900, className = "" }, ref)
 
       </div>
       {/* line */}
-      <div className='bg-white lg:-mt-8 lg:mb-[10px] z-0 lg:col-span-1 lg:row-span-1 row-span-1 col-span-1 lg:h-full h-2 lg:w-[95%] mr-4 ml-4 '>
+      <div className='bg-white lg:-mt-8 lg:mb-[10px] z-0 lg:col-span-1 lg:row-span-1 row-span-1 col-span-1 lg:h-full h-2 lg:w-[95%] lg:mr-0 lg:-ml-2 mr-4 ml-4 '>
       </div>
       {/* portrait   */}
-      <div id="portrait-wrap" className='col-span-1 row-span-1 border-l-1 border-gray-400 w-[95%] h-[95%] justify-self-center content-center'>
-        <Portrait image={"src/images/headshot_trim.png"} background='bg-[url("src/images/background/purple_smudge.jpg")] cursor-pointer' height={600} width={400}></Portrait>
+      <div id="portrait-wrap" className='col-span-1 row-span-1 w-[95%] h-[95%] justify-self-center content-center'>
+        <Portrait image={"src/images/headshot_trim.png"} background='bg-[url("src/images/background/purple_smudge.jpg")] cursor-pointer' height={500} width={300}></Portrait>
       </div>
     </div>
   )

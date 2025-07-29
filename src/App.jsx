@@ -5,7 +5,9 @@ import Portfolio from './pages/Portfolio';
 import Music from './pages/Music';
 import Contact from './pages/Contact';
 import Layout from './Layout';
+import GdpPop from './pages/GdpPop';
 import ScrollToTop from './components/ScrollToTop';
+
 
 function App() {
 
@@ -18,6 +20,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/gdp" element={<GdpPop />} />
         </Route>
       </Routes>
       
