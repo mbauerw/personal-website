@@ -36,13 +36,13 @@ const Hero = forwardRef(({ height = 900, minHeight = 900, className = "" }, ref)
 
           <br />
         </p>
-        <p className='relative z-2 hover:z-10 p3 text-4xl bg-neutral-100 shadow-lg shadow-black antialiased border-gray-300 border-4 border-b-gray-400 rounded-xl row-span-1 col-span-1 p-10'>
+        <p className='relative z-2 hover:z-10 p3 text-4xl bg-neutral-100 shadow-lg shadow-black antialiased border-gray-300 border-4 border-b-gray-400 rounded-xl row-span-1 col-span-1 p-10 -mt-8 lg:ml-0 lg:mr-0 -ml-3 mr-3'>
           Guitar (electic == classical), Piano, Tennis, Greek Yogurt
         </p>
-        <p className='relative z-3 hover:z-10 p3 text-4xl bg-neutral-100 shadow-lg shadow-black antialiased border-gray-200 border-4 border-b-gray-400 rounded-xl row-span-1 col-span-1 p-10'>
+        <p className='relative z-3 hover:z-10 p3 text-4xl bg-neutral-100 shadow-lg shadow-black antialiased border-gray-200 border-4 border-b-gray-400 rounded-xl row-span-1 col-span-1 p-10 -mt-8 lg:ml-4 lg:-mr-4 -ml-3 mr-3'>
           Loves: Family, Friends, Pets
         </p>
-        <div className='relative z-3 hover:z-10 p3 text-4xl bg-neutral-100 shadow-lg shadow-black antialiased rounded-xl row-span-1 col-span-1'>
+        <div className='relative z-3 hover:z-10 p3 text-4xl bg-neutral-100 shadow-lg shadow-black antialiased rounded-xl row-span-1 col-span-1 -mt-8 lg:ml-8 lg:-mr-8 -ml-3 mr-3'>
           {!hovered ? (
             <p className='absolute z-3 hover:z-10 p3 text-4xl bg-neutral-100 shadow-lg shadow-black antialiased border-gray-200 border-4 border-b-gray-400 rounded-xl w-full h-full p-2'
               onMouseEnter={mouseEnter}
@@ -69,7 +69,7 @@ const Hero = forwardRef(({ height = 900, minHeight = 900, className = "" }, ref)
       </div>
       {/* portrait   */}
       <div id="portrait-wrap" className='col-span-1 row-span-1 border-l-1 border-gray-400 w-[95%] h-[95%] justify-self-center content-center'>
-        <Portrait image={"src/images/headshot_tri.png"} background='bg-[url("src/images/background/purple_smudge.jpg")]' height={600} width={400}></Portrait>
+        <Portrait image={"src/images/headshot_tri.png"} background='bg-[url("src/images/background/purple_smudge.jpg")] cursor-pointer' height={600} width={400}></Portrait>
       </div>
     </div>
   )
