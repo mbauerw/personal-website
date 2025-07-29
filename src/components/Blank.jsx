@@ -1,8 +1,11 @@
 import React, { useRef, useState, useEffect } from "react";
+import { useInView } from 'react-intersection-observer';
 
 
 function Blank({
 		offset=200,
+    toffset=0,
+    moffset=0,
     height=300,
     className="",
     background="",
@@ -47,11 +50,24 @@ function Blank({
       case 'desktop': 
         return `center ${-offsetY + offset + 50}px`;
       case 'tablet': 
-        return `center ${-offsetY + offset + 160}px`;
+        return `center ${-offsetY + toffset + 300}px`;
       default: 
-        return `center ${-offsetY + offset + 120}px`;
+        return `center ${-offsetY + moffset + 40}px `;
     }
   };
+
+  // const getBackgroundSize = () => {
+  //   if(adjust){
+  //     switch(screenSize) {
+  //       case 'desktop': 
+  //         return `100% 110%`;
+  //       case 'tablet': 
+  //         return `120% 110%`;
+  //       default: 
+  //         return `150% 110%`;
+  //     }
+  //   }
+    
 
 	return (
 		<div
@@ -60,6 +76,7 @@ function Blank({
       style={{
         height: `${height}px`,
         backgroundPosition: getBackgroundPosition()
+
       }}
     >
 			{children}

@@ -89,16 +89,16 @@ const Home = ({children}) =>  {
         <main  className="">
           <Blank 
             height={viewportSize.height + 100} 
-            offset={0}
-            background={block1[0]}
-            speed={1.6}
-            className=""
+            offset={-50}
+            background={block1[1]}
+            speed={.2}
+            className="bg-size-[100%_110%]"
             >
             <BouncingArrow 
               ref={heroRef}
               title="Max Bauer"
               onClick={(ref) => scrollToSection(ref)}
-              className=" dark:bg-none dark:hover:bg-white/20 mb-15"
+              className=" dark:bg-none dark:hover:bg-black/20"
             ></BouncingArrow>
           </Blank>
           <div id={SECTIONS.HOME.HERO}>

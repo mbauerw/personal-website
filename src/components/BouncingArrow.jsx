@@ -15,28 +15,18 @@ const BouncingArrow = ({ref, onClick, className, title, circle}) => {
   const text_blue = "text-blue-900/80";
   const text_green = "text-green-800/90";
   const text_cyan = "text-cyan-800/90";
-  const text_white = "text-white/80"
+  const text_white = "text-white/80 group-hover:text-white"
 
   
 
   return (
-    <div className="flex items-center justify-center h-[50vh]">
-      <div className={`flex flex-col justify-center items-center rounded-full h-90 w-90 transition-all transition-discrete duration-1400 cursor-pointer ${circle} ${className}`}
+    <div className="flex items-center justify-center h-[50vh] mb-10">
+      <div className={`group flex flex-col justify-center items-center rounded-full h-90 w-90 transition-all transition-discrete duration-1400 cursor-pointer ${circle} ${className}`}
         onClick={() => onClick(ref)}>
-        <div className="h-1/2 flex justify-center items-center">
-          <h1 className={`text-8xl p3 font-bold ${text_white} pt-16`}>{title}</h1>
+        <div className="h-1/2 flex justify-center items-center pb-10">
+          <h1 className={`text-8xl p3 font-bold transition-all transition-discrete duration-1400 ${text_white}`}>{title}</h1>
         </div>
-        <div className=" h-1/2 ">
-          {/* <ArrowDown
-            className={`w-36 h-36 ${text_blue} mx-auto animate-bounce animate-duration-2000 cursor-pointer transition-colors duration-1000`}
-            style={{
-              filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.7))'
-            }}
-            onClick={() => onClick(ref)}
-
-          /> */}
-          
-        </div>
+        
       </div>
     </div>
   );
@@ -47,6 +37,16 @@ export default BouncingArrow;
 /* Bg options
 
 bg-amber-500/40 hover:bg-amber-500/70
+<div className=" h-1/2 ">
+  <ArrowDown
+    className={`w-36 h-36 ${text_blue} mx-auto animate-bounce animate-duration-2000 cursor-pointer transition-colors duration-1000`}
+    style={{
+      filter: 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.7))'
+    }}
+    onClick={() => onClick(ref)}
 
+  /> 
+  
+</div>
  
 */
