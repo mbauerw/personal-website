@@ -15,12 +15,31 @@ const Home = ({children}) =>  {
 
     // background images
     const backgrounds = [
-      'bg-[url("src/images/background/blueish_stars.jpg")]',
-      'bg-[url("src/images/background/cat_watching_city.jpg")]',
-      'bg-[url("src/images/background/time_lapse_sky_mountains.avif")]',
-      'bg-[url("src/images/background/misty_woods.avif")'
+      "bg-[url('src/images/background/african-safari-sunset.jpg')]",
+      "bg-[url('src/images/background/black_bench_full.avif')]",
+      "bg-[url('src/images/background/blueish_stars.jpg')]",
+      "bg-[url('src/images/background/canoe_lake.jpg')]",
+      "bg-[url('src/images/background/cat_watching_city.jpg')]",
+      "bg-[url('src/images/background/dark_stars.jpg')]",
+      "bg-[url('src/images/background/door_bench_trim.png')]",
+      "bg-[url('src/images/background/grey-brick-with-snow.jpg')]",
+      "bg-[url('src/images/background/misty_woods.avif')]", 
+      "bg-[url('src/images/background/mountain_stars.jpg')]",
+      "bg-[url('src/images/background/only_stars.jpg')]",
+      "bg-[url('src/images/background/pixel_cabin.jpg')]",
+      "bg-[url('src/images/background/pixel_stars.png')]",
+      "bg-[url('src/images/background/purple_castle.jpg')]",
+      "bg-[url('src/images/background/purple_smudge.jpg')]",
+      "bg-[url('src/images/background/stars_clouds_deep_blue.jpg')]",
+      "bg-[url('src/images/background/time_lapse_sky_mountains.avif')]"
     ]
 
+    const block1 = [
+      "bg-[url('src/images/block1/candle.jpg')]",
+      "bg-[url('src/images/block1/dot_lights.jpg')]",
+      "bg-[url('src/images/block1/lamp_brick.jpg')]",
+      "bg-[url('src/images/block1/stars.jpg')]"
+    ]
     const [viewportSize, setViewportSize] = useState({
       width: window.innerWidth,
       height: window.innerHeight
@@ -71,11 +90,13 @@ const Home = ({children}) =>  {
           <Blank 
             height={viewportSize.height + 100} 
             background={""}
+            className="dark:bg-gray-900/90"
             >
             <BouncingArrow 
               ref={heroRef}
+              title="Max Bauer"
               onClick={(ref) => scrollToSection(ref)}
-
+              className="dark:bg-gray-300 dark:hover:bg-white"
             ></BouncingArrow>
           </Blank>
           <div id={SECTIONS.HOME.HERO}>
@@ -87,10 +108,14 @@ const Home = ({children}) =>  {
           </div>
           
           <Blank 
-            height={400}
-            offset={200} 
-            background={backgrounds[1]}
-            ></Blank>
+            height={800}
+            offset={-200} 
+            background={block1[1]}
+            className="opacity-80"
+            speed={.4}
+            >
+
+            </Blank>
           <div id={SECTIONS.HOME.ABOUT}>
           <About 
             className={`bg-slate-900/90`} 
@@ -98,9 +123,10 @@ const Home = ({children}) =>  {
             </About>
           </div>         
           <Blank 
-            height={400} 
+            height={600} 
             offset={500}
-            background={backgrounds[2]}
+            background={backgrounds[11]}
+            className="opacity-80"
             ></Blank>
         </main>
 

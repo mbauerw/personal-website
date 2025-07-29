@@ -5,7 +5,7 @@ import { Github, Linkedin, Twitter, Mail, Heart, Coffee, MapPin, Calendar, Exter
 const Footer = ({className}) => {
 
   return (
-  <div className={`space-y-4 ${className}`}>
+  <div className={`space-y-4 z-5 ${className}`}>
       <footer className="bg-zinc-700 border-t border-black py-7">
         <div className="max-w-3xl mx-auto px-4">
           <div className="text-center mb-8">

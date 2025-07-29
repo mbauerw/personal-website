@@ -1,7 +1,7 @@
 import React from 'react';
 import { ChevronDown, ArrowDown } from 'lucide-react';
 
-const BouncingArrow = ({ref, onClick}) => {
+const BouncingArrow = ({ref, onClick, className, title}) => {
 
   const bg_amber = "bg-amber-500/40 hover:bg-amber-500/60";
   const bg_amber_lite = "bg-amber-500/20 hover:bg-amber-500/30";
@@ -21,9 +21,9 @@ const BouncingArrow = ({ref, onClick}) => {
   return (
     <div className="flex items-center justify-center h-[50vh]">
       <div className={`flex flex-col justify-center items-center rounded-full h-90 w-90 transition-all transition-discrete duration-1400 
-        ${bg_white}`}>
+        ${bg_white} ${className}`}>
         <div className="h-1/2 flex justify-center items-center">
-          <h1 className={`text-8xl p3 font-bold ${text_blue} pt-16`}>Max Bauer</h1>
+          <h1 className={`text-8xl p3 font-bold ${text_blue} pt-16`}>{title}</h1>
         </div>
         <div className=" h-1/2 ">
           <ArrowDown
