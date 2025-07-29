@@ -1,49 +1,49 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useInView } from 'react-intersection-observer';
 
-
 function Blank({
-		offset=200,
-    height=300,
-    className="",
-    background="",
-		speed=.15,
-    children
+  offset = 200,
+  height = 300,
+  className = "",
+  background = "",
+  speed = 0.5,
+  children
 }) {
+  const [offsetY, setOffsetY] = useState(0);
 
-	// scroll listener for paralax
-	const [offsetY, setOffsetY] = useState(0);
-  const elementRef = useRef();
-
-  const {ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     threshold: 0,
-
-    triggerOnce: false,
-
+    triggerOnce: false, 
+    rootMargin: '0px 0px' 
   });
 
   useEffect(() => {
     const handleScroll = () => {
-      setOffsetY(window.pageYOffset * speed);
+      if (inView) {
+        setOffsetY(window.pageYOffset * speed);
+      }
     };
     
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    return () => window.removeEventListener('scroll', handleScroll);    
+  }, [speed, inView]); 
 
-  
-
-	return (
-		<div
-			ref={elementRef} 
-			className={`w-full bg-fixed bg-repeat bg-size-[100%_100%] bg-position-[center] flex flex-col justify-center ${background} ${className} `} 
+  return (
+    <div
+      ref={ref} 
+      className={`w-full bg-repeat bg-cover flex flex-col justify-center ${background} ${className}`} 
       style={{
-        height: `${height}px`
+        height: `${height}px`,
+        backgroundPosition: `center ${offsetY}px`, 
+        backgroundAttachment: 'fixed'
       }}
     >
-			{children}
-		</div>
-	)
+      {children}
+    </div>
+  );
 }
 
 export default Blank;
+
+
+

@@ -42,16 +42,16 @@ function Portrait({
         }}     
         >
         <div 
-          className={`flex justify-center items-center rounded-full h-6/9 w-6/10 ${"bg-[url('src/images/portrait_clouds.jpg')]"}  -mt-4 `}
+          className={`flex justify-center items-center rounded-full h-1/2 w-5/10 ${"bg-[url('src/images/portrait_clouds.jpg')]"}  -mt-4 `}
           
         >
             <img
             src={image}
             alt={alt}
-            className="absolute rounded-full mt-4 pointer-events-none"
+            className="absolute rounded-full pointer-events-none"
             style={{
-              width: `${width-80}px`, 
-              height: `${height-100}px`
+              width: `${width-180}px`, 
+              height: `${height-250}px`
             }}
             />  
 

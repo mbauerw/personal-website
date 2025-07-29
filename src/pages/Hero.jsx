@@ -47,7 +47,7 @@ const Hero = forwardRef(({ height = 900, minHeight = 900, className = "" }, ref)
             <p className='absolute z-3 hover:z-10 p3 text-4xl bg-neutral-100 shadow-lg shadow-black antialiased border-gray-200 border-4 border-b-gray-400 rounded-xl w-full h-full p-2'
               onMouseEnter={mouseEnter}
               onMouseLeave={mouseLeave} >
-              Strengths: Flexibility, creativity, perseverance <br />
+              Strengths: Flexibility, creativity, determination <br />
               Weaknesses: <span className="text-bold text-blue-800 text-7xl"> ... </span>
             </p>
 
@@ -55,7 +55,7 @@ const Hero = forwardRef(({ height = 900, minHeight = 900, className = "" }, ref)
             <p className='absolute z-3 hover:z-10 p3 text-4xl bg-neutral-100 shadow-lg shadow-black antialiased border-gray-200 border-4 border-b-gray-400 rounded-xl w-full h-auto'
               onMouseEnter={mouseEnter}
               onMouseLeave={mouseLeave} >
-              Strengths: Flexibility, creativity, perseverance <br />
+              Strengths: Flexibility, creativity, determination <br />
               Weaknesses: Unconsciously setting down what I'm holding in my hand while in the process of looking for something I've lost and then, having found what I was originally looking for, needing to spend even more time looking for what I just had in my hand
             </p>
           )}
@@ -65,11 +65,11 @@ const Hero = forwardRef(({ height = 900, minHeight = 900, className = "" }, ref)
 
       </div>
       {/* line */}
-      <div className='bg-white lg:-mt-8 lg:mb-[10px] z-0 lg:col-span-1 lg:row-span-1 row-span-1 col-span-1 lg:h-full h-2 w-[95%] '>
+      <div className='bg-white lg:-mt-8 lg:mb-[10px] z-0 lg:col-span-1 lg:row-span-1 row-span-1 col-span-1 lg:h-full h-2 lg:w-[95%] mr-4 ml-4 '>
       </div>
       {/* portrait   */}
       <div id="portrait-wrap" className='col-span-1 row-span-1 border-l-1 border-gray-400 w-[95%] h-[95%] justify-self-center content-center'>
-        <Portrait image={"src/images/headshot_tri.png"} background='bg-[url("src/images/background/purple_smudge.jpg")] cursor-pointer' height={600} width={400}></Portrait>
+        <Portrait image={"src/images/headshot_trim.png"} background='bg-[url("src/images/background/purple_smudge.jpg")] cursor-pointer' height={600} width={400}></Portrait>
       </div>
     </div>
   )
