@@ -7,7 +7,7 @@ function Blank({
   label = "",
   className = "",
   background = "",
-  speed = 0.6,
+  speed = .4,
   children
 }) {
   
@@ -37,7 +37,7 @@ function Blank({
     const parallaxOffset = -distance * speed;
     
     setOffsetY(parallaxOffset);
-  }, [isInView, speed]);
+  }, [isInView]);
 
   useEffect(() => {
     if (!isInView) {
@@ -47,9 +47,9 @@ function Blank({
 
     const handleScroll = () => {
       // Cancel previous frame
-      if (rafRef.current) {
-        cancelAnimationFrame(rafRef.current);
-      }
+      // if (rafRef.current) {
+      //   cancelAnimationFrame(rafRef.current);
+      // }
       
       // Schedule new calculation
       rafRef.current = requestAnimationFrame(calculateParallax);

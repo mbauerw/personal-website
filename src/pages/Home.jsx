@@ -91,7 +91,7 @@ const Home = ({children}) =>  {
             offset={-50}
             label={"First"}
             background={block1[1]}
-            speed={.2}
+            speed={.4}
             className="bg-size-[100%_110%]"
             >
             <BouncingArrow 
@@ -104,7 +104,7 @@ const Home = ({children}) =>  {
           <div id={SECTIONS.HOME.HERO}>
             <Hero 
               minHeight={900} 
-              className={'bg-gray-800/80'} 
+              className={'bg-slate-900/90'} 
               ref={heroRef}>
               </Hero>
           </div>
@@ -113,7 +113,7 @@ const Home = ({children}) =>  {
             height={800}
             offset={offset} 
             label={"Second"}
-            background={block1[2]} // block[2] 
+            background={backgrounds[5]} // block1[2] 
             className="opacity-90"
             >
 
