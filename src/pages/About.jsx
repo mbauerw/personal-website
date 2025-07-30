@@ -24,14 +24,14 @@ function About({
         </div>
       </div>
       {/* Photo */}
-      <div className="h-full bg-stone-500 flex justify-center items-center p-8 rounded-sm">
+      <div className="h-full  flex justify-center items-center p-8 rounded-sm">
         <img src="src/images/studio.jpg" className="h-[95%] cols-span-1"></img>
       </div>
       {/* line */}
-      <div className='bg-white -mt-3  z-0 lg:col-span-1 lg:row-span-1 row-span-1 col-span-1 lg:h-[105%] h-2 lg:w-[95%] lg:mr-0 lg:-ml-2 mr-4 ml-4 '>
+      <div className='bg-white -mt-3  z-0 lg:col-span-1 lg:row-span-1 row-span-1 col-span-1 lg:h-[100%] h-2 lg:w-[95%] lg:mr-0 lg:-ml-2 mr-4 ml-4 '>
       </div>
       
-      <div className="h-full w-contain bg-stone-500 cols-span-1 flex flex-row justify-end items-center
+      <div className="h-full w-contains cols-span-1 flex flex-row justify-end items-center
        gap-3 bg-nonw shadow-md rounded-sm  ">
         <ExpandableDiv
           index="1"

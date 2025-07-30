@@ -30,7 +30,7 @@ function Portrait({
   const setSpin = () => setShouldIncrement(prev => !prev);
 
   return(
-    <div className={`bg-neutral-200/40 rounded-sm lg:h-full h-150 w-full flex flex-col justify-center items-center p-5 ${className}`}>
+    <div className={` rounded-sm lg:h-full h-150 w-full flex flex-col justify-center items-center p-5 ${className}`}>
       <div
         id="portrait"
         className={`flex justify-center items-center rounded-full shadow-2xl shadow-black ${background}`}
