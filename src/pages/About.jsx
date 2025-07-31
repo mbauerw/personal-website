@@ -17,18 +17,18 @@ function About({
     >
        {/* banner   */}
       <div className='col-span-full row-span-1 mt-4 '>
-        <div className='bg-linear-to-br from-amber-500 to-yellow-500 h-16 w-140 justify-self-center'>
-          <p className='text-8xl text-white py-1 ml-7 w-160 a6 weight-500 '>
+        <div className='bg-linear-to-br from-amber-500 to-yellow-500 h-16 w-140 mr-15 justify-self-center'>
+          <p className='sm:text-8xl text-7xl text-white py-1 ml-7 w-160 a6 weight-500 '>
             The Details
           </p>
         </div>
       </div>
       {/* Photo */}
-      <div className="h-full  flex justify-center items-center p-8 rounded-sm">
-        <img src="src/images/studio.jpg" className="h-[95%] cols-span-1"></img>
+      <div className="max-h-[800px]  flex justify-center items-center p-8 rounded-sm">
+        <img src="src/images/studio.jpg" className="xl:h-[95%] xl:w-[auto] h-[80%] cols-span-1"></img>
       </div>
       {/* line */}
-      <div className='bg-white -mt-3  z-0 lg:col-span-1 lg:row-span-1 row-span-1 col-span-1 lg:h-[100%] h-2 lg:w-[95%] lg:mr-0 lg:-ml-2 mr-4 ml-4 '>
+      <div className='bg-white -mt-3  z-0 xl:col-span-1 xl:row-span-1 row-span-1 col-span-1 xl:h-[100%] h-2 xl:w-[95%] xl:mr-0 xl:-ml-2 mr-4 ml-4 '>
       </div>
       
       <div className="h-full w-contains cols-span-1 flex flex-row justify-end items-center
