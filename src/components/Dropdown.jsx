@@ -2,8 +2,9 @@ import { Link } from "react-router-dom"
 import React, { useRef, useState, useEffect, forwardRef } from "react";
 import { SECTIONS } from '../constants/sections';
 import { Menu, SquareMenu } from "lucide-react";
+import DropdownStack from "./DropdownStack";
 
-const Dropdown = ({ iconSize, className, iconClass }) => {
+const Dropdown = ({ iconSize, className, iconClass, showElement, heroRef, refs }) => {
 
 
 
@@ -60,6 +61,7 @@ const Dropdown = ({ iconSize, className, iconClass }) => {
     <div className={` h-full w-auto ${className}`}>
       <div className={` h-full w-auto`}>
         {!expanded && <Menu onClick={toggleExpand} size={iconSize} className={`text-gray-400 hover:text-gray-600  ${iconClass}`} />}
+        {expanded && <DropdownStack showElement={showElement} heroRef={heroRef} refs={refs}/>}
 
       </div>
 

@@ -75,17 +75,15 @@ const Header = ({ heroRef, aboutRef, refs }) => {
       <div
         id="header-wrap-inner"
         className={`w-full fixed flex flex-row justify-center items-center z-50 transition-[height,_opacity] transition-discrete border-none
-         duration-1000 ${showElement ? 'h-12 opacity-100 bg-zinc-700 shadow-zinc-300' : 'h-8 opacity-0 bg-zinc-700 shadow-none border-none shadow-zinc-400'} `}
-      >
-        <div
-          id="nav-wrap-inner"
-          className={`md:flex md:w-full hidden h-5/9 w-0 flex justify-center content-end transition-all transition-discrete md:duration-0 duration-1000  ${showElement ? 'opacity-100 ' : 'opacity-0'}`}
+         duration-1000 ${showElement ? 'h-12 opacity-100 bg-zinc-700 shadow-zinc-300' : 'h-8 opacity-0 bg-zinc-700 shadow-none border-none shadow-zinc-400'} `}>
+                          {/*  duration affects navbar shrink */}
+        <div id="nav-wrap-inner" className={`md:flex md:w-full hidden h-5/9 w-0 flex justify-center content-end transition-all transition-discrete md:duration-0 duration-500  ${showElement ? 'opacity-100 ' : 'opacity-0'}`}
         >
           <NavBar showElement={showElement} heroRef={heroRef} refs={refs}></NavBar>
         </div>
-                                          {/* md-duration affects navbar expand from collapse | duration affects icon speed of appearance  */}
-        <div className={` md:w-0 md:h-0 md:delay-0 delay-900 flex h-7/9 w-full justify-center content-end transition-all md:duration-1400 duration-1000  ${showElement ? 'opacity-100 ' : 'opacity-0'}`}>
-          <Dropdown className="md:delay-0 md:h-0 delay-900 md:duration-900 duration-0" iconClass="md:hidden flex md:h-0 h-full delay-900"></Dropdown>
+                                          {/* delay affects icon appear time | md-duration affects navbar expand from collapse | duration affects icon speed of appearance  */}
+        <div className={` md:w-0 md:h-0 md:delay-0 delay-600 flex h-7/9 w-full justify-center content-end transition-all md:duration-1100 duration-500  ${showElement ? 'opacity-100 ' : 'opacity-0'}`}>
+          <Dropdown className="md:delay-0 md:h-0 delay-600 md:duration-900 duration-0" iconClass="md:hidden flex md:h-0 h-full delay-600" showElement={showElement} heroRef={heroRef} refs={refs}></Dropdown>
         </div>
         <Logos position="right-5" showElement={showElement} />
       </div>
