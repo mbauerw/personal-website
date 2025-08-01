@@ -10,6 +10,8 @@ function About({
   const [activeButton, setActiveButton] = useState(null);
   const imageIds = ['edUW7cJ', 'jRetXxS', 'KvSDVHD', 'zs7lXPL', 'rfig4mQ', 'GdLn4KT']
 
+  const expandClass = ""
+
   return (
     <div id="about-wrap"
       className={`w-full h-auto place-self-center grid  grid-cols-[1fr] grid-rows-auto gap-10 pb-0 bg-none shadow-md rounded-sm content-start ${className}
@@ -31,14 +33,15 @@ function About({
       <div className='bg-white -mt-3  z-0 xl:col-span-1 xl:row-span-1 row-span-1 col-span-1 xl:h-[100%] h-2 xl:w-[95%] xl:mr-0 xl:-ml-2 mr-4 ml-4 '>
       </div>
       
-      <div className="h-full w-contains cols-span-1 flex flex-row justify-end items-center
-       gap-3 bg-nonw shadow-md rounded-sm  ">
+      <div className="h-full w-contains cols-span-1 flex lg:flex-row lg:justify-end flex-col justify-start items-center
+       gap-3 bg-none shadow-md rounded-sm  ">
         <ExpandableDiv
           index="1"
           label="History"
           imgId='edUW7cJ'
           isActive={activeButton === "1"}
           sendState={setActiveButton}
+          className="lg:h-200 lg:min-w-24 lg:w-24 w-[95%] h-24"
         ></ExpandableDiv>
 
         <ExpandableDiv
