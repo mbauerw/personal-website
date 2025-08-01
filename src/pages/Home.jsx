@@ -65,7 +65,6 @@ const Home = ({children}) =>  {
 
       window.addEventListener('resize', handleResize);
       return () => window.removeEventListener('resize', handleResize);
-
     }, []);
 
     // hash scrolling
@@ -91,7 +90,7 @@ const Home = ({children}) =>  {
             offset={-50}
             label={"First"}
             background={block1[1]}
-            speed={.4}
+            speed={.5}
             className="bg-size-[100%_110%]"
             >
             <BouncingArrow 
@@ -115,6 +114,7 @@ const Home = ({children}) =>  {
             label={"Second"}
             background={backgrounds[5]} // block1[2] 
             className="opacity-90"
+            speed={.5}
             >
 
             </Blank>

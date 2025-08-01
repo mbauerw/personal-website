@@ -70,6 +70,7 @@ function Layout( ) {
             refs={refs}
             heroRef={heroRef}
             aboutRef={aboutRef}
+            viewportSize={viewportSize}
           />
         </div>
         <Outlet context={refs}></Outlet>

@@ -6,7 +6,8 @@ import { SECTIONS } from '../constants/sections';
 
 function NavBar({showElement, heroRef, refs}) {
 
-    const linkStyle = "text-neutral-300 hover:bg-neutral-900 hover:rounded-sm a3 "
+    const linkStyle = "text-neutral-300 hover:bg-neutral-900 hover:rounded-sm a3 md:flex hidden"
+
 
     const scrollToSection = (ref) => {
       ref.current?.scrollIntoView({ 
@@ -20,7 +21,7 @@ function NavBar({showElement, heroRef, refs}) {
         className={`w-3/4 h-full bg-logo content-center transition-all transition-discrete ease-in-out duration-800
           ${showElement ? 'opacity-100 duration-1600' : 'opacity-0 duration-800'}`}>
         <ul 
-          className={`transition-all transition-discrete flex justify-around ${showElement ? 'opacity-100 duration-1000' : 'opacity-0 duration-800'} `}>
+          className={`transition-all transition-discrete md:flex md:justify-around   ${showElement ? 'opacity-100 duration-1000' : 'opacity-0 duration-800'} `}>
           <Link to="/" className={linkStyle}>HOME</Link>
           <Link to={`/#${SECTIONS.HOME.HERO}`} className={linkStyle} onClick={() => scrollToSection(heroRef)}>ABOUT</Link>
           <Link to="/portfolio" className={linkStyle}>PORTFOLIO</Link>
