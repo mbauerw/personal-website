@@ -45,26 +45,6 @@ const Header = ({ heroRef, aboutRef, refs }) => {
 
   }
 
-  const [delayedVisible, setDelayedVisible] = useState(false);
-
-  useEffect(() => {
-    let timeout;
-
-    if (showElement) {
-      timeout = setTimeout(() => {
-        setDelayedVisible(true);
-      }, 1400);
-    } else {
-      setDelayedVisible(false);
-    }
-
-    return () => {
-      if (timeout) clearTimeout(timeout);
-    };
-  }, [showElement]);
-
-
-
   return (
     <div
       id="header-wrap"

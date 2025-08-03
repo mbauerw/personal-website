@@ -7,10 +7,11 @@ function ExpandableDiv({
   imgId, 
   sendState, 
   isActive, 
-  height="xl:h-[95%] h-24",
-  width="xl:w-24 w-[95%] xl:min-w-24",
+  height="xl:h-[95%] h-24 ",
+  width="xl:w-24 xl:min-w-24 w-[95%]",
   expandedHeight="xl:h-[95%] h-full",
   expandedWidth="xl:w-full w-[95%]",
+  children,
   className}
   ) {
   const [expanded, setExpanded] = useState(false);
@@ -37,9 +38,9 @@ function ExpandableDiv({
         `}
     >
       {!expanded && <p className="font-bold xl:[writing-mode:vertical-lr] xl:rotate-180 text-6xl p-4">{label}</p>}
-      {expanded && <div class="h-1/2 w-400 overflow-hidden"><Photo imgId={imgId}></Photo></div>}
+      {expanded && <div className="h-1/2 w-400 overflow-hidden"><Photo imgId={imgId}></Photo></div>}
       
-      {expanded && <div class="h-1/2 w-full">asdfasdfasdfa</div>} 
+      {expanded && <div className="h-1/2 w-full">{children}</div>} 
       
       
     </div>

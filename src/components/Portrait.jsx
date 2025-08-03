@@ -38,7 +38,9 @@ function Portrait({
         style={{
           backgroundPosition: `${offset}px`,
           width: `${width}px`, 
-          height: `${height}px`
+          height: `${height}px`,
+          maxHeight: '80%',
+          maxWidth: '90%'
         }}     
         >
         <div 
@@ -51,7 +53,9 @@ function Portrait({
             className="absolute rounded-full pointer-events-none"
             style={{
               width: `${width-100}px`, 
-              height: `${height-140}px`
+              height: `${height-140}px`,
+              maxHeight: '80%',
+              maxWidth: '90%'
             }}
             />  
 

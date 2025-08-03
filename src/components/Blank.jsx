@@ -15,11 +15,11 @@ function Blank({
   const elementRef = useRef(null);
   const rafRef = useRef(null);
 
-  // Pass the ref directly as first argument
+  // paralax stuff
   const isInView = useInView(elementRef, {
     threshold: 0,
     triggerOnce: false, 
-    rootMargin: '200px 0px 200px 0px' // Start parallax before element enters view
+    rootMargin: '200px 0px 200px 0px'
   });
 
   const calculateParallax = useCallback(() => {
@@ -30,10 +30,7 @@ function Blank({
     const elementCenter = rect.top + rect.height / 2;
     const windowCenter = window.innerHeight / 2;
     
-    // Calculate distance from window center (negative when above center, positive when below)
-    const distance = elementCenter - windowCenter;
-    
-    // Apply parallax effect based on distance and speed
+    const distance = elementCenter - windowCenter; 
     const parallaxOffset = -distance * speed;
     
     setOffsetY(parallaxOffset);

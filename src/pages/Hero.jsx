@@ -15,46 +15,48 @@ const Hero = forwardRef(({ height = 900, minHeight = 900, className = "" }, ref)
   return (
     <div
       id="hero-wrap"
-      className={`w-full justify-center min-h-[1800px] ${className} grid lg:grid-cols-[4fr_5px_2fr] grid-rows-[1fr_6fr] grid-cols-1 space-y-10 lg:min-h-[1000px] lg:max-h-[1000px]`}
+      className={`w-full justify-center min-h-[1800px] ${className} grid lg:grid-cols-[4fr_5px_2fr] md:grid-rows-[1fr_6fr] grid-rows-[100px_6fr] grid-cols-1 space-y-10 lg:min-h-[1000px] lg:max-h-[1000px]`}
       ref={ref}>
       {/* banner   */}
-      <div className='col-span-full row-span-1 justify-self-center'>
-        <div className='bg-linear-to-br from-amber-500 to-yellow-500 h-16 w-103 justify-self-center'>
-          <p className='text-8xl text-white mt-3 ml-7 w-120 a6 weight-500 '>
-            About   Me
-          </p>
+      <div className='col-span-full row-span-1 w-full justify-self-center'>
+        <div className='bg-linear-to-br from-amber-500 to-yellow-500  justify-self-center
+          lg:h-16 lg:w-110 md:h-13 md:w-90 xs:h-11 xs:w-70 h-10 mt-3'>
+            <p className='text-white sm:ml-7 a6 xs:pt-3 pt-1 weight-500 lg:text-8xl lg:w-160 md:text-7xl md:w-140 sm:text-6xl xs:w-[140%] xs:text-6xl w-[110%] text-[9cqw] ml-3'>
+              About   Me
+            </p>
+          </div>
         </div>
-      </div>
       {/* blurbs   */}
       <div className='col-span-1 relative rounded-sm row-span-1 max-h-[900px] grid grid-cols-1 grid-rows-5 bg-neutral-00/40 w-[95%] h-[95%] lg:min-h-[500px] px-5 justify-self-center content-center lg:justify-center justify-items-center py-5'>
-      <p className='group w-1/2 min-w-100 z-1 text-4xl hover:!text-5xl p3 bg-neutral-100 shadow-lg shadow-black antialiased border-gray-300 border-4 border-b-gray-400 p-10 rounded-xl -mt-0 
-          hover:z-10 hover:w-full hover:overflow-visible hover:-ml-6 hover:whitespace-normal hover:min-h-50 hover:h-
-          lg:-ml-32 lg:mr-0 -ml-4 mr-4 truncate transition-all duration-1000 '>
+      <p className='group w-1/2 xs:min-w-100 min-w-[72%] z-1 xs:text-4xl text-3xl hover:!text-5xl p3 bg-neutral-100 shadow-lg shadow-black antialiased border-gray-300 border-4 border-b-gray-400 p-10 rounded-xl -mt-0 
+          hover:z-10 hover:w-full hover:overflow-visible hover:-ml-6 hover:whitespace-normal hover:min-h-50
+          lg:-ml-32 lg:mr-0 -ml-4 mr-4 truncate transition-all duration-1000 transform hover:-translate-y-6  '>
           Hello, I'm  <a className="group-hover:text-blue-800 group-hover:font-semibold group-hover:text-7xl transition-all duration-400"> Max </a> 
           </p>
-        <p className='group w-1/2 min-w-100 z-1 p3 text-4xl bg-neutral-100 shadow-lg shadow-black antialiased border-gray-300 border-4 border-b-gray-400 p-10 rounded-xl 
+        <p className='group w-1/2 xs:min-w-100 min-w-[72%] z-1 p3 xs:text-4xl text-3xl bg-neutral-100 shadow-lg shadow-black antialiased border-gray-300 border-4 border-b-gray-400 p-10 rounded-xl 
           hover:z-11 hover:w-full hover:!text-5xl hover:overflow-visible hover:w-full hover:-ml-2  hover:whitespace-normal hover:min-h-60 sm:hover:h-100 md:hover:h-80 lg:hover:h-60 hover:h-140 hover:p-4
-          lg:-ml-16 lg:mr-4 lg:-mt-8 -ml-2 mr-2 truncate transision-all duration-1000  '>
+          lg:-ml-16 lg:mr-4 lg:-mt-8 -ml-2 mr-2 truncate transision-all duration-1000 transform hover:-translate-y-14  '>
           Passions: <a className="group-hover:underline group-hover:text-red-600">Music</a>, learning, <Link to="/portfolio" className="group-hover:underline group-hover:decoration-wavy group-hover:text-emerald-500 transision-all duration-500">web development</Link>, reading,
           guitar (electric == classical), piano, tennis, greek yogurt
           </p>
-        <p className='group w-1/2 min-w-100 max-h-55 z-2  p3 text-4xl hover:!text-5xl bg-neutral-100 shadow-lg shadow-black antialiased border-gray-300 border-4 border-b-gray-400 p-10 rounded-xl
+        <p className='group w-1/2 xs:min-w-100 min-w-[72%] min-w-100 max-h-55 z-2  p3 xs:text-4xl text-3xl hover:!text-5xl bg-neutral-100 shadow-lg shadow-black antialiased border-gray-300 border-4 border-b-gray-400 p-10 rounded-xl
           hover:z-12 hover:w-full hover:z-10 hover:w-full hover:overflow-visible hover:whitespace-normal hover:max-h-55 hover:max-h-60 hover:h-60
-          lg:-ml-0 lg:mr-8 lg:-mt-8 ml-0 mr-0 truncate transision-all duration-1000'>
+          lg:-ml-0 lg:mr-8 lg:-mt-8 ml-0 mr-0 truncate transision-all duration-1000 transform hover:-translate-y-14 '>
             Loves: Family, Friends, Pets
           </p>
-        <p className='relative w-1/2 min-w-100 z-3 hover:z-10 p3 text-4xl hover:!text-5xl bg-neutral-100 shadow-lg shadow-black antialiased border-gray-200 border-4 border-b-gray-400 rounded-xl w-1/2 col-span-1 p-10  truncate
+        <p className='relative w-1/2 xs:min-w-100 min-w-[72%] z-3 hover:z-10 p3 xs:text-4xl text-3xl hover:!text-5xl bg-neutral-100 shadow-lg shadow-black antialiased border-gray-200 border-4 border-b-gray-400 rounded-xl w-1/2 col-span-1 p-10  truncate
         hover:z-13 hover:w-full hover:overflow-visible hover:whitespace-normal hover:h-80 sm:hover:h-70 md:hover:h-60 lg:hover:h-55 hover:pt-5
-        lg:ml-0 lg:mr-0 lg:-mt-8 ml-2 -mr-2  truncate transision-all duration-1000
+        lg:ml-0 lg:mr-0 lg:-mt-8 ml-2 -mr-2  truncate transision-all duration-1000 transform hover:-translate-y-14 
         '>
           Strengths: Flexibility, creativity, determination, patience
         </p>
-        <div className='relative z-3 transision:all duration-1000 p3 w-1/2 text-4xl bg-neutral-100 shadow-lg shadow-black antialiased rounded-xl row-span-1 col-span-1 lg:-mt-8 lg:ml-4 lg:-mr-4
-         hover:z-10 hover:w-full -ml-2 mr-2'>
+        <div className='relative w-1/2 xs:min-w-100 min-w-[72%] z-3 hover:z-10 p3 text-4xl hover:!text-5xl bg-neutral-100 shadow-lg shadow-black antialiased border-gray-200 rounded-xl w-1/2 col-span-1  truncate
+        hover:overflow-visible hover:whitespace-normal hover:h-80 sm:hover:h-70 md:hover:h-60 lg:hover:h-55 hover:w-full
+        lg:ml-4 lg:-mr-2 lg:-mt-8 ml-4 -mr-4  truncate transision-all duration-1000 transform hover:-translate-y-14 '>
           {!hovered ? (
-            <p className='absolute z-3 min-w-100 min-h-55 hover:z-10 p3 text-4xl hover:!text-5xl bg-neutral-100 shadow-lg shadow-black antialiased border-gray-200 border-4 border-b-gray-400 rounded-xl w-full h-full p-2
-              hover:z-14 hover:w-full hover:overflow-visible hover:whitespace-normal hover:h-55 hover:-ml-0 hover:mr-8
-              lg:ml-0 lg:mr-0 truncate transision-all duration-1000'
+            <p className='absolute z-3 xs:min-w-full min-w-[110%] min-h-55 hover:z-10 p3 xs:text-4xl text-3xl hover:!text-2xl bg-neutral-100 shadow-lg shadow-black antialiased border-gray-200 border-4 border-b-gray-400 rounded-xl  h-full p-2
+              hover:z-14 sm:hover:w-full hover:overflow-visible hover:whitespace-normal hover:min-h-full hover:-ml-0 hover:mr-8
+              lg:ml-0 lg:mr-0 truncate  transision-all duration-1000 '
               onMouseEnter={mouseEnter}
               onMouseLeave={mouseLeave} >
                <br />
@@ -62,9 +64,9 @@ const Hero = forwardRef(({ height = 900, minHeight = 900, className = "" }, ref)
             </p>
 
           ) : (
-            <p className='absolute z-3 min-w-100 hover:z-10 p3 text-4xl hover:!text-5xl bg-neutral-100 shadow-lg shadow-black antialiased border-gray-200 border-4 border-b-gray-400 rounded-xl w-full h-auto
-              hover:z-14 hover:w-full hover:overflow-visible hover:whitespace-normal hover:-ml-0 hover:mr-4
-              lg:-ml-0 lg:mr-0 lg:-mt-8 truncate transision-all duration-1000
+            <p className='absolute z-3 xs:min-w-full min-w-[110%] hover:z-10 p3 text-4xl hover:!text-4xl bg-neutral-100 shadow-lg shadow-black antialiased border-gray-200 border-4 border-b-gray-400 rounded-xl 
+              hover:z-14 sm:hover:w-full hover:overflow-visible hover:whitespace-normal hover:-ml-0 hover:mr-4 hover:min-h-full
+              lg:-ml-0 lg:mr-0 lg:-mt-0 truncate transision-all duration-1000 
             '
               onMouseEnter={mouseEnter}
               onMouseLeave={mouseLeave} >
@@ -77,7 +79,7 @@ const Hero = forwardRef(({ height = 900, minHeight = 900, className = "" }, ref)
 
       </div>
       {/* line */}
-      <div className='bg-white lg:-mt-8 lg:mb-[10px] z-0 lg:col-span-1 lg:row-span-1 row-span-1 col-span-1 lg:h-full h-2 lg:w-[95%] lg:mr-0 lg:-ml-2 mr-4 ml-4 '>
+      <div className='bg-white lg:-mt-8 lg:mb-[10px] z-0 lg:col-span-1 lg:row-span-1 row-span-1 col-span-1 lg:h-full h-2 lg:w-[95%] lg:mr-0 lg:-ml-2 mr-4 ml-4 xs:max-w-screen '>
       </div>
       {/* portrait   */}
       <div id="portrait-wrap" className='col-span-1 row-span-1 w-[95%] h-[95%] justify-self-center content-center'>

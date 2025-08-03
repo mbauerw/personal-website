@@ -1,6 +1,23 @@
 import ExpandableDiv from "../components/ExpandableDiv";
 import React, { useState } from "react";
 
+const HistoryText = () => {
+  return (
+    <div className="w-400 h-full bg-white">
+      <h1>
+        Born in Austria
+      </h1>
+      <h1 className="ml-20">
+        Raised in Michigan
+      </h1>
+      <h1 className="ml-40">
+        Landed on the West Coast
+      </h1>
+
+    </div>
+  )
+}
+
 function About({
   height = 900,
   minHeight = 900,
@@ -11,16 +28,18 @@ function About({
   const imageIds = ['edUW7cJ', 'jRetXxS', 'KvSDVHD', 'zs7lXPL', 'rfig4mQ', 'GdLn4KT']
 
   const expandClass = ""
+  
 
   return (
     <div id="about-wrap"
       className={`w-full h-auto place-self-center grid  grid-cols-[1fr] grid-rows-auto gap-10 pb-0 bg-none shadow-md rounded-sm content-start ${className}
-      xl:grid-cols-[650px_5px_minmax(700px,1480px)] xl:min-h-screen xl:h-auto xl:grid-rows-[90px_auto] `}
+      xl:grid-cols-[minmax(400px,600px)_5px_minmax(600px,1480px)] xl:min-h-screen xl:h-auto xl:grid-rows-[90px_auto] `}
     >
        {/* banner   */}
       <div className='col-span-full row-span-1 mt-4 '>
-        <div className='bg-linear-to-br from-amber-500 to-yellow-500 h-16 w-140 mr-15 justify-self-center'>
-          <p className='sm:text-8xl text-7xl text-white py-1 ml-7 w-160 a6 weight-500 '>
+        <div className='bg-linear-to-br from-amber-500 to-yellow-500  justify-self-center
+         lg:h-16 lg:w-140 md:h-13 md:w-118 xs:h-11 xs:w-100 xs:max-w-[60%] h-1/2 max-w-[60%]'>
+          <p className='text-white py-1 sm:ml-7 a6 sm:pt-2 weight-500 lg:text-8xl lg:w-160 md:text-7xl md:w-140 sm:text-6xl xs:w-[110%] xs:text-[9cqw] w-[110%] text-[8cqw] ml-3'>
             The Details
           </p>
         </div>
@@ -33,7 +52,7 @@ function About({
       <div className='bg-white -mt-3  z-0 xl:col-span-1 xl:row-span-1 row-span-1 col-span-1 xl:h-[100%] h-2 xl:w-[95%] xl:mr-0 xl:-ml-2 mr-4 ml-4 '>
       </div>
       
-      <div className="h-full w-contains cols-span-1 flex lg:flex-row lg:justify-end flex-col justify-start items-center
+      <div className="xl:h-full h-200 w-full cols-span-1 flex xl:flex-row xl:justify-end flex-col justify-start items-center
        gap-3 bg-none shadow-md rounded-sm  ">
         <ExpandableDiv
           index="1"
@@ -41,8 +60,8 @@ function About({
           imgId='edUW7cJ'
           isActive={activeButton === "1"}
           sendState={setActiveButton}
-          className="lg:h-200 lg:min-w-24 lg:w-24 w-[95%] h-24"
-        ></ExpandableDiv>
+        ><HistoryText></HistoryText> </ExpandableDiv>
+        
 
         <ExpandableDiv
           index="2"
