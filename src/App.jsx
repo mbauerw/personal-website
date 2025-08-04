@@ -21,6 +21,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/gdp" element={<GdpPop />} />
+          <Route path="/music" element={<Music />} />
         </Route>
       </Routes>
       

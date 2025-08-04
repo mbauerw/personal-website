@@ -18,7 +18,7 @@ function NavBar({showElement, heroRef, refs}) {
 
     return (
       <nav 
-        className={`w-3/4 h-full bg-logo content-center transition-all transition-discrete ease-in-out duration-800
+        className={`w-2/3 h-full bg-logo content-center transition-all transition-discrete ease-in-out duration-800
           ${showElement ? 'opacity-100 duration-1600' : 'opacity-0 duration-800'}`}>
         <ul 
           className={`transition-all transition-discrete md:flex md:justify-around   ${showElement ? 'opacity-100 duration-1000' : 'opacity-0 duration-800'} `}>

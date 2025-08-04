@@ -21,7 +21,7 @@ const Hero = forwardRef(({ height = 900, minHeight = 900, className = "" }, ref)
       <div className='col-span-full row-span-1 w-full justify-self-center'>
         <div className='bg-linear-to-br from-amber-500 to-yellow-500  justify-self-center
           lg:h-16 lg:w-110 md:h-13 md:w-90 xs:h-11 xs:w-70 h-10 mt-3'>
-            <p className='text-white sm:ml-7 a6 xs:pt-3 pt-1 weight-500 lg:text-8xl lg:w-160 md:text-7xl md:w-140 sm:text-6xl xs:w-[140%] xs:text-6xl w-[110%] text-[9cqw] ml-3'>
+            <p className='text-white sm:ml-7 a6 xs:pt-3 pt-1 weight-500 lg:text-8xl lg:w-140 md:text-7xl md:w-110 sm:text-6xl xs:w-[120%] xs:text-6xl w-[100%] text-[9cqw] ml-3'>
               About   Me
             </p>
           </div>

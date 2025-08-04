@@ -37,7 +37,7 @@ function ExpandableDiv({
         ${expanded ? 'flex flex-col' : ''}
         `}
     >
-      {!expanded && <p className="font-bold xl:[writing-mode:vertical-lr] xl:rotate-180 text-6xl p-4">{label}</p>}
+      {!expanded && <p className={`font-bold text-4xl xl:[writing-mode:vertical-lr] xl:rotate-180 sm:!text-5xl md:!text-6xl p-4`}>{label}</p>}
       {expanded && <div className="h-1/2 w-400 overflow-hidden"><Photo imgId={imgId}></Photo></div>}
       
       {expanded && <div className="h-1/2 w-full">{children}</div>} 
