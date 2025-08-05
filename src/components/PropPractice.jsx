@@ -1,18 +1,28 @@
 import { getImageUrl } from "./utils";
 
-function Landscape({image, size}) {
+const UrlImage =({image, size}) => {
   return (
 		<img
-			class="h-150 w-320"
+			className="h-150 w-320"
 			src={getImageUrl(image)}
 			alt={image.name}
 			// width={size}
 			// height={size}
 		/>
 	);
-  }
+}
 
-export default function Photo({imgId}){
+const LocalImage = ({imgId}) => {
+	return (
+		<img
+			className="h-150 w-320"
+			src={imgId}
+			/>
+	)
+		
+}
+
+export default function Photo({imgId, local}){
 
 	const imageIds = ['edUW7cJ', 'jRetXxS', 'KvSDVHD', 'zs7lXPL', 'rfig4mQ', 'GdLn4KT']
 
@@ -20,10 +30,8 @@ export default function Photo({imgId}){
 
   return (
 		<div>
-			<Landscape
-				size={"100%"}
-				image={{ name: 'aPhoto', imageId: imgId }}
-			/>  
+			{!local && <UrlImage size={"100%"} image={{ name: 'aPhoto', imageId: imgId }}/>}
+			{local && <LocalImage imgId={imgId} /> }
 		</div>                  
 	)
 }

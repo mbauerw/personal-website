@@ -10,7 +10,7 @@ app.use(express.json());
 // Your middleware function
 const validateInput = (req, res, next) => {
   const { firstName } = req.body;
-  
+   
   if (!firstName || firstName.trim().length < 2) {
     return res.status(400).json({ 
       error: 'First name must be at least 2 characters long' 

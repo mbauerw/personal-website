@@ -2,17 +2,25 @@ import ExpandableDiv from "../components/ExpandableDiv";
 import React, { useState } from "react";
 
 const HistoryText = () => {
+
+  const h_font = "a6 " 
+  const h_style = "text-[2.5cqw] col-span-1 row-span-1"
+
   return (
-    <div className="w-400 h-full bg-white">
-      <h1>
+    <div className="w-full h-full bg-white grid grid-rows-[1fr_1fr_1fr_8fr]">
+      <p className={`${h_style} ${h_font}`}>
         Born in Austria
-      </h1>
-      <h1 className="ml-20">
+      </p>
+      <p className={`${h_style} ${h_font} justify-self-center `}>
         Raised in Michigan
-      </h1>
-      <h1 className="ml-40">
+      </p>
+      <p className={`${h_style} ${h_font} justify-self-end`}>
         Landed on the West Coast
-      </h1>
+      </p>
+      <p>
+
+      </p>
+
 
     </div>
   )
@@ -33,7 +41,7 @@ function About({
   return (
     <div id="about-wrap"
       className={`w-full h-auto place-self-center grid  grid-cols-[1fr] grid-rows-auto gap-10 pb-0 bg-none shadow-md rounded-sm content-start ${className}
-      xl:grid-cols-[minmax(400px,600px)_5px_minmax(600px,1480px)] xl:min-h-screen xl:h-auto xl:grid-rows-[90px_auto] `}
+      xl:grid-cols-[minmax(400px,600px)_5px_minmax(600px,1480px)] xl:min-h-screen  xl:h-auto xl:grid-rows-[90px_auto] `}
     >
        {/* banner   */}
       <div className='col-span-full row-span-1 mt-4 '>
@@ -52,12 +60,12 @@ function About({
       <div className='bg-white -mt-3  z-0 xl:col-span-1 xl:row-span-1 row-span-1 col-span-1 xl:h-[100%] h-2 xl:w-[95%] xl:mr-0 xl:-ml-2 mr-4 ml-4 '>
       </div>
       
-      <div className="xl:h-full h-200 w-full cols-span-1 flex xl:flex-row xl:justify-end flex-col justify-start items-center
+      <div className="xl:h-full h-250 pb-6 w-full cols-span-1 flex xl:flex-row xl:justify-end flex-col justify-start items-center
        gap-3 bg-none shadow-md rounded-sm  ">
         <ExpandableDiv
           index="1"
           label="History"
-          imgId='edUW7cJ'
+          imgId="src/images/background/puchberg.jpeg"
           isActive={activeButton === "1"}
           sendState={setActiveButton}
         ><HistoryText></HistoryText> </ExpandableDiv>
@@ -67,6 +75,7 @@ function About({
           index="2"
           label="Endeavors"
           imgId='jRetXxS'
+          local={false}
           isActive={activeButton === "2"}
           sendState={setActiveButton}
         >
@@ -77,6 +86,7 @@ function About({
           index="3"
           label="Motivation"
           imgId='KvSDVHD'
+          local={false}
           isActive={activeButton === "3"}
           sendState={setActiveButton}
         >

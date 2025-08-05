@@ -31,7 +31,7 @@ function Blank({
     const windowCenter = window.innerHeight / 2;
     
     const distance = elementCenter - windowCenter; 
-    const parallaxOffset = -distance * speed;
+    const parallaxOffset = offset + -distance * speed;
     
     setOffsetY(parallaxOffset);
   }, [isInView]);

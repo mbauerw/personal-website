@@ -1,17 +1,69 @@
+import { useState } from 'react';
+import { GiAntibody, GiAnts } from "react-icons/gi";
 
+const GetMessage = ({fontStyle="text-black", bgStyle="bg-none"}) => {
 
-const GetMessage = () => {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [response, setResponse] = useState(null);
+  const [error, setError] = useState(null);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault;
+    setIsLoading(true);
+    setError(null);
+
+    try {
+      const response = await fetch('http://localhost:3000/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Somein bad happun');
+      }
+      setResponse(data);
+      console.log('Success:', data);
+      
+    } catch (err) {
+      setError(err.message);
+      console.error('Error:', err);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return(
-     <div className="bg-white p-10 rounded-2xl shadow-md">
-      <h3 className="text-2xl font-semibold text-gray-900 mb-6">
+     <div className={`p-10 rounded-2xl shadow-md bg-none ${bgStyle}`}>
+      <h3 className={`text-2xl font-semibold mb-6 text-black ${fontStyle}`}>
         Send Me a Message
       </h3>
       
-      <div>
+      <form onSubmit={handleSubmit}>
         {/* First Name & Last Name Row */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
           <div>
-            <label htmlFor="firstName" className="block mb-2 font-medium text-gray-700">
+            <label htmlFor="firstName" className={`block mb-2 font-medium text-gray-700 ${fontStyle}`}>
               First Name
             </label>
             <input
@@ -21,11 +73,11 @@ const GetMessage = () => {
               value={formData.firstName}
               onChange={handleInputChange}
               required
-              className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg text-base focus:outline-none focus:border-indigo-500 focus:ring-3 focus:ring-indigo-100 transition-all duration-200"
+              className="w-full px-4 py-3 bg-neutral-300 border-2 border-gray-200 rounded-lg text-base focus:outline-none focus:border-indigo-500 focus:ring-3 focus:ring-indigo-100 transition-all duration-200"
             />
           </div>
           <div>
-            <label htmlFor="lastName" className="block mb-2 font-medium text-gray-700">
+            <label htmlFor="lastName" className={`block mb-2 font-medium text-gray-700 ${fontStyle}`}>
               Last Name
             </label>
             <input
@@ -42,7 +94,7 @@ const GetMessage = () => {
 
         {/* Email */}
         <div className="mb-6">
-          <label htmlFor="email" className="block mb-2 font-medium text-gray-700">
+          <label htmlFor="email" className={`block mb-2 font-medium text-gray-700 ${fontStyle}`}>
             Email Address
           </label>
           <input
@@ -58,7 +110,7 @@ const GetMessage = () => {
 
         {/* Subject */}
         <div className="mb-6">
-          <label htmlFor="subject" className="block mb-2 font-medium text-gray-700">
+          <label htmlFor="subject" className={`block mb-2 font-medium text-gray-700 ${fontStyle}`}>
             Subject
           </label>
           <input
@@ -74,7 +126,7 @@ const GetMessage = () => {
 
         {/* Message */}
         <div className="mb-6">
-          <label htmlFor="message" className="block mb-2 font-medium text-gray-700">
+          <label htmlFor="message" className={`block mb-2 font-medium text-gray-700 ${fontStyle}`}>
             Message
           </label>
           <textarea
@@ -96,7 +148,9 @@ const GetMessage = () => {
         >
           {isSubmitting ? 'Sending...' : 'Send Message'}
         </button>
-      </div>
+      </form>S
      </div>
-  );
+  )
 }
+
+export default GetMessage;
