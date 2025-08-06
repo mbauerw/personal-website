@@ -2,32 +2,32 @@ import { Mail, Phone, MapPin } from "lucide-react";
 import { forwardRef } from "react";
 import Logos from "../Logos";
 
-const ContactInfo = forwardRef(({ height = "h-full", width = "w-full", fontColor="", className="" }, ref) => {
+const ContactInfo = forwardRef(({ height = "h-full", width = "w-full", fontStyle="", className="" }, ref) => {
 
   return(
   <div className={`bg-none ${height} ${width} grid grid-rows-[70px_1fr_1fr_1fr] grid-cols-[repeat(auto-fit,minmax(400px,1fr))] gap-5`}>
     <div className="h-full flex justify-center items-start w-full">
-      <h3 className={`text-4xl g4 font-semibold text-gray-900 mb-6 col-span-full row-span-1 p-5 ${fontColor}`}>
+      <h3 className={`text-4xl g4 font-semibold text-gray-900 mb-6 col-span-full row-span-1 p-5 ${fontStyle}`}>
         Contact Information
       </h3>
     </div>
     
     <div className="flex items-center justify-start py-4 border-b border-slate-200 last:border-b-0">
       <div className="w-1/5 flex justify-center">
-        <Mail color="white" size="50px"/>
+        <Mail  size="50px" className={fontStyle}/>
       </div>
       
       <div className="w-4/5 flex justify-start">
-        <p className="text-slate-200 text-2xl g4"> max.bauer.wd@gmail.com</p>
+        <p className={`text-slate-200 text-2xl g4 ${fontStyle}`}> max.bauer.wd@gmail.com</p>
       </div>
     </div>
     <div className="flex items-center py-4 border-b border-slate-200 last:border-b-0">
       <div className="w-1/5 flex justify-center">
-        <Phone color="white" size="50px"/>
+        <Phone className={fontStyle} size="50px"/>
       </div>
       <div className="w-4/5 flex justify-start">
         <p>
-          <a href="tel:+1234567890" className="text-white hover:text-purple-600 transition-colors duration-200 text-2xl g4">
+          <a href="tel:+1234567890" className={`text-white hover:text-purple-600 transition-colors duration-200 text-2xl g4 ${fontStyle}`}>
             +1 (234) 567-8900
           </a>
         </p>
@@ -37,11 +37,11 @@ const ContactInfo = forwardRef(({ height = "h-full", width = "w-full", fontColor
     </div>
     <div className="flex items-center py-4 border-b border-slate-200 last:border-b-0">
     <div className="w-1/5 flex justify-center">
-        <MapPin color="white" size="50px"/> 
+        <MapPin className={fontStyle} size="50px"/> 
       </div>
       <div className="w-4/5 flex justify-start">
         <p>
-          <a href="tel:+1234567890" className="text-white hover:text-purple-600 transition-colors duration-200 text-2xl g4">
+          <a href="tel:+1234567890" className={`text-white hover:text-purple-600 transition-colors duration-200 text-2xl g4 ${fontStyle}`}>
             Lansing, MI
           </a>
         </p>

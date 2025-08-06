@@ -4,9 +4,9 @@ import { SECTIONS } from '../constants/sections';
 
 
 
-function NavBar({showElement, heroRef, refs}) {
+function NavBar({showElement, heroRef, refs, navStyle = "bg-neutral-700 rounded-xl " }) {
 
-    const linkStyle = "text-neutral-300 hover:bg-neutral-900 hover:rounded-sm a3 md:flex hidden"
+    const linkStyle = "text-neutral-300 hover:bg-neutral-900 hover:rounded-md hover:-translate-y-[2px] transition-all duration-800 b5 md:flex hidden"
 
 
     const scrollToSection = (ref) => {
@@ -18,8 +18,8 @@ function NavBar({showElement, heroRef, refs}) {
 
     return (
       <nav 
-        className={`w-2/3 h-full bg-logo content-center transition-all transition-discrete ease-in-out duration-800
-          ${showElement ? 'opacity-100 duration-1600' : 'opacity-0 duration-800'}`}>
+        className={`w-2/3 h-full content-center transition-all transition-discrete ease-in-out duration-800
+          ${showElement ? 'opacity-100 duration-1600' : 'opacity-0 duration-800'} ${navStyle}`}>
         <ul 
           className={`transition-all transition-discrete md:flex md:justify-around   ${showElement ? 'opacity-100 duration-1000' : 'opacity-0 duration-800'} `}>
           <Link to="/" className={linkStyle}>HOME</Link>

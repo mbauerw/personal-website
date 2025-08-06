@@ -4,6 +4,9 @@ import { GiAntibody, GiAnts } from "react-icons/gi";
 import GetMessage from '../components/contact/GetMessage';
 
 function ContactSection() {
+
+  const fontStyle = 'p3 text-white dark:text-gray-300'
+  const bgStyle = ""
   
   
   return (
@@ -25,12 +28,12 @@ function ContactSection() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-15 items-start grid-rows-auto">
         
         <div className='bg-none col-span-2 row-span-1'>
-          <ContactInfo fontColor="text-white"></ContactInfo>
+          <ContactInfo fontStyle={fontStyle}></ContactInfo>
 
         </div>
 
         <div className='bg-none col-span-1 h-full row-span-1 flex flex-col justify-center items-center'>
-          <GiAntibody size="100%" color="white"/>
+          {/* <GiAntibody size="100%" className={fontStyle}/> */}
 
         </div>
       
@@ -38,13 +41,13 @@ function ContactSection() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-15 items-start">
         
         <div className='bg-none col-span-1 h-full row-span-1 flex flex-col justify-center items-center'>
-          <GiAnts size="100%" color="white"/>
+          {/* <GiAnts size="100%" className={fontStyle}/> */}
 
         </div>
       
         {/* getMessage container */}
-        <div className="bg-none p-10 col-span-2 rounded-2xl shadow-md">
-          <GetMessage bgStyle='bg-none' fontStyle='b6 text-white'></GetMessage>
+        <div className="bg-none p-10 col-span-2 rounded-2xl">
+          <GetMessage bgStyle='bg-none' fontStyle={fontStyle}></GetMessage>
           
         </div>
       </div>

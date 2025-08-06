@@ -51,6 +51,7 @@ const Home = ({ children }) => {
     "bg-[url('src/images/block2/sunrise_tree.jpg')]",
     "bg-[url('src/images/block2/rocky_mountain.jpg')]",
     "bg-[url('src/images/block2/lamps.jpg')]",
+    "bg-[url('src/images/block2/ceiling.jpg')]",
 
 
   ]
@@ -124,10 +125,10 @@ const Home = ({ children }) => {
 
       <Blank
         height={800}
-        offset={-100}
+        offset={0}
         label={"Second"}
         background={block2[7]} // block1[2] block1[1] backgrounds[5] block2[1]
-        className="opacity-100"
+        className="opacity-100 "
         speed={.5}
       >
 

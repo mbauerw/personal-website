@@ -54,7 +54,7 @@ const GetMessage = ({fontStyle="text-black", bgStyle="bg-none"}) => {
   };
 
   return(
-     <div className={`p-10 rounded-2xl shadow-md bg-none ${bgStyle}`}>
+     <div className={`p-10 rounded-2xl bg-none ${bgStyle}`}>
       <h3 className={`text-2xl font-semibold mb-6 text-black ${fontStyle}`}>
         Send Me a Message
       </h3>
@@ -73,7 +73,7 @@ const GetMessage = ({fontStyle="text-black", bgStyle="bg-none"}) => {
               value={formData.firstName}
               onChange={handleInputChange}
               required
-              className="w-full px-4 py-3 bg-neutral-300 border-2 border-gray-200 rounded-lg text-base focus:outline-none focus:border-indigo-500 focus:ring-3 focus:ring-indigo-100 transition-all duration-200"
+              className="w-full px-4 py-3 bg-neutral-300 border-2 border-gray-200 rounded-lg text-base focus:outline-none focus:border-gray-500 focus:ring-3 focus:ring-gray-100 transition-all duration-200"
             />
           </div>
           <div>
@@ -87,7 +87,7 @@ const GetMessage = ({fontStyle="text-black", bgStyle="bg-none"}) => {
               value={formData.lastName}
               onChange={handleInputChange}
               required
-              className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg text-base focus:outline-none focus:border-indigo-500 focus:ring-3 focus:ring-indigo-100 transition-all duration-200"
+              className="w-full px-4 py-3 bg-neutral-300 border-2 border-gray-200 rounded-lg text-base focus:outline-none focus:border-gray-500 focus:ring-3 focus:ring-gray-100 transition-all duration-200"
             />
           </div>
         </div>
@@ -104,8 +104,7 @@ const GetMessage = ({fontStyle="text-black", bgStyle="bg-none"}) => {
             value={formData.email}
             onChange={handleInputChange}
             required
-            className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg text-base focus:outline-none focus:border-indigo-500 focus:ring-3 focus:ring-indigo-100 transition-all duration-200"
-          />
+            className="w-full px-4 py-3 bg-neutral-300 border-2 border-gray-200 rounded-lg text-base focus:outline-none focus:border-gray-500 focus:ring-3 focus:ring-gray-100 transition-all duration-200"          />
         </div>
 
         {/* Subject */}
@@ -120,7 +119,7 @@ const GetMessage = ({fontStyle="text-black", bgStyle="bg-none"}) => {
             value={formData.subject}
             onChange={handleInputChange}
             required
-            className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg text-base focus:outline-none focus:border-indigo-500 focus:ring-3 focus:ring-indigo-100 transition-all duration-200"
+            className="w-full px-4 py-3 bg-neutral-300 border-2 border-gray-200 rounded-lg text-base focus:outline-none focus:border-gray-500 focus:ring-3 focus:ring-gray-100 transition-all duration-200"
           />
         </div>
 
@@ -136,19 +135,18 @@ const GetMessage = ({fontStyle="text-black", bgStyle="bg-none"}) => {
             onChange={handleInputChange}
             placeholder="Tell me about your project or how I can help you..."
             required
-            className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg text-base focus:outline-none focus:border-indigo-500 focus:ring-3 focus:ring-indigo-100 transition-all duration-200 resize-y min-h-32"
-          />
+            className="w-full px-4 py-3 bg-neutral-300 border-2 border-gray-200 rounded-lg text-base focus:outline-none focus:border-gray-500 focus:ring-3 focus:ring-gray-100 transition-all duration-200"          />
         </div>
 
         {/* Submit Button */}
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white border-none py-4 px-8 rounded-lg text-base font-semibold cursor-pointer transform hover:-translate-y-1 hover:shadow-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+          className="w-full bg-gradient-to-r from-gray-600 to-slate-600 text-white border-none py-4 px-8 rounded-lg text-base font-semibold cursor-pointer transform hover:-translate-y-1 hover:shadow-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
         >
           {isSubmitting ? 'Sending...' : 'Send Message'}
         </button>
-      </form>S
+      </form>
      </div>
   )
 }
