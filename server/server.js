@@ -1,4 +1,5 @@
 import express from 'express';
+import nodemailer from 'nodemailer';
 import cors from 'cors';
 
 const app = express();
@@ -35,6 +36,8 @@ app.post('/api/contact', validateInput, (req, res) => {
     data: req.validatedData 
   });
 });
+
+app.
 
 app.listen(3000, () => {
   console.log('Server on 3k Sire!');

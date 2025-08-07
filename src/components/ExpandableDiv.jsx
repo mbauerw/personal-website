@@ -7,7 +7,8 @@ function ExpandableDiv({
   imgId,
   local=true, 
   sendState, 
-  isActive, 
+  isActive,
+  contentClick, 
   height="xl:h-[80vh] h-24 min-h-24 ",
   width="xl:w-24 xl:min-w-24 w-[95vw]",
   expandedHeight="xl:h-[80vh] h-full ",
@@ -26,6 +27,11 @@ function ExpandableDiv({
   const mouseEnter = () => setHovered(true);
   const mouseLeave = () => setHovered(false);
 
+  useEffect(() => {
+    setExpanded(prev => !prev)
+
+  }, [contentClick]);
+
 
   return (
     <div 
@@ -33,16 +39,16 @@ function ExpandableDiv({
       onMouseEnter={mouseEnter}
       onMouseLeave={mouseLeave}
       className={`xl:transition-[width] transition-[height] ease-in-out duration-800 outline-1 outline-neutral-200 overflow-hidden cursor-pointer bg-white rounded
-        shadow-xl shadow-neutral-400 hover:outline-1 hover:outline-black 
+        shadow-xl shadow-neutral-400 hover:outline-1 hover:outline-black
         ${expanded ? `${expandedHeight} ${expandedWidth} ` : `${height} ${width}`} ${expanded ? 'hover:none' : 'hover:bg-blue-200'}
         ${expanded ? 'flex flex-col' : ''}
         `}
     >
       {!expanded && <p className={`font-bold text-4xl xl:[writing-mode:vertical-lr] xl:rotate-180 sm:!text-5xl md:!text-6xl p-4`}>{label}</p>}
       {/* {expanded && <div className="h-1/3 w-400 overflow-hidden"><Photo imgId={imgId} local={local}></Photo></div>} */}
-      {expanded && <div className="h-1/4 w-full overflow-hidden flex justify-center items-center bg-linear-to-br from-gray-200 to-slate-300"><p className='text-8xl a1 text-neutral-800'>{label}</p></div>}
+      {/* {expanded && <div className="h-1/4 w-full overflow-hidden flex justify-center items-center bg-linear-to-br from-gray-200 to-slate-300"><p className='text-8xl a1 text-neutral-800'>{label}</p></div>} */}
 
-      {expanded && <div className="h-2/3 w-full">{children}</div>} 
+      {expanded && <div className="h-full w-full">{children}</div>} 
       
       
     </div>

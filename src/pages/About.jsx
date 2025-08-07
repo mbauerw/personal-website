@@ -1,13 +1,17 @@
-import ExpandableDiv from "../components/ExpandableDiv";
 import React, { useState } from "react";
+import ExpandableDiv from "../components/ExpandableDiv";
+import Resume from "../components/Resume";
+import GridPhoto from "../components/GridPhoto";
 
-const HistoryText = () => {
-
-  const h_font = "a6 " 
-  const h_style = "text-[2.5cqw] col-span-1 row-span-1"
+const HistoryText = ({
+  h_font = "a6 p-2",
+  h_style = "xl:text-[4cqh] text-[5cqh] col-span-1 row-span-1",
+  p_style = "xl:text-[2cqh] text-[2.5cqh] row-span-1 justify-self-center self-center p-2",
+  banner = "bg-linear-to-br from-amber-500 to-amber-600" }) => {
 
   return (
-    <div className="w-full h-full bg-white grid grid-rows-[1fr_1fr_1fr_8fr]">
+    <div className="w-full h-full bg-white grid grid-rows-[2fr__1fr_1fr_1fr_4fr_2fr]">
+      <div className={`bg-amber-600 w-full h-full ${""}`}></div>
       <p className={`${h_style} ${h_font}`}>
         Born in Austria
       </p>
@@ -17,14 +21,21 @@ const HistoryText = () => {
       <p className={`${h_style} ${h_font} justify-self-end`}>
         Landed on the West Coast
       </p>
-      <p>
-
+      <p className={`${p_style}`}>
+        I've been lucky enough to have spent time living across the US and Europe. After spending some years sowing my oats in
+        California I refocused my goals and completed a Bachelors in Computer Science from UCSC in 2020.
+        <br />
+        <br />
+        For the past few years I worked
+        for Waymo on the Canary Triage team, performing front line KPI analysis of the most recent software versions for their autonomous vehciles.
+        I currently build websites and other web applications, specializing in React.
       </p>
-
+      <div className={`bg-amber-600 w-full h-full ${banner}`}></div>
 
     </div>
   )
 }
+
 
 function About({
   height = 900,
@@ -35,15 +46,20 @@ function About({
   const [activeButton, setActiveButton] = useState(null);
   const imageIds = ['edUW7cJ', 'jRetXxS', 'KvSDVHD', 'zs7lXPL', 'rfig4mQ', 'GdLn4KT']
 
-  const expandClass = ""
-  
+  const [contentExpand, setContentExpand] = useState(true);
+
+  const contentClick = () => {
+    setContentExpand(prev => !prev)
+    console.log("Content Clicked")
+  }
+
 
   return (
     <div id="about-wrap"
       className={`w-full h-auto place-self-center grid  grid-cols-[1fr] grid-rows-auto gap-10 pb-0 bg-none shadow-md rounded-sm content-start ${className}
       xl:grid-cols-[minmax(400px,600px)_5px_minmax(600px,1480px)] xl:min-h-screen  xl:h-auto xl:grid-rows-[90px_auto] `}
     >
-       {/* banner   */}
+      {/* banner   */}
       <div className='col-span-full row-span-1 mt-4 '>
         <div className='bg-linear-to-br from-amber-500 to-yellow-500  justify-self-center
          lg:h-16 lg:w-140 md:h-13 md:w-118 xs:h-11 xs:w-100 xs:max-w-[60%] h-1/2 max-w-[60%]'>
@@ -59,7 +75,7 @@ function About({
       {/* line */}
       <div className='bg-white -mt-3  z-0 xl:col-span-1 xl:row-span-1 row-span-1 col-span-1 xl:h-[100%] h-2 xl:w-[95%] xl:mr-0 xl:-ml-2 mr-4 ml-4 '>
       </div>
-      
+
       <div className="xl:h-full h-250 pb-6 w-full cols-span-1 flex xl:flex-row xl:justify-end flex-col justify-start items-center
        gap-3 bg-none shadow-md rounded-sm  ">
         <ExpandableDiv
@@ -69,17 +85,18 @@ function About({
           isActive={activeButton === "1"}
           sendState={setActiveButton}
         ><HistoryText></HistoryText> </ExpandableDiv>
-        
+
 
         <ExpandableDiv
           index="2"
-          label="Endeavors"
+          label="Resume"
           imgId='jRetXxS'
           local={false}
           isActive={activeButton === "2"}
           sendState={setActiveButton}
-        >
 
+        >
+          <Resume></Resume>
         </ExpandableDiv>
 
         <ExpandableDiv
@@ -90,7 +107,7 @@ function About({
           isActive={activeButton === "3"}
           sendState={setActiveButton}
         >
-
+          {/* <GridPhoto /> */}
         </ExpandableDiv>
       </div>
     </div>

@@ -2,12 +2,12 @@ import React, { useRef, useState, useEffect, useCallback } from "react";
 import { useInView } from 'motion/react';
 
 function Blank({
-  offset = 200,
+  offset = 0,
   height = 300,
   label = "",
   className = "",
   background = "",
-  speed = .4,
+  speed = .5,
   children
 }) {
   
@@ -31,19 +31,19 @@ function Blank({
     const windowCenter = window.innerHeight / 2;
     
     const distance = elementCenter - windowCenter; 
-    const parallaxOffset = offset + -distance * speed;
+    const parallaxOffset = offset - distance * speed;
     
     setOffsetY(parallaxOffset);
   }, [isInView]);
 
   useEffect(() => {
     if (!isInView) {
-      setOffsetY(0); // Reset when out of view
+      // setOffsetY(0);
       return;
     }
 
     const handleScroll = () => {
-      // Cancel previous frame
+      
       // if (rafRef.current) {
       //   cancelAnimationFrame(rafRef.current);
       // }
@@ -69,7 +69,7 @@ function Blank({
       ref={elementRef} 
       className={`w-full bg-repeat bg-cover flex flex-col justify-center ${background} ${className}`} 
       style={{
-        height: `${height}px`,
+        height: `${height}`,
         backgroundPosition: `center calc(50% + ${offsetY}px)`, 
         backgroundAttachment: 'scroll'
       }}

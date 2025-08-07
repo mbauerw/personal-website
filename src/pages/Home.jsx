@@ -101,7 +101,7 @@ const Home = ({ children }) => {
 
     <main className="">
       <Blank
-        height={viewportSize.height + 100}
+        height={"110vh"}
         offset={-50}
         label={"First"}
         background={block1[1]}
@@ -124,10 +124,10 @@ const Home = ({ children }) => {
       </div>
 
       <Blank
-        height={800}
-        offset={0}
+        height={"800px"}
+        offset={-100}
         label={"Second"}
-        background={block2[7]} // block1[2] block1[1] backgrounds[5] block2[1]
+        background={block2[7]} // block1[2] block1[1] backgrounds[5] block2[1] block2[7]
         className="opacity-100 "
         speed={.5}
       >
@@ -140,7 +140,7 @@ const Home = ({ children }) => {
         </About>
       </div>
       <Blank
-        height={600}
+        height={"600px"}
         label={"Third"}
         offset={offset}
         background={backgrounds[11]}
