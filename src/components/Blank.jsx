@@ -8,73 +8,64 @@ function Blank({
   className = "",
   background = "",
   speed = .5,
+  imgHeight = "120%",
   children
 }) {
-  
   const [offsetY, setOffsetY] = useState(0);
-  const elementRef = useRef(null);
-  const rafRef = useRef(null);
+  const ref = useRef(null);
 
-  // paralax stuff
-  const isInView = useInView(elementRef, {
+
+  const isInView = useInView(ref, {
     threshold: 0,
-    triggerOnce: false, 
-    rootMargin: '400px 0px 400px 0px'
+
+    once: false,
+
+    margin: "100px 0px 100px 0px"
   });
 
-  const calculateParallax = useCallback(() => {
-    if (!elementRef.current || !isInView) return;
-
-    const element = elementRef.current;
-    const rect = element.getBoundingClientRect();
-    const elementCenter = rect.top + rect.height / 2;
-    console.log("rect: " + label + " top: " + rect.top + "height: " + rect.height)
-    const windowCenter = window.innerHeight / 2;
-    
-    const distance = elementCenter - windowCenter; 
-    const parallaxOffset = offset - distance * speed;
-    
-    setOffsetY(parallaxOffset);
-  }, [isInView, offset, speed]);
-
   useEffect(() => {
-    if (!isInView) {
-      // setOffsetY(0);
-      return;
-    }
-
     const handleScroll = () => {
-      
-      // if (rafRef.current) {
-      //   cancelAnimationFrame(rafRef.current);
-      // }
-      
-      // Schedule new calculation
-      rafRef.current = requestAnimationFrame(calculateParallax);
+      if (isInView && ref.current) {
+        const rect = ref.current.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        
+        // Calculate how far the element has moved through the viewport
+        // When element enters from bottom: rect.top = windowHeight, progress = 0
+        // When element exits from top: rect.bottom = 0, progress = 1
+        const elementHeight = rect.height;
+        const totalDistance = windowHeight + elementHeight;
+        const progress = (windowHeight - rect.top) / totalDistance;
+        
+        // Apply the parallax offset based on progress
+        const maxOffset = elementHeight * .2; // Adjust this multiplier as needed
+        setOffsetY((progress - 0.5) * maxOffset * speed);
+      }     
     };
-    
 
-    calculateParallax();
-    
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      if (rafRef.current) {
-        cancelAnimationFrame(rafRef.current);
-      }
-    };
-  }, [isInView, calculateParallax]);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [speed, isInView]);
 
+  
   return (
     <div
-      ref={elementRef} 
-      className={`w-full bg-repeat bg-cover flex flex-col justify-center ${background} ${className}`} 
+      ref={ref}
+      className={`w-full relative flex bg-gray-200 flex-col justify-center overflow-hidden z-0 ${className}`} 
       style={{
-        height: `${height}`,
-        backgroundPosition: `center calc(50% + ${offsetY}px)`, 
-        backgroundAttachment: 'scroll'
+        height: `${height}`
       }}
     >
+      <img 
+        src={background}
+        alt={label}
+        className="z-1 absolute"
+        style={{
+          transform: `translateY(${offsetY + offset}px)`,
+          width: '100%',
+          height: `${imgHeight}`, // Make image larger to prevent gaps
+          objectFit: 'cover'
+        }}
+        />
       {children}
     </div>
   );

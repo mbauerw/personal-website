@@ -16,44 +16,42 @@ const Home = ({ children }) => {
 
   // background images
   const backgrounds = [
-    "bg-[url('src/images/background/african-safari-sunset.jpg')]",
-    "bg-[url('src/images/background/black_bench_full.avif')]",
-    "bg-[url('src/images/background/blueish_stars.jpg')]",
-    "bg-[url('src/images/background/canoe_lake.jpg')]",
-    "bg-[url('src/images/background/cat_watching_city.jpg')]",
-    "bg-[url('src/images/background/dark_stars.jpg')]",
-    "bg-[url('src/images/background/door_bench_trim.png')]",
-    "bg-[url('src/images/background/grey-brick-with-snow.jpg')]",
-    "bg-[url('src/images/background/misty_woods.avif')]",
-    "bg-[url('src/images/background/mountain_stars.jpg')]",
-    "bg-[url('src/images/background/only_stars.jpg')]",
-    "bg-[url('src/images/background/pixel_cabin.jpg')]",
-    "bg-[url('src/images/background/pixel_stars.png')]",
-    "bg-[url('src/images/background/purple_castle.jpg')]",
-    "bg-[url('src/images/background/purple_smudge.jpg')]",
-    "bg-[url('src/images/background/stars_clouds_deep_blue.jpg')]",
-    "bg-[url('src/images/background/time_lapse_sky_mountains.avif')]"
+    'src/images/background/african-safari-sunset.jpg',
+    'src/images/background/black_bench_full.avif',
+    'src/images/background/blueish_stars.jpg',
+    'src/images/background/canoe_lake.jpg',
+    'src/images/background/cat_watching_city.jpg',
+    'src/images/background/dark_stars.jpg',
+    'src/images/background/door_bench_trim.png',
+    'src/images/background/grey-brick-with-snow.jpg',
+    'src/images/background/misty_woods.avif',
+    'src/images/background/mountain_stars.jpg',
+    'src/images/background/only_stars.jpg',
+    'src/images/background/pixel_cabin.jpg',
+    'src/images/background/pixel_stars.png',
+    'src/images/background/purple_castle.jpg',
+    'src/images/background/purple_smudge.jpg',
+    'src/images/background/stars_clouds_deep_blue.jpg',
+    'src/images/background/time_lapse_sky_mountains.avif'
   ]
 
   const block1 = [
-    "bg-[url('src/images/block1/candle.jpg')]",
-    "bg-[url('src/images/block1/dot_lights.jpg')]",
-    "bg-[url('src/images/block1/lamp_brick.jpg')]",
-    "bg-[url('src/images/block1/stars.jpg')]"
+    'src/images/block1/candle.jpg',
+    'src/images/block1/dot_lights.jpg',
+    'src/images/block1/lamp_brick.jpg',
+    'src/images/block1/stars.jpg'
   ]
 
   const block2 = [
-    "bg-[url('src/images/block2/canon_road.jpg')]",
-    "bg-[url('src/images/block2/mountain_sky.jpg')]",
-    "bg-[url('src/images/block2/road_forrest.jpg')]",
-    "bg-[url('src/images/block2/snow_path.jpg')]",
-    "bg-[url('src/images/block2/snow_tree.jpg')]",
-    "bg-[url('src/images/block2/sunrise_tree.jpg')]",
-    "bg-[url('src/images/block2/rocky_mountain.jpg')]",
-    "bg-[url('src/images/block2/lamps.jpg')]",
-    "bg-[url('src/images/block2/ceiling.jpg')]",
-
-
+    'src/images/block2/canon_road.jpg',
+    'src/images/block2/mountain_sky.jpg',
+    'src/images/block2/road_forrest.jpg',
+    'src/images/block2/snow_path.jpg',
+    'src/images/block2/snow_tree.jpg',
+    'src/images/block2/sunrise_tree.jpg',
+    'src/images/block2/rocky_mountain.jpg',
+    'src/images/block2/lamps.jpg',
+    'src/images/block2/ceiling.jpg',
   ]
 
   const [viewportSize, setViewportSize] = useState({
@@ -102,18 +100,18 @@ const Home = ({ children }) => {
     <main className="">
       <Blank
         height={"110vh"}
-        offset={-50}
+        offset={0}
         label={"First"}
         background={block1[1]}
-        speed={.5}
-        className="bg-size-[100%_110%]"
+        speed={3}
       >
         <BouncingArrow
           ref={heroRef}
           title="Max Bauer"
           onClick={(ref) => scrollToSection(ref)}
-          className=" dark:bg-none dark:hover:bg-black/20"
-        ></BouncingArrow>
+          className=" dark:bg-none dark:hover:bg-black/20 z-20"
+        >
+        </BouncingArrow>
       </Blank>
       <div id={SECTIONS.HOME.HERO}>
         <Hero
@@ -124,12 +122,11 @@ const Home = ({ children }) => {
       </div>
 
       <Blank
-        height={"800px"}
-        offset={-100}
-        label={"Second"}
-        background={block2[7]} // block1[2] block1[1] backgrounds[5] block2[1] block2[7]
-        className="opacity-100 "
-        speed={.5}
+        height={"70vh"}
+        offset={0}
+        label={"second"}
+        background={block2[7]}
+        speed={3}
       >
 
       </Blank>
@@ -142,9 +139,11 @@ const Home = ({ children }) => {
       <Blank
         height={"600px"}
         label={"Third"}
-        offset={offset}
+        offset={0}
         background={backgrounds[11]}
+        imgHeight="120%"
         className="opacity-90"
+        speed={3}
       ></Blank>
     </main>
 
