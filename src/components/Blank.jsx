@@ -19,7 +19,7 @@ function Blank({
   const isInView = useInView(elementRef, {
     threshold: 0,
     triggerOnce: false, 
-    rootMargin: '200px 0px 200px 0px'
+    rootMargin: '400px 0px 400px 0px'
   });
 
   const calculateParallax = useCallback(() => {
@@ -35,7 +35,7 @@ function Blank({
     const parallaxOffset = offset - distance * speed;
     
     setOffsetY(parallaxOffset);
-  }, [isInView]);
+  }, [isInView, offset, speed]);
 
   useEffect(() => {
     if (!isInView) {
