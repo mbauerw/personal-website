@@ -28,6 +28,7 @@ function Blank({
     const element = elementRef.current;
     const rect = element.getBoundingClientRect();
     const elementCenter = rect.top + rect.height / 2;
+    console.log("rect: " + label + " top: " + rect.top + "height: " + rect.height)
     const windowCenter = window.innerHeight / 2;
     
     const distance = elementCenter - windowCenter; 
@@ -85,57 +86,6 @@ export default Blank;
 
 
 
-// import React, { useRef, useState, useEffect } from "react";
-// import { useInView } from 'motion/react';
-
-// function Blank({
-//   offset = 200,
-//   height = 300,
-//   label = "",
-//   className = "",
-//   background = "",
-//   speed = 0.4,
-//   children
-// }) {
-  
-//   const [offsetY, setOffsetY] = useState(0);
-//   const elementRef = useRef(null);
-
-//   // Pass the ref directly as first argument
-//   const isInView = useInView(elementRef, {
-//     threshold: 0,
-//     triggerOnce: false, 
-//     rootMargin: '0px 0px' 
-    
-//   });
-
-//   useEffect(() => {
-//     const handleScroll = () => {
-//         setOffsetY(window.pageYOffset);
-//         console.log(" This is the div in view: " + label);
-//         console.log("pageYOffset: " + window.pageYOffset * speed);         
-//     };
-    
-//     window.addEventListener('scroll', handleScroll, { passive: true });
-//     return () => window.removeEventListener('scroll', handleScroll);    
-//   }, [isInView]); 
-
-//   return (
-//     <div
-//       ref={elementRef} 
-//       className={`w-full bg-repeat bg-cover flex flex-col justify-center ${background} ${className}`} 
-//       style={{
-//         height: `${height}px`,
-//         backgroundPosition: `center ${offsetY}px`, 
-//         backgroundAttachment: 'scroll'
-//       }}
-//     >
-//       {children}
-//     </div>
-//   );
-// }
-
-// export default Blank;
 
 
 

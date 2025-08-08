@@ -24,7 +24,7 @@ const GetMessage = ({fontStyle="text-black", bgStyle="bg-none"}) => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault;
+    e.preventDefault();
     setIsLoading(true);
     setError(null);
 
@@ -43,7 +43,7 @@ const GetMessage = ({fontStyle="text-black", bgStyle="bg-none"}) => {
         throw new Error(data.error || 'Somein bad happun');
       }
       setResponse(data);
-      console.log('Success:', data);
+      console.log('Success asdfasdfasdfsdfasdf:', data);
       
     } catch (err) {
       setError(err.message);

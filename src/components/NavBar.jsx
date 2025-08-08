@@ -6,7 +6,7 @@ import { SECTIONS } from '../constants/sections';
 
 function NavBar({showElement, heroRef, refs, navStyle = "bg-neutral-700 rounded-xl " }) {
 
-    const linkStyle = "text-neutral-300 hover:bg-neutral-900 hover:rounded-md hover:-translate-y-[2px] transition-all duration-800 b5 md:flex hidden"
+    const linkStyle = "text-neutral-300 hover:bg-neutral-800 hover:rounded-md hover:-translate-y-[2px] hover:shadow-sm hover:shadow-neutral-900 transition-all duration-800 b5 md:flex hidden"
 
 
     const scrollToSection = (ref) => {
