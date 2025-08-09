@@ -8,7 +8,7 @@ const Resume = ({onClick}) => {
   return (
     <div className="relative w-full h-full"> 
       <iframe 
-        src="src/assets/resume-light.pdf#toolbar=0&zoom=95"
+        src="src/assets/resume-light.pdf#zoom=95"
         width="100%"
         height="100%"
         title="Resume"

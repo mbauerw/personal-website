@@ -122,10 +122,11 @@ const Home = ({ children }) => {
       </div>
 
       <Blank
-        height={"70vh"}
+        height={"90vh"}
         offset={0}
         label={"second"}
-        background={block2[7]}
+        background={backgrounds[1]}
+        imgheight="90%"
         speed={3}
       >
 
@@ -142,7 +143,7 @@ const Home = ({ children }) => {
         offset={0}
         background={backgrounds[11]}
         imgHeight="120%"
-        className="opacity-90"
+        className="opacity-100"
         speed={3}
       ></Blank>
     </main>

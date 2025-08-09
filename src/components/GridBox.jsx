@@ -4,7 +4,7 @@
 const GridBox = ({thumb, title, description, category, className, children} ) => {
 
   return (
-    <div className="relative aspect-square bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer group">
+    <div className="relative  aspect-square bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer group">
       <div className={`w-full h-[70%] bg-contain bg-center bg-no-repeat relative ${thumb} ${className}`}>
           <div className="absolute inset-0 bg-black/90 bg-opacity-40 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <div className="h-1/2 flex flex-col justify-end items-center pb-5">

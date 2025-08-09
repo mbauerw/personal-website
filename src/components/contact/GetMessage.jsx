@@ -53,6 +53,9 @@ const GetMessage = ({fontStyle="text-black", bgStyle="bg-none"}) => {
     }
   };
 
+  // styles
+  const inputStyle = "w-full px-4 py-3 bg-neutral-100 border-2 border-gray-200 rounded-lg text-base focus:outline-none focus:border-gray-500 focus:ring-3 focus:ring-gray-100 transition-all duration-200"
+
   return(
      <div className={`p-10 rounded-2xl bg-none ${bgStyle}`}>
       <h3 className={`text-2xl font-semibold mb-6 text-black ${fontStyle}`}>
@@ -73,7 +76,7 @@ const GetMessage = ({fontStyle="text-black", bgStyle="bg-none"}) => {
               value={formData.firstName}
               onChange={handleInputChange}
               required
-              className="w-full px-4 py-3 bg-neutral-300 border-2 border-gray-200 rounded-lg text-base focus:outline-none focus:border-gray-500 focus:ring-3 focus:ring-gray-100 transition-all duration-200"
+              className={inputStyle}
             />
           </div>
           <div>
@@ -87,8 +90,7 @@ const GetMessage = ({fontStyle="text-black", bgStyle="bg-none"}) => {
               value={formData.lastName}
               onChange={handleInputChange}
               required
-              className="w-full px-4 py-3 bg-neutral-300 border-2 border-gray-200 rounded-lg text-base focus:outline-none focus:border-gray-500 focus:ring-3 focus:ring-gray-100 transition-all duration-200"
-            />
+              className={inputStyle}            />
           </div>
         </div>
 
@@ -104,7 +106,7 @@ const GetMessage = ({fontStyle="text-black", bgStyle="bg-none"}) => {
             value={formData.email}
             onChange={handleInputChange}
             required
-            className="w-full px-4 py-3 bg-neutral-300 border-2 border-gray-200 rounded-lg text-base focus:outline-none focus:border-gray-500 focus:ring-3 focus:ring-gray-100 transition-all duration-200"          />
+            className={inputStyle}            />
         </div>
 
         {/* Subject */}
@@ -119,8 +121,7 @@ const GetMessage = ({fontStyle="text-black", bgStyle="bg-none"}) => {
             value={formData.subject}
             onChange={handleInputChange}
             required
-            className="w-full px-4 py-3 bg-neutral-300 border-2 border-gray-200 rounded-lg text-base focus:outline-none focus:border-gray-500 focus:ring-3 focus:ring-gray-100 transition-all duration-200"
-          />
+            className={inputStyle}          />
         </div>
 
         {/* Message */}
@@ -135,7 +136,8 @@ const GetMessage = ({fontStyle="text-black", bgStyle="bg-none"}) => {
             onChange={handleInputChange}
             placeholder="Tell me about your project or how I can help you..."
             required
-            className="w-full px-4 py-3 bg-neutral-300 border-2 border-gray-200 rounded-lg text-base focus:outline-none focus:border-gray-500 focus:ring-3 focus:ring-gray-100 transition-all duration-200"          />
+            className={inputStyle}           
+            />
         </div>
 
         {/* Submit Button */}

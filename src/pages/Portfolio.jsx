@@ -25,11 +25,11 @@ function Portfolio() {
   const gdplink = (<Link to="/gdp" className="bg-white bg-opacity-90 text-slate-700 px-5 py-2.5 rounded-full font-medium no-underline hover:bg-white transition-colors duration-300">View Project</Link>);
 
   return (
-    <div className="bg-gray-800/80 w-full h-[140vh]">
+    <div className="bg-gray-800/40 w-full h-[140vh]">
       <section class="max-w-6xl mx-auto mt-26">
         <div class="text-center mb-12">
-          <h2 class="text-5xl p3 md:text-5xl text-stone-300 mb-2 font-bold">My Portfolio</h2>
-          <p class="text-lg p3  text-stone-300">Explore my latest projects and creative work</p>
+          <h2 class="text-5xl p3 md:text-5xl text-stone-100 mb-2 font-bold">My Stuff</h2>
+          <p class="text-lg p3  text-stone-100">Explore my latest projects and creative work</p>
         </div>
 
         <div class="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] md:grid-rows-[repeat(auto-fit,minmax(350px,1fr))] gap-6 md:gap-10 py-3">

@@ -101,7 +101,7 @@ function About({
 
         <ExpandableDiv
           index="3"
-          label="Motivation"
+          label="Aspirations"
           imgId='KvSDVHD'
           local={false}
           isActive={activeButton === "3"}

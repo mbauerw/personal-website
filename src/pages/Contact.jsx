@@ -12,7 +12,7 @@ function ContactSection() {
   return (
     <div className='h-full bg-slate-600/50 '>
 
-    <section className="h-full max-w-6xl mx-auto px-5 py-20 dark:bg-slate-800 bg-slate-200">
+    <section className="h-full max-w-6xl mx-auto px-5 py-20 dark:bg-slate-800 bg-slate-800">
       {/* Section Header */}
       <div className="text-center mb-15">
         <h2 className="text-4xl font-bold dark:text-slate-200 text-gray-900 mb-4 p3">
