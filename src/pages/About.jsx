@@ -7,11 +7,12 @@ const HistoryText = ({
   h_font = "a6 p-2",
   h_style = "xl:text-[4cqh] text-[5cqh] col-span-1 row-span-1",
   p_style = "xl:text-[2cqh] text-[2.5cqh] row-span-1 justify-self-center self-center p-2",
-  banner = "bg-linear-to-br from-amber-500 to-amber-600" }) => {
+  banner = "bg-gradient-to-br from-amber-400 from-8% via-white via-20% to-white to-1%", 
+  banner2 = "bg-linear-to-bl from-amber-600 to-amber-300"}) => {
 
   return (
-    <div className="w-full h-full bg-white grid grid-rows-[2fr__1fr_1fr_1fr_4fr_2fr]">
-      <div className={`bg-amber-600 w-full h-full ${""}`}></div>
+    <div className={`w-full h-full grid grid-rows-[2fr__1fr_1fr_1fr_4fr_2fr] ${""}`}>
+      <div className={` w-full h-full ${banner2}`}></div>
       <p className={`${h_style} ${h_font}`}>
         Born in Austria
       </p>
@@ -30,7 +31,7 @@ const HistoryText = ({
         for Waymo on the Canary Triage team, performing front line KPI analysis of the most recent software versions for their autonomous vehciles.
         I currently build websites and other web applications, specializing in React.
       </p>
-      <div className={`bg-amber-600 w-full h-full ${banner}`}></div>
+      <div className={` w-full h-full ${banner2}`}></div>
 
     </div>
   )

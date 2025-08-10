@@ -6,7 +6,7 @@ import Dropdown from "./Dropdown";
 
 
 
-const Header = ({ heroRef, aboutRef, refs, headerStyle = "bg-neutral-600" }) => {
+const Header = ({ heroRef, aboutRef, refs, headerStyle = "bg-neutral-700" }) => {
 
   const [showElement, setShowElement] = useState(true);
   const [pastScroll, setPastScroll] = useState(false);

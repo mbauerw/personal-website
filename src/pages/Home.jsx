@@ -123,7 +123,7 @@ const Home = ({ children }) => {
 
       <Blank
         height={"90vh"}
-        offset={0}
+        offset={-50}
         label={"second"}
         background={backgrounds[1]}
         imgheight="90%"

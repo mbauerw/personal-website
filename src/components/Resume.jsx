@@ -18,10 +18,10 @@ const Resume = ({onClick}) => {
         onClick={handleClick}
         style={{
           position: 'absolute',
-          top: 0,
+          top: 40,
           left: 0,
           width: '95%',
-          height: '95%',
+          height: '90%',
           backgroundColor: 'transparent',
           cursor: 'pointer'
         }}

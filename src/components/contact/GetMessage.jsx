@@ -57,14 +57,14 @@ const GetMessage = ({fontStyle="text-black", bgStyle="bg-none"}) => {
   const inputStyle = "w-full px-4 py-3 bg-neutral-100 border-2 border-gray-200 rounded-lg text-base focus:outline-none focus:border-gray-500 focus:ring-3 focus:ring-gray-100 transition-all duration-200"
 
   return(
-     <div className={`p-10 rounded-2xl bg-none ${bgStyle}`}>
+     <div className={`p-5 rounded-2xl bg-none ${bgStyle} `}>
       <h3 className={`text-2xl font-semibold mb-6 text-black ${fontStyle}`}>
         Send Me a Message
       </h3>
       
       <form onSubmit={handleSubmit}>
         {/* First Name & Last Name Row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <div id="names" className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
           <div>
             <label htmlFor="firstName" className={`block mb-2 font-medium text-gray-700 ${fontStyle}`}>
               First Name

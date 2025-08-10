@@ -12,6 +12,10 @@ const Hero = forwardRef(({ height = 900, minHeight = 900, className = "" }, ref)
   const mouseEnter = () => setHovered(true);
   const mouseLeave = () => setHovered(false);
 
+  const boxStyle = `group w-1/2 xs:min-w-100 min-w-[72%] z-1 p3 xs:!text-4xl text-3xl bg-neutral-100 shadow-lg shadow-black antialiased border-gray-300 border-4 border-b-gray-400 p-10 rounded-xl 
+  hover:z-11 hover:w-full hover:!text-5xl hover:overflow-visible hover:w-full hover:-ml-2  hover:whitespace-normal hover:min-h-60 
+  sm:hover:h-100 md:hover:h-80 lg:hover:h-70 hover:h-140 hover:p-4 lg:-ml-16 lg:mr-4 lg:-mt-8 -ml-2 mr-2 truncate transision-all duration-1000 transform hover:-translate-y-14`
+
   return (
     <div
       id="hero-wrap"
@@ -33,9 +37,7 @@ const Hero = forwardRef(({ height = 900, minHeight = 900, className = "" }, ref)
           lg:-ml-32 lg:mr-0 -ml-4 mr-4 truncate transition-all duration-1000 transform hover:-translate-y-6  '>
           Hello, I'm  <a className="group-hover:text-blue-800 group-hover:font-semibold group-hover:text-7xl transition-all duration-400"> Max </a> 
           </p>
-        <p className='group w-1/2 xs:min-w-100 min-w-[72%] z-1 p3 xs:text-4xl text-3xl bg-neutral-100 shadow-lg shadow-black antialiased border-gray-300 border-4 border-b-gray-400 p-10 rounded-xl 
-          hover:z-11 hover:w-full hover:!text-5xl hover:overflow-visible hover:w-full hover:-ml-2  hover:whitespace-normal hover:min-h-60 sm:hover:h-100 md:hover:h-80 lg:hover:h-60 hover:h-140 hover:p-4
-          lg:-ml-16 lg:mr-4 lg:-mt-8 -ml-2 mr-2 truncate transision-all duration-1000 transform hover:-translate-y-14  '>
+        <p className={`${boxStyle}`}>
           Passions: <a className="group-hover:underline group-hover:text-red-600">Music</a>, learning, <Link to="/portfolio" className="group-hover:underline group-hover:decoration-wavy group-hover:text-emerald-500 transision-all duration-500">web development</Link>, reading,
           guitar (electric == classical), piano, tennis, greek yogurt
           </p>

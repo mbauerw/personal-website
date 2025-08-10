@@ -7,7 +7,7 @@ const ContactInfo = forwardRef(({ height = "h-full", width = "w-full", fontStyle
   return(
   <div className={`bg-none ${height} ${width} grid grid-rows-[70px_1fr_1fr_1fr] grid-cols-[repeat(auto-fit,minmax(400px,1fr))] gap-5`}>
     <div className="h-full flex justify-center items-start w-full">
-      <h3 className={`text-4xl g4 font-semibold text-gray-900 mb-6 col-span-full row-span-1 p-5 ${fontStyle}`}>
+      <h3 className={`text-3xl g4 font-semibold text-gray-900 mb-6 col-span-full row-span-1 p-5 ${fontStyle}`}>
         Contact Information
       </h3>
     </div>
@@ -49,7 +49,7 @@ const ContactInfo = forwardRef(({ height = "h-full", width = "w-full", fontStyle
       </div>
     </div>
     <div className="col-span-full h-full flex items-center justify-center py-4 border-b border-slate-200 last:border-b-0">
-      <Logos position={"relative h-full"} showElement={true} iconSize={"w-10 h-10"}/>
+      <Logos position={"relative h-full"} showElement={true} iconSize={"w-10 h-10 hover:text-neutral-600 transition-[color] duration-400"}/>
     </div>
     
 
