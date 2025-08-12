@@ -2,7 +2,8 @@
 export const SECTIONS = {
   HOME: {
     HERO: 'hero',
-    ABOUT: 'about' 
+    ABOUT: 'about',
+    SKILLS: 'skills'
   },
   SERVICES: {
     PRICING: 'pricing',

@@ -12,7 +12,7 @@ import SkillsSection from "../components/skills/SkillSection";
 
 const Home = ({ children }) => {
 
-  const { heroRef, aboutRef } = useOutletContext();
+  const { heroRef, aboutRef, skillsRef } = useOutletContext();
   const [offset, setOffset] = useState(0);
 
   // background images
@@ -121,25 +121,22 @@ const Home = ({ children }) => {
           ref={heroRef}>
         </Hero>
       </div>
-
-      {/* <Blank
-        height={"90vh"}
-        offset={-50}
-        label={"second"}
-        background={""}
-        className="opacity-95"
-        imgheight="90%"
-        speed={3}
-      >
-        
-      </Blank> */}
-      <SkillsSection />
-      <div id={SECTIONS.HOME.ABOUT}>
-        <About
-          className={`bg-slate-900/90`}
-          ref={aboutRef}>
-        </About>
+      <div className="relative">
+        <div id={SECTIONS.HOME.SKILLS} className="absolute mt-15">
+        </div>
+        <SkillsSection ref={skillsRef} />
       </div>
+
+      <div className="relative">
+        <div id={SECTIONS.HOME.ABOUT} className="absolute mt-5">
+        </div> 
+          <About
+            className={`bg-slate-900/90`}
+            ref={aboutRef}>
+          </About>
+        
+      </div>
+
       <Blank
         height={"600px"}
         label={"Third"}

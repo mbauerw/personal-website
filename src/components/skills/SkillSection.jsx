@@ -1,13 +1,13 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, forwardRef } from 'react';
 import StarRating from './StarRating';
 
-const SkillsSection = ({
+const SkillsSection = forwardRef(({
   title = "Technical Skills",
   subtitle = "A comprehensive overview of my development expertise across various technologies and frameworks",
   summaryTitle = "Constantly Learning & Evolving",
   summaryText = "I'm passionate about staying current with emerging technologies and best practices in web development. Always excited to take on new challenges and expand my skill set!",
   skillsData = null
-}) => {
+}, ref ) => {
   const [isVisible, setIsVisible] = useState(true);
   const categoryRefs = useRef([]);
 
@@ -47,9 +47,9 @@ const SkillsSection = ({
     {
       category: "",
       skills: [
-        { name: "Git & GitHub", rating: 5, level: "Expert" },
-        { name: "Docker", rating: 3, level: "Intermediate" },
-        { name: "VS Code", rating: 5, level: "Expert" }
+        { name: "Git & GitHub", rating: 4, level: "Advanced" },
+        { name: "Bash", rating: 3, level: "Intermediate" },
+        { name: "VS Code", rating: 4, level: "Advanced" }
       ]
     }
   ];
@@ -81,7 +81,7 @@ const SkillsSection = ({
   const SkillItem = ({ skill }) => (
     <div className="flex justify-between max-w-[95vw]  items-center mb-2 py-3">
       <span className="text-gray-700 xl:!text-xl text-lg font-medium a6">{skill.name}</span>
-      <div className="flex sm:max-w-2/5 sm:w-1/2 max-w-1/2  flex-row sm:justify-between justify-start ">
+      <div className="flex xl:max-w-2/6 sm:max-w-2/5 sm:w-1/2 max-w-1/2  flex-row sm:justify-between justify-start ">
         <StarRating rating={skill.rating} skillName={skill.name} />
         <span className="text-md text-gray-500 ml-2 a3 font-medium">{skill.level}</span>
       </div>
@@ -105,9 +105,10 @@ const SkillsSection = ({
   return (
     <div className="font-sans bg-none p-10 md:p-5 min-h-[140vh]">
       <div
+        ref={ref}
         className={`min-w-[70vw] w-[85vw] h-auto place-self-center grid  grid-cols-1 grid-rows-auto lg:gap-10 gap-8 pb-0 bg-none  content-start
-        grid-cols-[repeat] min-h-screen  h-auto grid-rows-[90px_auto] pt-10 `}>
-        <div className='col-span-full row-span-1 mt-4 '>
+        grid-cols-[repeat] min-h-screen  h-auto grid-rows-[90px_auto] mt-10 `}>
+        <div className='col-span-full row-span-1 mt-4 ' >
           <div className='bg-linear-to-br from-gray-500 to-slate-500  justify-self-center
           lg:h-16 lg:w-80 md:h-13 md:w-60 xs:h-11 xs:w-50 xs:max-w-[60%] h-1/2 max-w-[60%]'>
             <p className='text-neutral-700 py-1 sm:ml-7 a6 sm:pt-2 weight-500 lg:text-8xl lg:w-80 md:text-7xl md:w-60 sm:text-6xl xs:w-[110%] xs:text-[9cqw] w-[110%] text-[8cqw] ml-3'>
@@ -131,7 +132,7 @@ const SkillsSection = ({
               />
             ))}
           </div>
-          <div className="row-span-1 col-span-1 flex flex-col justify-start space-y-10 ">
+          <div className="row-span-1 col-span-1 flex flex-col justify-around space-y-2 ">
             <div className='relative flex flex-col justify-center items-center h-20'>
               <h1 className='text-center a6'>Database & Cloud</h1>
               <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-40 h-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full"></div>
@@ -160,6 +161,6 @@ const SkillsSection = ({
       </div>
     </div>
   );
-};
+});
 
 export default SkillsSection;

@@ -19,7 +19,7 @@ const Hero = forwardRef(({ height = 900, minHeight = 900, className = "" }, ref)
   return (
     <div
       id="hero-wrap"
-      className={`w-full justify-center min-h-[1800px] ${className} grid lg:grid-cols-[4fr_5px_2fr] md:grid-rows-[1fr_6fr] grid-rows-[100px_6fr] grid-cols-1 space-y-30 lg:min-h-[1000px] lg:max-h-[1000px] pt-5 `}
+      className={`w-full justify-center min-h-[1800px] ${className} grid lg:grid-cols-[4fr_5px_2fr] md:grid-rows-[1fr_6fr] grid-rows-[100px_6fr] grid-cols-1 space-y-30 lg:min-h-[1000px] lg:max-h-[1024px] pt-5 `}
       ref={ref}>
       {/* banner   */}
       <div className='col-span-full row-span-1 w-full justify-self-center'>

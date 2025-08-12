@@ -13,39 +13,49 @@ function Portfolio({
   // parallax 
   const [offsetY, setOffsetY] = useState(0);
   const ref = useRef(null);
+  const [isInitialized, setIsInitialized] = useState(false);
 
   const background = "src/images/block1/lamp_brick.jpg";
 
   const isInView = useInView(ref, {
     threshold: 0,
-
-    once: false,
-
-    margin: "100px 0px 100px 0px"
+    once: true,
+    margin: "200px 0px 200px 0px"
   });
 
+  const calculateParallaxOffset = useCallback(() => {
+    if (isInView && ref.current) {
+      const rect = ref.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      
+      const elementHeight = rect.height;
+      const totalDistance = windowHeight + elementHeight;
+      const progress = (windowHeight - rect.top) / totalDistance;
+      
+      const maxOffset = elementHeight * .2;
+      return (progress - 0.5) * maxOffset * speed;
+    }
+    return 0;
+  }, [speed, isInView]);
+
+  // Initialize parallax position and set up scroll handler
   useEffect(() => {
     const handleScroll = () => {
       if (isInView && ref.current) {
-        const rect = ref.current.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        
-        // Calculate how far the element has moved through the viewport
-        // When element enters from bottom: rect.top = windowHeight, progress = 0
-        // When element exits from top: rect.bottom = 0, progress = 1
-        const elementHeight = rect.height;
-        const totalDistance = windowHeight + elementHeight;
-        const progress = (windowHeight - rect.top) / totalDistance;
-        
-        // Apply the parallax offset based on progress
-        const maxOffset = elementHeight * .2; // Adjust this multiplier as needed
-        setOffsetY((progress - 0.5) * maxOffset * speed);
+        const newOffset = calculateParallaxOffset();
+        setOffsetY(newOffset);
       }     
     };
 
+    // Calculate initial position immediately
+    if (isInView && !isInitialized) {
+      handleScroll(); // This will set the initial position
+      setIsInitialized(true);
+    }
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [speed, isInView]);
+  }, [calculateParallaxOffset, isInView, isInitialized]);
      
 
   const thumbs = [
@@ -58,29 +68,21 @@ function Portfolio({
   ]
 
   const portLink = (<a href="#" className="bg-white bg-opacity-90 text-slate-700 px-5 py-2.5 rounded-full font-medium no-underline hover:bg-white transition-colors duration-300">View Project</a>)
-  const gdpPop = (<iframe 
-      src="src/assets/gdp-pop.html"
-      width="100%" 
-      height="900"
-      title="Example"
-     
-    />
-  );
-
+  
   const gdplink = (<Link to="/gdp" className="bg-white bg-opacity-90 text-slate-700 px-5 py-2.5 rounded-full font-medium no-underline hover:bg-white transition-colors duration-300">View Project</Link>);
 
   return (
     <div
       ref={ref}
-      className="relative bg-none w-full min-h-[140vh] h-full z-0">
+      className="relative bg-none w-full min-h-[140vh] h-[140vh] z-0">
       <img 
         src={background}
         alt={label}
-        className="-z-1 absolute opacity-92"
+        className="-z-1 absolute opacity-92 transition-transform duration-0"
         style={{
           transform: `translateY(${offsetY + offset}px)`,
           width: '100%',
-          height: `${imgHeight}`, // Make image larger to prevent gaps
+          height: `${imgHeight}`,
           objectFit: 'cover'
         }}
         />
@@ -108,5 +110,3 @@ function Portfolio({
 }
 
 export default Portfolio;
-
-{/* <iframe src="src/assets/gdp-pop.html" width="100%" height="1100px"></iframe> */ }

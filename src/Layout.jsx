@@ -15,9 +15,10 @@ function Layout( ) {
     // section refs
     const heroRef = useRef();
     const aboutRef = useRef();
+    const skillsRef = useRef();
 
     const refs = {
-      heroRef, aboutRef
+      heroRef, aboutRef, skillsRef
     };
     
 
@@ -70,6 +71,7 @@ function Layout( ) {
             refs={refs}
             heroRef={heroRef}
             aboutRef={aboutRef}
+            skillsRef={skillsRef}
             viewportSize={viewportSize}
           />
         </div>
