@@ -7,8 +7,8 @@ const HistoryText = ({
   h_font = "a6 p-2",
   h_style = "xl:text-[4cqh] text-[5cqh] col-span-1 row-span-1",
   p_style = "xl:text-[2cqh] text-[2.5cqh] row-span-1 justify-self-center self-center p-2",
-  banner = "bg-gradient-to-tr from-amber-500 from-3% via-white via-20% to-white to-1%", 
-  banner2 = "bg-linear-to-bl from-slate-700 to-gray-500",
+  banner = "bg-gradient-to-br from-amber-500 from-3% via-white via-20% to-white to-1%", 
+  banner2 = "bg-linear-to-br from-slate-700 to-gray-500",
   banner3 = "bg-linear-to-tr from-slate-600 to-gray-400"}) => {
 
   return (
@@ -42,6 +42,7 @@ const HistoryText = ({
 function About({
   height = 900,
   minHeight = 900,
+  ref,
   className = ""
 }) {
 
@@ -57,12 +58,14 @@ function About({
 
 
   return (
-    <div id="about-wrap"
-      className={`w-full h-auto place-self-center grid  grid-cols-[1fr] grid-rows-auto gap-10 pb-0 bg-none shadow-md rounded-sm content-start ${className}
+    <div
+      id="about-wrap"
+      className={`relative w-full h-auto place-self-center grid  grid-cols-[1fr] grid-rows-auto gap-10 pb-0 bg-none shadow-md rounded-sm content-start ${className}
       xl:grid-cols-[minmax(400px,600px)_5px_minmax(600px,1480px)] xl:min-h-screen  xl:h-[110vh] xl:grid-rows-[120px_auto] py-10 `}
     >
+      <div className="absolute mt-6 " ref={ref}></div>
       {/* banner   */}
-      <div className='col-span-full row-span-1 mt-4 '>
+      <div  className='col-span-full row-span-1 mt-4 '>
         <div className='bg-linear-to-br from-amber-500 to-yellow-500  justify-self-center
          lg:h-16 lg:w-140 md:h-13 md:w-118 xs:h-11 xs:w-100 xs:max-w-[60%] h-1/2 max-w-[60%]'>
           <p className='text-white py-1 sm:ml-7 a6 sm:pt-2 weight-500 lg:text-8xl lg:w-160 md:text-7xl md:w-140 sm:text-6xl xs:w-[110%] xs:text-[9cqw] w-[110%] text-[8cqw] ml-3'>

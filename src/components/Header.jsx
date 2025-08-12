@@ -11,7 +11,6 @@ const Header = ({ heroRef, skillsRef, aboutRef, refs, headerStyle = "bg-neutral-
   const [showElement, setShowElement] = useState(true);
   const [pastScroll, setPastScroll] = useState(false);
 
-
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
@@ -55,7 +54,7 @@ const Header = ({ heroRef, skillsRef, aboutRef, refs, headerStyle = "bg-neutral-
       <div
         id="header-wrap-inner"
         className={`w-full fixed flex flex-row justify-center items-center z-50 transition-[height,_opacity] transition-discrete border-none
-         duration-1000 ${headerStyle} ${showElement ? 'h-12 opacity-100 shadow-zinc-300' : 'h-8 opacity-0'} `}>
+         duration-1000 ${headerStyle} ${showElement ? 'h-12 opacity-100 shadow-zinc-30 duration-500 ' : 'h-8 opacity-0 duration-1000'} `}>
                           {/*  duration affects navbar shrink */}
         <div id="nav-wrap-inner" className={`md:flex md:w-full hidden h-5/9 w-0 flex justify-center content-end transition-all transition-discrete md:duration-0 duration-500  ${showElement ? 'opacity-100 ' : 'opacity-0'}`}
         >

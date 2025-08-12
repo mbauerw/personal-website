@@ -11,10 +11,16 @@ const Dropdown = ({ iconSize, className, iconClass, showElement, heroRef, refs }
 
   const [hovered, setHovered] = useState(false);
   const [expanded, setExpanded] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(true);
 
+  const handleClickAway = () => {
+    setShowDropdown(false);
+    setExpanded(false);
+  };
 
   const toggleExpand = () => {
     setExpanded(prev => !prev);
+    setShowDropdown(true);
   }
 
   // resize listener
@@ -61,7 +67,7 @@ const Dropdown = ({ iconSize, className, iconClass, showElement, heroRef, refs }
     <div className={` h-full w-auto ${className}`}>
       <div className={` h-full w-auto`}>
         {!expanded && <Menu onClick={toggleExpand} size={iconSize} className={`text-gray-400 hover:text-gray-600  ${iconClass}`} />}
-        {expanded && <DropdownStack showElement={showElement} heroRef={heroRef} refs={refs}/>}
+        {expanded && showDropdown && <DropdownStack showElement={showElement} awayElement={showDropdown} onClickAway={handleClickAway} heroRef={heroRef} refs={refs}/>}
 
       </div>
 

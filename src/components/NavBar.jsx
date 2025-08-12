@@ -3,7 +3,7 @@ import React, { useRef, useState, useEffect, forwardRef } from "react";
 import { SECTIONS } from '../constants/sections';
 import DropdownStack from "./DropdownStack";
 
-function NavBar({showElement, heroRef, skillsRef, refs, navStyle = "bg-neutral-600 rounded-xl " }) {
+function NavBar({showElement, heroRef, skillsRef, aboutRef, refs, navStyle = "bg-neutral-600 rounded-xl " }) {
 
     const linkStyle = "text-neutral-200 hover:bg-neutral-800 hover:rounded-md hover:-translate-y-[2px] hover:shadow-sm hover:shadow-neutral-900 transition-all duration-800 b5 md:flex hidden"
 
@@ -28,9 +28,7 @@ function NavBar({showElement, heroRef, skillsRef, refs, navStyle = "bg-neutral-6
     const aboutDropdownLinks = [
       { to: `/#${SECTIONS.HOME.HERO}`, label: "The Highlights", onClick: () => scrollToSection(heroRef) },
       { to: `/#${SECTIONS.HOME.SKILLS}`, label: "Skill Set", onClick: () => scrollToSection(skillsRef) },
-      { to: `/#${SECTIONS.HOME.ABOUT}`, label: "The Details" },
-      { to: "/about/mission", label: "Mission & Values" },
-      { to: "/about/careers", label: "Careers" }
+      { to: `/#${SECTIONS.HOME.ABOUT}`, label: "The Details", onClick: () => scrollToSection(aboutRef) }
     ];
 
     return (
