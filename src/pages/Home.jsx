@@ -6,6 +6,7 @@ import About from "./About";
 import Portfolio from "./Portfolio";
 import BouncingArrow from "../components/BouncingArrow";
 import { SECTIONS } from "../constants/sections";
+import SkillsSection from "../components/skills/SkillSection";
 
 
 
@@ -121,16 +122,18 @@ const Home = ({ children }) => {
         </Hero>
       </div>
 
-      <Blank
+      {/* <Blank
         height={"90vh"}
         offset={-50}
         label={"second"}
-        background={backgrounds[1]}
+        background={""}
+        className="opacity-95"
         imgheight="90%"
         speed={3}
       >
-
-      </Blank>
+        
+      </Blank> */}
+      <SkillsSection />
       <div id={SECTIONS.HOME.ABOUT}>
         <About
           className={`bg-slate-900/90`}
@@ -142,9 +145,9 @@ const Home = ({ children }) => {
         label={"Third"}
         offset={0}
         background={backgrounds[11]}
-        imgHeight="120%"
+        imgHeight="200%"
         className="opacity-100"
-        speed={3}
+        speed={5}
       ></Blank>
     </main>
 
