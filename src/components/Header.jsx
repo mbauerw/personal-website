@@ -64,7 +64,7 @@ const Header = ({ heroRef, skillsRef, aboutRef, refs, headerStyle = "bg-neutral-
         <div className={` md:w-0 md:h-0 md:delay-0 delay-600 flex h-7/9 w-full justify-center content-end transition-all md:duration-1100 duration-500  ${showElement ? 'opacity-100 ' : 'opacity-0'}`}>
           <Dropdown className="md:delay-0 md:h-0 delay-600 md:duration-900 duration-0" iconClass="md:hidden flex md:h-0 h-full delay-600" showElement={showElement} heroRef={heroRef} refs={refs}></Dropdown>
         </div>
-        <Logos position="right-5" showElement={showElement} />
+        <Logos position="right-5" iconSize={"hover:text-neutral-500 transition-[color]"} showElement={showElement} />
       </div>
 
     </div>
