@@ -58,10 +58,10 @@ const Dropdown = ({ iconSize, className, iconClass, showElement, heroRef, refs }
   }, [isAbove, expanded]);
 
 
-  console.log("Breaker Breaker: " + isBroken);
-  console.log(" are we above " + isAbove);
-  console.log("The width in here is small: " + viewportSize.width);
-  console.log("The width in here iasdfasdfasdf: " + window.innerWidth);
+  // console.log("Breaker Breaker: " + isBroken);
+  // console.log(" are we above " + isAbove);
+  // console.log("The width in here is small: " + viewportSize.width);
+  // console.log("The width in here iasdfasdfasdf: " + window.innerWidth);
 
   return (
     <div className={` h-full w-auto ${className}`}>

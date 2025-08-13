@@ -63,7 +63,7 @@ function About({
       className={`relative w-full h-auto place-self-center grid  grid-cols-[1fr] grid-rows-auto gap-10 pb-0 bg-none shadow-md rounded-sm content-start ${className}
       xl:grid-cols-[minmax(400px,600px)_5px_minmax(600px,1480px)] xl:min-h-screen  xl:h-[110vh] xl:grid-rows-[120px_auto] py-10 `}
     >
-      <div className="absolute mt-6 " ref={ref}></div>
+      <div id="aboutRef" className="absolute mt-6 " ref={ref}></div>
       {/* banner   */}
       <div  className='col-span-full row-span-1 mt-4 '>
         <div className='bg-linear-to-br from-amber-500 to-yellow-500  justify-self-center

@@ -7,12 +7,13 @@ import Portfolio from "./Portfolio";
 import BouncingArrow from "../components/BouncingArrow";
 import { SECTIONS } from "../constants/sections";
 import SkillsSection from "../components/skills/SkillSection";
-
+import {animateScroll as scroll, scroller } from 'react-scroll';
 
 
 const Home = ({ children }) => {
 
-  const { heroRef, aboutRef, skillsRef } = useOutletContext();
+  const { homeRef, heroRef, aboutRef, skillsRef, scrollToSection } = useOutletContext();
+
   const [offset, setOffset] = useState(0);
 
   // background images
@@ -60,12 +61,16 @@ const Home = ({ children }) => {
     height: window.innerHeight
   });
 
-  const scrollToSection = (ref) => {
-    ref.current?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
-  };
+  // const scrollToSection = (ref, duration = 2000) => {
+  //   if (!ref.current) return;
+
+  //   scroller.scrollTo(ref.current.id || 'target', {
+  //     duration: duration,
+  //     delay: 100,
+  //     smooth: 'easeInOutQuart',
+  //     offset: 0
+  //   })
+  // }
 
   // viewport size listener to determine blank sizes
   useEffect(() => {
@@ -87,18 +92,24 @@ const Home = ({ children }) => {
   useEffect(() => {
     if (location.hash) {
       setTimeout(() => {
-        const element = document.getElementById(location.hash.substring(1));
+        const elementId = location.hash.substring(1);
+        const element = document.getElementById(elementId);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
+          scroller.scrollTo(elementId, {
+            duration: 2000,
+            delay: 100, // 0.5 seconds
+            smooth: 'easeInOutQuart',
+            offset: 0
+          });
         }
-      }, 100);
+      }, 0);
     }
   }, [location.hash]);
 
 
   return (
 
-    <main className="">
+    <main className="" id="homeRef" ref={homeRef}>
       <Blank
         height={"110vh"}
         offset={0}

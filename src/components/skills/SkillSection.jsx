@@ -16,8 +16,9 @@ const SkillsSection = forwardRef(({
     {
       category: "Frontend",
       skills: [
-        { name: "HTML5 & CSS3", rating: 5, level: "Expert" },
-        { name: "JavaScript", rating: 5, level: "Expert" },
+        { name: "HTML5", rating: 5, level: "Expert" },
+        { name: "CSS3", rating: 5, level: "Expert" },
+        { name: "JavaScript", rating: 4, level: "Advanced" },
         { name: "React.js", rating: 4, level: "Advanced" },
         { name: "Tailwind", rating: 4, level: "Advanced" },
         { name: "TypeScript", rating: 3, level: "Intermediate" },
@@ -105,6 +106,7 @@ const SkillsSection = forwardRef(({
   return (
     <div className="font-sans bg-none p-10 md:p-5 min-h-[140vh]">
       <div
+        id="skillRef"
         ref={ref}
         className={`min-w-[70vw] w-[85vw] h-auto place-self-center grid  grid-cols-1 grid-rows-auto lg:gap-10 gap-8 pb-0 bg-none  content-start
         grid-cols-[repeat] min-h-screen  h-auto grid-rows-[90px_auto] mt-10 `}>

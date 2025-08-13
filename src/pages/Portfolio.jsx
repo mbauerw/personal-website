@@ -56,7 +56,8 @@ function Portfolio({
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [calculateParallaxOffset, isInView, isInitialized]);
-     
+  
+  
 
   const thumbs = [
     "bg-[url('src/images/thumbs/ratio_heatmap.png')]",

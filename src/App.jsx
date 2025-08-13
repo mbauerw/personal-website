@@ -7,9 +7,11 @@ import Contact from './pages/Contact';
 import Layout from './Layout';
 import GdpPop from './pages/GdpPop';
 import ScrollToTop from './components/ScrollToTop';
+import { useEffect } from 'react';
 
 
 function App() {
+
 
   return (
     <BrowserRouter>

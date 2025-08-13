@@ -9,16 +9,18 @@ import { Link } from "react-router-dom"
 import Portfolio from './pages/Portfolio';
 import BouncingArrow from './components/BouncingArrow';
 import Footer from "./pages/Footer";
+import { animateScroll as scroll, scroller } from 'react-scroll';
 
 function Layout( ) {
 
     // section refs
+    const homeRef = useRef()
     const heroRef = useRef();
     const aboutRef = useRef();
     const skillsRef = useRef();
 
     const refs = {
-      heroRef, aboutRef, skillsRef
+      homeRef, heroRef, aboutRef, skillsRef
     };
     
 
@@ -35,15 +37,25 @@ function Layout( ) {
       height: window.innerHeight
     });
 
-    const scrollToSection = (ref) => {
-      ref.current?.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start' 
-      });
-    };
+     const scrollToSection = (ref, duration = 1500) => {
+        if (!ref.current) {
+          console.log('no ref current');
+          return;
+        } 
+    
+        scroller.scrollTo(ref.current.id || 'target', {
+          duration: duration,
+          delay: 10,
+          smooth: 'easeInOutQuart',
+          offset: 0
+        })
 
-    console.log("Viewport height: " + viewportSize.height);
-    console.log("Viewport width: " + viewportSize.width);
+
+      }
+
+
+    // console.log("Viewport height: " + viewportSize.height);
+    // console.log("Viewport width: " + viewportSize.width);
     
     // viewport size listener to determine blank sizes
     useEffect(() => {
@@ -60,6 +72,11 @@ function Layout( ) {
 
     }, []);
 
+    useEffect(() => {
+      if (window.location.hash) {
+          window.history.replaceState(null, null, window.location.pathname);
+      }
+    }, []);
 
   return (
     <div
@@ -69,13 +86,15 @@ function Layout( ) {
         <div id="header-wrap">
           <Header
             refs={refs}
+            homeRef={homeRef}
             heroRef={heroRef}
             aboutRef={aboutRef}
             skillsRef={skillsRef}
             viewportSize={viewportSize}
+            scrollToSection={scrollToSection}
           />
         </div>
-        <Outlet context={refs}></Outlet>
+        <Outlet context={{homeRef, heroRef, aboutRef, skillsRef, scrollToSection}}></Outlet>
         <Footer className="mt-auto"/>
       </div>
       

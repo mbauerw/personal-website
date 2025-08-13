@@ -1,18 +1,11 @@
 import { Link } from "react-router-dom"
-import React, { useRef, useState, useEffect, forwardRef } from "react";
+import React, { useRef, useState, useEffect, forwardRef, useMemo } from "react";
 import { SECTIONS } from '../constants/sections';
 import DropdownStack from "./DropdownStack";
 
-function NavBar({showElement, heroRef, skillsRef, aboutRef, refs, navStyle = "bg-neutral-600 rounded-xl " }) {
+function NavBar({showElement, homeRef, heroRef, skillsRef, aboutRef, refs, scrollToSection, links = [], navStyle = "bg-neutral-600 rounded-xl " }) {
 
     const linkStyle = "text-neutral-200 hover:bg-neutral-800 hover:rounded-md hover:-translate-y-[2px] hover:shadow-sm hover:shadow-neutral-900 transition-all duration-800 b5 md:flex hidden"
-
-    const scrollToSection = (ref) => {
-      ref.current?.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start' 
-      });
-    };
 
     const [aboutHovered, setAboutHovered] = useState(false);
 
@@ -24,12 +17,17 @@ function NavBar({showElement, heroRef, skillsRef, aboutRef, refs, navStyle = "bg
       setAboutHovered(false);
     }
 
+    console.log('Refs received:', {heroRef, skillsRef, aboutRef});
+   
+
     // Example dropdown links for ABOUT section
-    const aboutDropdownLinks = [
-      { to: `/#${SECTIONS.HOME.HERO}`, label: "The Highlights", onClick: () => scrollToSection(heroRef) },
+    const defaultLinks = [
+      { to: `/#${SECTIONS.HOME.HERO}`, label: "The Highlights", onClick: () => scrollToSection(heroRef)},
       { to: `/#${SECTIONS.HOME.SKILLS}`, label: "Skill Set", onClick: () => scrollToSection(skillsRef) },
-      { to: `/#${SECTIONS.HOME.ABOUT}`, label: "The Details", onClick: () => scrollToSection(aboutRef) }
+      { to: `/#${SECTIONS.HOME.ABOUT}`, label: "The Details", onClick: () => scrollToSection(aboutRef)}
     ];
+
+    const aboutDropdownLinks = links.length > 0 ? links : defaultLinks;
 
     return (
       <nav 
@@ -37,7 +35,7 @@ function NavBar({showElement, heroRef, skillsRef, aboutRef, refs, navStyle = "bg
           ${showElement ? 'opacity-100 duration-1600' : 'opacity-0 duration-800'} ${navStyle}`}>
         <ul 
           className={`transition-all transition-discrete md:flex md:justify-around relative ${showElement ? 'opacity-100 duration-1000' : 'opacity-0 duration-800'} `}>
-          <Link to="/" className={linkStyle}>HOME</Link>
+          <Link to="/" className={linkStyle} onClick={() => scrollToSection(homeRef)}>HOME</Link>
           
           {/* ABOUT link with dropdown container */}
           <div 

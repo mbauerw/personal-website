@@ -2,6 +2,7 @@ import React, { forwardRef, useEffect, useState, useRef } from 'react';
 import Portfolio from './Portfolio';
 import Portrait from '../components/Portrait';
 import { Link } from 'react-router-dom';
+import ScrollReveal from '../components/animation/ScrollReveal';
 
 
 
@@ -21,15 +22,18 @@ const Hero = forwardRef(({ height = 900, minHeight = 900, className = "" }, ref)
       id="hero-wrap"
       className={`w-full justify-center min-h-[1800px] ${className} grid lg:grid-cols-[4fr_5px_2fr] md:grid-rows-[1fr_6fr] grid-rows-[100px_6fr] grid-cols-1 space-y-30 lg:min-h-[1000px] lg:max-h-[1024px] pt-5 `}
       ref={ref}>
-      {/* banner   */}
-      <div className='col-span-full row-span-1 w-full justify-self-center'>
-        <div className='bg-linear-to-br from-amber-500 to-yellow-500  justify-self-center
-          lg:h-16 lg:w-110 md:h-13 md:w-90 xs:h-11 xs:w-70 h-10 mt-3'>
+      {/* banner   */}     
+        <div className='col-span-full row-span-1 w-full justify-self-center'>
+        <ScrollReveal delay={.5} traiggerOnce={false} duration={1.5} direction='up' >
+          <div className='bg-linear-to-br from-amber-500 to-yellow-500  justify-self-center
+            lg:h-16 lg:w-110 md:h-13 md:w-90 xs:h-11 xs:w-70 h-10 mt-3'>
             <p className='text-white sm:ml-7 a6 xs:pt-3 pt-1 weight-500 lg:text-8xl lg:w-140 md:text-7xl md:w-110 sm:text-6xl xs:w-[120%] xs:text-6xl w-[100%] text-[9cqw] ml-3'>
               About   Me
             </p>
           </div>
+        </ScrollReveal>
         </div>
+     
       {/* blurbs   */}
       <div className='col-span-1 relative rounded-sm row-span-1 max-h-[900px] grid grid-cols-1 grid-rows-5 bg-neutral-00/40 w-[95%] h-[95%] lg:min-h-[500px] px-5 justify-self-center content-center lg:justify-center justify-items-center py-5'>
       <p className='group w-1/2 xs:min-w-100 min-w-[72%] z-1 xs:text-4xl text-3xl hover:!text-5xl p3 bg-neutral-100 shadow-lg shadow-black antialiased border-gray-300 border-4 border-b-gray-400 p-10 rounded-xl -mt-0 
