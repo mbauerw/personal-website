@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ExpandableDiv from "../components/ExpandableDiv";
 import Resume from "../components/Resume";
 import GridPhoto from "../components/GridPhoto";
+import ScrollReveal from "../components/animation/ScrollReveal";
 
 const HistoryText = ({
   h_font = "a6 p-2",
@@ -66,12 +67,14 @@ function About({
       <div id="aboutRef" className="absolute mt-6 " ref={ref}></div>
       {/* banner   */}
       <div  className='col-span-full row-span-1 mt-4 '>
-        <div className='bg-linear-to-br from-amber-500 to-yellow-500  justify-self-center
-         lg:h-16 lg:w-140 md:h-13 md:w-118 xs:h-11 xs:w-100 xs:max-w-[60%] h-1/2 max-w-[60%]'>
-          <p className='text-white py-1 sm:ml-7 a6 sm:pt-2 weight-500 lg:text-8xl lg:w-160 md:text-7xl md:w-140 sm:text-6xl xs:w-[110%] xs:text-[9cqw] w-[110%] text-[8cqw] ml-3'>
-            The Details
-          </p>
-        </div>
+        <ScrollReveal delay={.2} traiggerOnce={false} duration={1.5} direction='up' >
+          <div className='bg-linear-to-br from-amber-500 to-yellow-500  justify-self-center
+          lg:h-16 lg:w-140 md:h-13 md:w-118 xs:h-11 xs:w-100 xs:max-w-[60%] h-1/2 max-w-[60%]'>
+            <p className='text-white py-1 sm:ml-7 a6 sm:pt-2 weight-500 lg:text-8xl lg:w-160 md:text-7xl md:w-140 sm:text-6xl xs:w-[110%] xs:text-[9cqw] w-[110%] text-[8cqw] ml-3'>
+              The Details
+            </p>
+          </div>
+        </ScrollReveal>
       </div>
       {/* Photo */}
       <div className="max-h-[800px]  flex justify-center items-center p-8 rounded-sm">

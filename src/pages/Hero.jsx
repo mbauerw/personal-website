@@ -24,7 +24,7 @@ const Hero = forwardRef(({ height = 900, minHeight = 900, className = "" }, ref)
       ref={ref}>
       {/* banner   */}     
         <div className='col-span-full row-span-1 w-full justify-self-center'>
-        <ScrollReveal delay={.5} traiggerOnce={false} duration={1.5} direction='up' >
+        <ScrollReveal delay={.2} traiggerOnce={false} duration={1.5} direction='up' >
           <div className='bg-linear-to-br from-amber-500 to-yellow-500  justify-self-center
             lg:h-16 lg:w-110 md:h-13 md:w-90 xs:h-11 xs:w-70 h-10 mt-3'>
             <p className='text-white sm:ml-7 a6 xs:pt-3 pt-1 weight-500 lg:text-8xl lg:w-140 md:text-7xl md:w-110 sm:text-6xl xs:w-[120%] xs:text-6xl w-[100%] text-[9cqw] ml-3'>
@@ -60,9 +60,9 @@ const Hero = forwardRef(({ height = 900, minHeight = 900, className = "" }, ref)
         hover:overflow-visible hover:whitespace-normal hover:h-80 sm:hover:h-70 md:hover:h-60 lg:hover:h-55 hover:w-full
         lg:ml-4 lg:-mr-2 lg:-mt-8 ml-4 -mr-4  truncate transision-all duration-1000 transform hover:-translate-y-14 '>
           {!hovered ? (
-            <p className='absolute z-3 xs:min-w-full min-w-[110%] min-h-55 hover:z-10 p3 xs:text-4xl text-3xl hover:!text-2xl bg-neutral-100 shadow-lg shadow-black antialiased border-gray-200 border-4 border-b-gray-400 rounded-xl  h-full p-2
+            <p className='absolute z-3 xs:min-w-full min-w-[110%] min-h-55 hover:z-10 p3 xs:text-4xl text-3xl hover:!text-2xl bg-neutral-100 shadow-lg shadow-black antialiased border-gray-200 border-4 border-b-gray-400 rounded-xl h-full p-2
               hover:z-14 sm:hover:w-full hover:overflow-visible hover:whitespace-normal hover:min-h-full hover:-ml-0 hover:mr-8
-              lg:ml-0 lg:mr-0 truncate  transision-all duration-1000 '
+              lg:ml-0 lg:mr-0 truncate  transision-all duration-1000 pl-10 '
               onMouseEnter={mouseEnter}
               onMouseLeave={mouseLeave} >
                <br />

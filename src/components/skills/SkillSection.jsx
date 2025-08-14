@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, forwardRef } from 'react';
 import StarRating from './StarRating';
+import ScrollReveal from '../animation/ScrollReveal';
 
 const SkillsSection = forwardRef(({
   title = "Technical Skills",
@@ -7,7 +8,7 @@ const SkillsSection = forwardRef(({
   summaryTitle = "Constantly Learning & Evolving",
   summaryText = "I'm passionate about staying current with emerging technologies and best practices in web development. Always excited to take on new challenges and expand my skill set!",
   skillsData = null
-}, ref ) => {
+}, ref) => {
   const [isVisible, setIsVisible] = useState(true);
   const categoryRefs = useRef([]);
 
@@ -111,12 +112,14 @@ const SkillsSection = forwardRef(({
         className={`min-w-[70vw] w-[85vw] h-auto place-self-center grid  grid-cols-1 grid-rows-auto lg:gap-10 gap-8 pb-0 bg-none  content-start
         grid-cols-[repeat] min-h-screen  h-auto grid-rows-[90px_auto] mt-10 `}>
         <div className='col-span-full row-span-1 mt-4 ' >
-          <div className='bg-linear-to-br from-gray-500 to-slate-500  justify-self-center
-          lg:h-16 lg:w-80 md:h-13 md:w-60 xs:h-11 xs:w-50 xs:max-w-[60%] h-1/2 max-w-[60%]'>
-            <p className='text-neutral-700 py-1 sm:ml-7 a6 sm:pt-2 weight-500 lg:text-8xl lg:w-80 md:text-7xl md:w-60 sm:text-6xl xs:w-[110%] xs:text-[9cqw] w-[110%] text-[8cqw] ml-3'>
-              Skills
-            </p>
-          </div>
+          <ScrollReveal delay={.5} traiggerOnce={false} duration={1.5} direction='up'>
+            <div className='bg-linear-to-br from-gray-500 to-slate-500  justify-self-center
+                lg:h-16 lg:w-80 md:h-13 md:w-60 xs:h-11 xs:w-50 xs:max-w-[60%] h-1/2 max-w-[60%]'>
+              <p className='text-neutral-700 py-1 sm:ml-7 a6 sm:pt-2 weight-500 lg:text-8xl lg:w-80 md:text-7xl md:w-60 sm:text-6xl xs:w-[110%] xs:text-[9cqw] w-[110%] text-[8cqw] ml-3'>
+                Skills
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-15 grid-rows-auto pt-10">

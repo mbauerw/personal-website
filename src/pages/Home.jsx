@@ -8,6 +8,7 @@ import BouncingArrow from "../components/BouncingArrow";
 import { SECTIONS } from "../constants/sections";
 import SkillsSection from "../components/skills/SkillSection";
 import {animateScroll as scroll, scroller } from 'react-scroll';
+import { ChevronUp } from "lucide-react";
 
 
 const Home = ({ children }) => {
@@ -154,9 +155,18 @@ const Home = ({ children }) => {
         offset={0}
         background={backgrounds[11]}
         imgHeight="200%"
-        className="opacity-100"
+        className="opacity-100 relative"
         speed={5}
-      ></Blank>
+      >
+        <div className="w-screen h-screen flex flex-col justify-end items-end mb-5 z-50">
+          <div className={`w-10 h-10 bg-white opacity-80 rounded-md shadow-sm hover:cursor-pointer shadow-black z-50 flex mr-5 justify-center items-center`}>
+            <ChevronUp className="animate-bounce " onClick={() => scrollToSection(homeRef)}>
+            </ChevronUp>
+        </div>
+
+        </div>
+        
+      </Blank>
     </main>
 
   )
