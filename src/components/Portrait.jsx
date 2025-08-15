@@ -44,7 +44,7 @@ function Portrait({
         }}     
         >
         <div 
-          className={`flex justify-center items-center rounded-full h-3/5 w-6/10 ${"bg-[url('src/images/portrait_clouds.jpg')]"}  -mt-4 `}
+          className={`flex justify-center items-center rounded-full h-3/5 w-6/10 ${"bg-[url('/images/portrait_clouds.jpg')]"}  -mt-4 `}
           
         >
             <img

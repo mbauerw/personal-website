@@ -20,8 +20,8 @@ const Home = ({ children }) => {
 
   // background images
   const backgrounds = [
-    'src/images/block1/dot_lights.jpg',
-    'src/images/background/pixel_cabin.jpg'
+    '/images/block1/dot_lights.jpg',
+    '/images/background/pixel_cabin.jpg'
   ]
 
   const [viewportSize, setViewportSize] = useState({

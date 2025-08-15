@@ -15,7 +15,7 @@ function Portfolio({
   const ref = useRef(null);
   const [isInitialized, setIsInitialized] = useState(false);
 
-  const background = "public/images/block1/wood.jpg";
+  const background = "/images/block1/wood.jpg";
 
   const isInView = useInView(ref, {
     threshold: 0,
@@ -61,12 +61,12 @@ function Portfolio({
   
 
   const thumbs = [
-    "bg-[url('src/images/thumbs/ratio_heatmap.png')]",
-    "bg-[url('src/images/thumbs/play_up_logo.png')]",
-    "bg-[url('src/images/thumbs/elff.png')]",
-    "bg-[url('src/images/thumbs/Bauer-Photo-scaled.webp')]",
-    "bg-[url('src/assets/GitHub_Logo.png')]",
-    "bg-[url('src/images/bauerj.png')]"
+    "bg-[url('/images/thumbs/ratio_heatmap.png')]",
+    "bg-[url('/images/thumbs/play_up_logo.png')]",
+    "bg-[url('/images/thumbs/elff.png')]",
+    "bg-[url('/images/thumbs/Bauer-Photo-scaled.webp')]",
+    "bg-[url('/assets/GitHub_Logo.png')]",
+    "bg-[url('/images/bauerj.png')]"
   ]
 
   const portLink = (<a href="#" className="bg-white bg-opacity-90 text-slate-700 px-5 py-2.5 rounded-full font-medium no-underline hover:bg-white transition-colors duration-300">View Project</a>)

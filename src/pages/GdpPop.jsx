@@ -4,7 +4,7 @@ const GdpPop = () => {
  return(
   <div className="pt-15">
     <iframe 
-      src="src/assets/gdp-pop.html"
+      src="/assets/gdp-pop.html"
       width="100%" 
       height="1080"
       title="Gdp vs Population"

@@ -130,11 +130,13 @@ const SkillsSection = forwardRef(({
               <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-40 h-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full"></div>
             </div>
             {skills.slice(0, 2).map((categoryData, index) => (
+              <div>
               <SkillCategory
                 key={index}
                 categoryData={categoryData}
                 index={index}
               />
+              </div>
             ))}
           </div>
           <div className="row-span-1 col-span-1 flex flex-col justify-around space-y-2 ">
@@ -142,12 +144,13 @@ const SkillsSection = forwardRef(({
               <h1 className='text-center a6'>Database & Cloud</h1>
               <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-40 h-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full"></div>
             </div>
-            {skills.slice(2, 3).map((categoryData, index) => (
-              <SkillCategory
+            {skills.slice(2, 3).map((categoryData, index) => (   
+                <SkillCategory
                 key={index}
                 categoryData={categoryData}
                 index={index}
-              />
+                />
+              
             ))}
             <div className='relative flex flex-col justify-center items-center h-20'>
               <h1 className='text-center a6'>Tools & Workflow</h1>
