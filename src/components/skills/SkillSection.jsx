@@ -130,12 +130,12 @@ const SkillsSection = forwardRef(({
               <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-40 h-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full"></div>
             </div>
             {skills.slice(0, 2).map((categoryData, index) => (
-              <div>
-              <SkillCategory
-                key={index}
-                categoryData={categoryData}
-                index={index}
-              />
+              <div key={index} className='relative h-full'>
+                <SkillCategory
+                  key={index}
+                  categoryData={categoryData}
+                  index={index}
+                />
               </div>
             ))}
           </div>

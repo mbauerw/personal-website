@@ -11,7 +11,7 @@ function ExpandableDiv({
   contentClick, 
   height="xl:h-[84vh] h-24 min-h-24 ",
   width="xl:w-24 xl:min-w-24 w-[95vw]",
-  expandedHeight="xl:h-[80vh] h-full ",
+  expandedHeight="xl:h-[84vh] h-full ",
   expandedWidth="xl:w-full w-[95vw]",
   children,
   className}
@@ -19,11 +19,8 @@ function ExpandableDiv({
   const [expanded, setExpanded] = useState(false);
   const [hovered, setHovered] = useState(false);
 
-  const [isInitialized, setIsInitialized] = useState(false);
-
   const toggleExpand = () => {
 
-    console.log("expanded on mount");
     setExpanded(prev => !prev);
     sendState(index);
   }

@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     tailwindcss()],
     content: [
-      './src/**/*.{js,jsx,ts,tsx}', // Make sure this includes your SkillCategory files
+      './src/**/*.{js,jsx,ts,tsx}',
       './components/**/*.{js,jsx,ts,tsx}',
     ],
     // ...

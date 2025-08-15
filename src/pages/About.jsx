@@ -54,7 +54,7 @@ function About({
 
   const expandableHeight = "xl:h-[84vh] h-24 min-h-24 ";
   const expandableWidth = "xl:w-24 xl:min-w-24 w-[95vw]";
-  const expandableExpandedHeigh = "xl:h-[80vh] h-full ";
+  const expandableExpandedHeigh = "xl:h-[84vh] h-full ";
   const expandableExpandedWidth = "xl:w-full w-[95vw]";
 
   const contentClick = () => {
