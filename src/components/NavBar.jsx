@@ -53,7 +53,7 @@ function NavBar({showElement, homeRef, heroRef, skillsRef, aboutRef, refs, scrol
             {/* Dropdown menu */}
             {aboutHovered && (
               <div 
-                className={`absolute top-full left-0 mt-0 w-40 bg-neutral-700 rounded-md shadow-lg z-50 transition-all duration-1200 ${aboutHovered ? 'opacity-100' : 'opacity-0'}`}
+                className={`absolute top-full -ml-10 w-35 bg-neutral-700 rounded-md shadow-lg z-50 transition-all duration-1200 ${aboutHovered ? 'opacity-100' : 'opacity-0'}`}
                 onMouseLeave={mouseLeave}>
                 {aboutDropdownLinks.map((link, index) => (
                   <Link

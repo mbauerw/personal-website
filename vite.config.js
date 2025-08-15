@@ -8,3 +8,11 @@ export default defineConfig({
     react(),
     tailwindcss()],
 })
+
+module.exports = {
+  content: [
+    './src/**/*.{js,jsx,ts,tsx}', // Make sure this includes your SkillCategory files
+    './components/**/*.{js,jsx,ts,tsx}',
+  ],
+  // ...
+}
