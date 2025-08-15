@@ -124,13 +124,14 @@ const SkillsSection = forwardRef(({
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-15 grid-rows-auto pt-10">
 
-          <div className="row-span-1 col-span-1 grid grid-rows-[90px_2] grid-cols-1 flex flex-col space-y-10 relative">
+          <div className="row-span-1 col-span-1 grid grid-rows-[90px_1fr_1fr] grid-cols-1 space-y-10 ">
             <div className='relative flex flex-col justify-center items-center h-20'>
               <h1 className='text-center a6'>Web Development</h1>
               <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-40 h-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full"></div>
             </div>
+
             {skills.slice(0, 2).map((categoryData, index) => (
-              <div key={index} className='relative h-full'>
+              <div key={index} className='relative h-full row-span-1 col-span-1'>
                 <SkillCategory
                   key={index}
                   categoryData={categoryData}
