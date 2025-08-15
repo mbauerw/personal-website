@@ -9,12 +9,13 @@ const ScrollReveal = ({
   duration = 0.6,
   distance = 50,
   threshold = 0.1,
+  margin = '0px 0px 0px 0px',
   triggerOnce = true 
 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { 
     once: triggerOnce,
-    margin: '0px 0px 0px 0px' // Trigger slightly before element is fully visible
+    margin: `${margin}` // Trigger slightly before element is fully visible
   });
 
   const directionOffset = {

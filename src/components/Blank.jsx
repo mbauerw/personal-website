@@ -29,15 +29,12 @@ function Blank({
         const rect = ref.current.getBoundingClientRect();
         const windowHeight = window.innerHeight;
         
-        // Calculate how far the element has moved through the viewport
-        // When element enters from bottom: rect.top = windowHeight, progress = 0
-        // When element exits from top: rect.bottom = 0, progress = 1
         const elementHeight = rect.height;
         const totalDistance = windowHeight + elementHeight;
         const progress = (windowHeight - rect.top) / totalDistance;
         
-        // Apply the parallax offset based on progress
-        const maxOffset = elementHeight * .2; // Adjust this multiplier as needed
+  
+        const maxOffset = elementHeight * .2 ;
         setOffsetY((progress - 0.5) * maxOffset * speed);
       }     
     };

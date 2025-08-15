@@ -15,12 +15,12 @@ function Portfolio({
   const ref = useRef(null);
   const [isInitialized, setIsInitialized] = useState(false);
 
-  const background = "src/images/block1/lamp_brick.jpg";
+  const background = "src/images/block1/wood.jpg";
 
   const isInView = useInView(ref, {
     threshold: 0,
-    once: true,
-    margin: "200px 0px 200px 0px"
+    once: false,
+    margin: "0px 0px 0px 0px"
   });
 
   const calculateParallaxOffset = useCallback(() => {
@@ -32,7 +32,8 @@ function Portfolio({
       const totalDistance = windowHeight + elementHeight;
       const progress = (windowHeight - rect.top) / totalDistance;
       
-      const maxOffset = elementHeight * .2;
+      const screenMultiplier = window.innerWidth < 768 ? 0.5 : 1;
+      const maxOffset = elementHeight * .2 * screenMultiplier;
       return (progress - 0.5) * maxOffset * speed;
     }
     return 0;
@@ -71,11 +72,16 @@ function Portfolio({
   const portLink = (<a href="#" className="bg-white bg-opacity-90 text-slate-700 px-5 py-2.5 rounded-full font-medium no-underline hover:bg-white transition-colors duration-300">View Project</a>)
   
   const gdplink = (<Link to="/gdp" className="bg-white bg-opacity-90 text-slate-700 px-5 py-2.5 rounded-full font-medium no-underline hover:bg-white transition-colors duration-300">View Project</Link>);
+  const playuplink = (<a href="https://github.com/mbauerw/playup" className="bg-white bg-opacity-90 text-slate-700 px-5 py-2.5 rounded-full font-medium no-underline hover:bg-white transition-colors duration-300">View Project</a>);
+  const elfflink = (<Link to="/gdp" className="bg-white bg-opacity-90 text-slate-700 px-5 py-2.5 rounded-full font-medium no-underline hover:bg-white transition-colors duration-300">View Project</Link>);
+  const dadlink = (<Link to="/gdp" className="bg-white bg-opacity-90 text-slate-700 px-5 py-2.5 rounded-full font-medium no-underline hover:bg-white transition-colors duration-300">View Project</Link>);
+  const gitlink = (<Link to="/gdp" className="bg-white bg-opacity-90 text-slate-700 px-5 py-2.5 rounded-full font-medium no-underline hover:bg-white transition-colors duration-300">View Project</Link>);
+
 
   return (
     <div
       ref={ref}
-      className="relative bg-none w-full min-h-[140vh] h-[140vh] z-0">
+      className="relative bg-none w-full min-h-[140vh] h-full z-0 overflow-hidden">
       <img 
         src={background}
         alt={label}
@@ -87,7 +93,7 @@ function Portfolio({
           objectFit: 'cover'
         }}
         />
-      <div className="max-w-[80vw] min-h-[130vh] mx-auto mt-12 pt-14 bg-gray-500/98 z-3 px-10 ">
+      <div className="max-w-[80vw] min-h-[130vh] mx-auto mt-12 pt-14 bg-gray-800/98 z-3 px-10 rounded-xl ">
         <div className="text-center pb-12">
           <h2 className="text-5xl p3 md:text-5xl text-stone-100 mb-2 font-bold">My Stuff</h2>
           <p className="text-lg p3  text-stone-100">Explore my latest projects and creative work</p>
@@ -97,7 +103,7 @@ function Portfolio({
          
           <GridBox thumb={thumbs[0]} title={"The Impact of Economic Growth on Population Change"} category={"Data Analysis"} description={"Data Analysis project exploring the relationships between economic growth and population change across the United States"} className={"bg-cover"} children={gdplink}></GridBox>
  
-          <GridBox thumb={thumbs[1]} title={"Play Up"} category={"Web app and API Integration"} description={"Web App leveraging Spotify's API to provide more compelling playlists"} children={portLink}></GridBox>
+          <GridBox thumb={thumbs[1]} title={"Play Up"} category={"Web app and API Integration"} description={"Web App leveraging Spotify's API to provide more compelling playlists"} children={playuplink}></GridBox>
 
           <GridBox thumb={thumbs[2]} title={"East Lansing Film Festival"} category={"Web Development"} description={"Website for the non-profit film patron The East Lansing Film Festival"} children={portLink}></GridBox>
 

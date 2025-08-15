@@ -9,6 +9,7 @@ import { SECTIONS } from "../constants/sections";
 import SkillsSection from "../components/skills/SkillSection";
 import {animateScroll as scroll, scroller } from 'react-scroll';
 import { ChevronUp } from "lucide-react";
+import ScrollReveal from "../components/animation/ScrollReveal";
 
 
 const Home = ({ children }) => {
@@ -19,42 +20,8 @@ const Home = ({ children }) => {
 
   // background images
   const backgrounds = [
-    'src/images/background/african-safari-sunset.jpg',
-    'src/images/background/black_bench_full.avif',
-    'src/images/background/blueish_stars.jpg',
-    'src/images/background/canoe_lake.jpg',
-    'src/images/background/cat_watching_city.jpg',
-    'src/images/background/dark_stars.jpg',
-    'src/images/background/door_bench_trim.png',
-    'src/images/background/grey-brick-with-snow.jpg',
-    'src/images/background/misty_woods.avif',
-    'src/images/background/mountain_stars.jpg',
-    'src/images/background/only_stars.jpg',
-    'src/images/background/pixel_cabin.jpg',
-    'src/images/background/pixel_stars.png',
-    'src/images/background/purple_castle.jpg',
-    'src/images/background/purple_smudge.jpg',
-    'src/images/background/stars_clouds_deep_blue.jpg',
-    'src/images/background/time_lapse_sky_mountains.avif'
-  ]
-
-  const block1 = [
-    'src/images/block1/candle.jpg',
     'src/images/block1/dot_lights.jpg',
-    'src/images/block1/lamp_brick.jpg',
-    'src/images/block1/stars.jpg'
-  ]
-
-  const block2 = [
-    'src/images/block2/canon_road.jpg',
-    'src/images/block2/mountain_sky.jpg',
-    'src/images/block2/road_forrest.jpg',
-    'src/images/block2/snow_path.jpg',
-    'src/images/block2/snow_tree.jpg',
-    'src/images/block2/sunrise_tree.jpg',
-    'src/images/block2/rocky_mountain.jpg',
-    'src/images/block2/lamps.jpg',
-    'src/images/block2/ceiling.jpg',
+    'src/images/background/pixel_cabin.jpg'
   ]
 
   const [viewportSize, setViewportSize] = useState({
@@ -62,18 +29,6 @@ const Home = ({ children }) => {
     height: window.innerHeight
   });
 
-  // const scrollToSection = (ref, duration = 2000) => {
-  //   if (!ref.current) return;
-
-  //   scroller.scrollTo(ref.current.id || 'target', {
-  //     duration: duration,
-  //     delay: 100,
-  //     smooth: 'easeInOutQuart',
-  //     offset: 0
-  //   })
-  // }
-
-  // viewport size listener to determine blank sizes
   useEffect(() => {
 
     const handleResize = () => {
@@ -115,7 +70,7 @@ const Home = ({ children }) => {
         height={"110vh"}
         offset={0}
         label={"First"}
-        background={block1[1]}
+        background={backgrounds[0]}
         speed={3}
       >
         <BouncingArrow
@@ -153,17 +108,18 @@ const Home = ({ children }) => {
         height={"600px"}
         label={"Third"}
         offset={0}
-        background={backgrounds[11]}
+        background={backgrounds[1]}
         imgHeight="200%"
         className="opacity-100 relative"
         speed={5}
       >
-        <div className="w-screen h-screen flex flex-col justify-end items-end mb-5 z-50">
-          <div className={`w-10 h-10 bg-white opacity-80 rounded-md shadow-sm hover:cursor-pointer shadow-black z-50 flex mr-5 justify-center items-center`}>
-            <ChevronUp className="animate-bounce " onClick={() => scrollToSection(homeRef)}>
-            </ChevronUp>
-        </div>
-
+        <div className="w-screen h-screen flex flex-col justify-end items-end p-2 pr-5 z-40">
+          <ScrollReveal margin="0px 0px -200px 0px" threshold={.1} distance={20} duration={1.5} delay={1}>
+            <div className={`w-10 h-10 bg-white opacity-80 rounded-md shadow-sm hover:cursor-pointer shadow-black z-50  flex justify-center items-center`}>
+              <ChevronUp className="animate-bounce " onClick={() => scrollToSection(homeRef)}>
+              </ChevronUp>
+            </div>
+          </ScrollReveal>
         </div>
         
       </Blank>
