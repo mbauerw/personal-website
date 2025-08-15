@@ -19,18 +19,17 @@ function ExpandableDiv({
   const [expanded, setExpanded] = useState(false);
   const [hovered, setHovered] = useState(false);
 
+  const [isInitialized, setIsInitialized] = useState(false);
+
   const toggleExpand = () => {
+
+    console.log("expanded on mount");
     setExpanded(prev => !prev);
     sendState(index);
   }
 
   const mouseEnter = () => setHovered(true);
   const mouseLeave = () => setHovered(false);
-
-  useEffect(() => {
-    setExpanded(prev => !prev)
-
-  }, [contentClick]);
 
 
   return (

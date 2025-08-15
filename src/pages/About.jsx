@@ -50,13 +50,17 @@ function About({
   const [activeButton, setActiveButton] = useState(null);
   const imageIds = ['edUW7cJ', 'jRetXxS', 'KvSDVHD', 'zs7lXPL', 'rfig4mQ', 'GdLn4KT']
 
-  const [contentExpand, setContentExpand] = useState(true);
+  const [contentExpand, setContentExpand] = useState(false);
+
+  const expandableHeight = "xl:h-[84vh] h-24 min-h-24 ";
+  const expandableWidth = "xl:w-24 xl:min-w-24 w-[95vw]";
+  const expandableExpandedHeigh = "xl:h-[80vh] h-full ";
+  const expandableExpandedWidth = "xl:w-full w-[95vw]";
 
   const contentClick = () => {
     setContentExpand(prev => !prev)
     console.log("Content Clicked")
   }
-
 
   return (
     <div
@@ -67,7 +71,7 @@ function About({
       <div id="aboutRef" className="absolute mt-6 " ref={ref}></div>
       {/* banner   */}
       <div  className='col-span-full row-span-1 mt-4 '>
-        <ScrollReveal delay={.2} traiggerOnce={false} duration={1.5} direction='up' >
+        <ScrollReveal delay={.2} triggerOnce={false} duration={1.5} direction='up' >
           <div className='bg-linear-to-br from-amber-500 to-yellow-500  justify-self-center
           lg:h-16 lg:w-140 md:h-13 md:w-118 xs:h-11 xs:w-100 xs:max-w-[60%] h-1/2 max-w-[60%]'>
             <p className='text-white py-1 sm:ml-7 a6 sm:pt-2 weight-500 lg:text-8xl lg:w-160 md:text-7xl md:w-140 sm:text-6xl xs:w-[110%] xs:text-[9cqw] w-[110%] text-[8cqw] ml-3'>
