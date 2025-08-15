@@ -62,7 +62,7 @@ function About({
     <div
       id="about-wrap"
       className={`relative w-full h-auto place-self-center grid  grid-cols-[1fr] grid-rows-auto gap-10 pb-0 bg-none shadow-md rounded-sm content-start ${className}
-      xl:grid-cols-[minmax(400px,600px)_5px_minmax(600px,1480px)] xl:min-h-screen  xl:h-[110vh] xl:grid-rows-[120px_auto] py-10 `}
+      xl:grid-cols-[minmax(400px,600px)_5px_minmax(600px,1480px)] xl:min-h-screen  xl:h-[120vh] xl:grid-rows-[120px_auto] py-10 `}
     >
       <div id="aboutRef" className="absolute mt-6 " ref={ref}></div>
       {/* banner   */}
@@ -77,14 +77,14 @@ function About({
         </ScrollReveal>
       </div>
       {/* Photo */}
-      <div className="max-h-[800px]  flex justify-center items-center p-8 rounded-sm">
+      <div className="max-h-[800px]  flex justify-center items-center p-5 rounded-sm">
         <img src="/images/studio.jpg" className="xl:h-[95%] xl:w-[auto] h-[80%] cols-span-1"></img>
       </div>
       {/* line */}
       <div className='bg-white -mt-3  z-0 xl:col-span-1 xl:row-span-1 row-span-1 col-span-1 xl:h-[100%] h-2 xl:w-[95%] xl:mr-0 xl:-ml-2 mr-4 ml-4 '>
       </div>
 
-      <div className="xl:h-full h-250 pb-6 w-full cols-span-1 flex xl:flex-row xl:justify-end flex-col justify-start items-center
+      <div className="xl:h-full h-250 w-full cols-span-1 flex xl:flex-row xl:justify-end flex-col justify-start items-center
        gap-3 bg-none shadow-md rounded-sm  ">
         <ExpandableDiv
           index="1"

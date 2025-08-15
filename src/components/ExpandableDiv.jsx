@@ -9,7 +9,7 @@ function ExpandableDiv({
   sendState, 
   isActive,
   contentClick, 
-  height="xl:h-[80vh] h-24 min-h-24 ",
+  height="xl:h-[84vh] h-24 min-h-24 ",
   width="xl:w-24 xl:min-w-24 w-[95vw]",
   expandedHeight="xl:h-[80vh] h-full ",
   expandedWidth="xl:w-full w-[95vw]",

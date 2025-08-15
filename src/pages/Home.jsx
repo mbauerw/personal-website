@@ -114,7 +114,7 @@ const Home = ({ children }) => {
         speed={5}
       >
         <div className="w-screen h-screen flex flex-col justify-end items-end p-2 pr-5 z-40">
-          <ScrollReveal margin="0px 0px -200px 0px" threshold={.1} distance={20} duration={1.5} delay={1}>
+          <ScrollReveal margin="0px 0px -200px 0px" threshold={.1} distance={20} duration={1.5} delay={.5}>
             <div className={`w-10 h-10 bg-white opacity-80 rounded-md shadow-sm hover:cursor-pointer shadow-black z-50  flex justify-center items-center`}>
               <ChevronUp className="animate-bounce " onClick={() => scrollToSection(homeRef)}>
               </ChevronUp>
