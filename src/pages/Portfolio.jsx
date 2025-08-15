@@ -15,7 +15,7 @@ function Portfolio({
   const ref = useRef(null);
   const [isInitialized, setIsInitialized] = useState(false);
 
-  const background = "src/images/block1/wood.jpg";
+  const background = "public/images/block1/wood.jpg";
 
   const isInView = useInView(ref, {
     threshold: 0,

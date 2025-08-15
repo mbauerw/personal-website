@@ -78,7 +78,7 @@ function About({
       </div>
       {/* Photo */}
       <div className="max-h-[800px]  flex justify-center items-center p-8 rounded-sm">
-        <img src="src/images/studio.jpg" className="xl:h-[95%] xl:w-[auto] h-[80%] cols-span-1"></img>
+        <img src="/images/studio.jpg" className="xl:h-[95%] xl:w-[auto] h-[80%] cols-span-1"></img>
       </div>
       {/* line */}
       <div className='bg-white -mt-3  z-0 xl:col-span-1 xl:row-span-1 row-span-1 col-span-1 xl:h-[100%] h-2 xl:w-[95%] xl:mr-0 xl:-ml-2 mr-4 ml-4 '>
@@ -89,7 +89,7 @@ function About({
         <ExpandableDiv
           index="1"
           label="History"
-          imgId="src/images/background/puchberg.jpeg"
+          imgId="/images/background/puchberg.jpeg"
           isActive={activeButton === "1"}
           sendState={setActiveButton}
         ><HistoryText></HistoryText> </ExpandableDiv>
