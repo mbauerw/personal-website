@@ -12,6 +12,7 @@ function Blank({
   children
 }) {
   const [offsetY, setOffsetY] = useState(0);
+  const [isInitialized, setIsInitialized] = useState(false);
   const ref = useRef(null);
 
 
@@ -23,25 +24,41 @@ function Blank({
     margin: "100px 0px 100px 0px"
   });
 
+   const calculateParallaxOffset = useCallback(() => {
+    if (isInView && ref.current) {
+      const rect = ref.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      
+      const elementHeight = rect.height;
+      const totalDistance = windowHeight + elementHeight;
+      const progress = (windowHeight - rect.top) / totalDistance;
+      
+      const screenMultiplier = window.innerWidth < 768 ? 0.5 : 1;
+      const maxOffset = elementHeight * .2 * screenMultiplier;
+      return (progress - 0.5) * maxOffset * speed;
+    }
+    return 0;
+  }, [speed, isInView]);
+
+  // Initialize parallax position and set up scroll handler
   useEffect(() => {
     const handleScroll = () => {
       if (isInView && ref.current) {
-        const rect = ref.current.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        
-        const elementHeight = rect.height;
-        const totalDistance = windowHeight + elementHeight;
-        const progress = (windowHeight - rect.top) / totalDistance;
-        
-  
-        const maxOffset = elementHeight * .2 ;
-        setOffsetY((progress - 0.5) * maxOffset * speed);
+        const newOffset = calculateParallaxOffset();
+        setOffsetY(newOffset);
       }     
     };
 
+    // Calculate initial position immediately
+    if (isInView && !isInitialized) {
+      handleScroll(); // This will set the initial position
+      setIsInitialized(true);
+    }
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [speed, isInView]);
+  }, [calculateParallaxOffset, isInView, isInitialized]);
+  
 
   
   return (

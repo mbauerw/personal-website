@@ -140,30 +140,34 @@ const SkillsSection = forwardRef(({
               </div>
             ))}
           </div>
-          <div className="row-span-1 col-span-1 flex flex-col justify-around space-y-2">
-            <div className='relative flex flex-col justify-center items-center h-20'>
-              <h1 className='text-center a6'>Database & Cloud</h1>
-              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-40 h-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full"></div>
-            </div>
-            {skills.slice(2, 3).map((categoryData, index) => (   
+          <div className="row-span-1 col-span-1 flex flex-col justify-start space-y-20 pt-15">
+            <div className='space-y-10'>
+              <div className='relative flex flex-col justify-center items-center h-20'>
+                <h1 className='text-center a6'>Database & Cloud</h1>
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-40 h-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full"></div>
+              </div>
+              {skills.slice(2, 3).map((categoryData, index) => (
                 <SkillCategory
-                key={index}
-                categoryData={categoryData}
-                index={index}
+                  key={index}
+                  categoryData={categoryData}
+                  index={index}
                 />
-              
-            ))}
-            <div className='relative flex flex-col justify-center items-center h-20'>
-              <h1 className='text-center a6'>Tools & Workflow</h1>
-              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-40 h-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full"></div>
+              ))}
             </div>
-            {skills.slice(3, 5).map((categoryData, index) => (
-              <SkillCategory
-                key={index}
-                categoryData={categoryData}
-                index={index}
-              />
-            ))}
+            <div className='space-y-10'>
+              <div className='relative flex flex-col justify-center items-center h-20'>
+                <h1 className='text-center a6'>Tools & Workflow</h1>
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-40 h-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full"></div>
+              </div>
+              {skills.slice(3, 5).map((categoryData, index) => (
+                <SkillCategory
+                  key={index}
+                  categoryData={categoryData}
+                  index={index}
+                />
+              ))}
+            </div>
+
           </div>
         </div>
 

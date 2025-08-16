@@ -9,7 +9,7 @@ const HistoryText = ({
   h_style = "xl:text-[4cqh] text-[5cqh] col-span-1 row-span-1",
   p_style = "xl:text-[2cqh] text-[2.5cqh] row-span-1 justify-self-center self-center p-2",
   banner = "bg-gradient-to-br from-amber-500 from-3% via-white via-20% to-white to-1%", 
-  banner2 = "bg-linear-to-br from-slate-700 to-gray-500",
+  banner2 = "bg-gradient-to-bl from-amber-500 from-3% via-white via-20% to-white to-1%",
   banner3 = "bg-linear-to-tr from-slate-600 to-gray-400"}) => {
 
   return (
@@ -34,6 +34,45 @@ const HistoryText = ({
         I currently build websites and other web applications, specializing in React.
       </p>
       <div className={` w-full h-full ${""}`}></div>
+
+    </div>
+  )
+}
+
+const AspirationsText = () =>{
+
+  const h_font = "a6 p-2";
+  const h_style = "xl:text-[4cqh] text-[5cqh] col-span-1 row-span-1";
+  const p_style = "xl:text-[2cqh] text-[2.5cqh] row-span-1 justify-self-center self-center p-2";
+  const banner = "bg-gradient-to-br from-amber-500 from-3% via-white via-20% to-white to-1%";
+  const banner2 = "bg-gradient-to-bl from-amber-500 from-3% via-white via-20% to-white to-1%";
+
+  return (
+    <div className={`w-full h-full grid grid-rows-[1fr_1fr_1fr_1fr_1fr] ${banner2}`}>
+      <div className="row-span-1 col-span-1"></div>
+      <div className="row-span-1 col-span-1 p-5">
+        <p className={`${h_style} ${h_font}`}>
+          1. Stay Up to Date on AI Advancements
+        </p>
+        <p>
+          Whether we're ready or not, AI and its impact on our relationship with technology is here to stay. 
+          I am personally very excited about the prospect of harnessing this powerful tool to enhance my productivity and expand my potential. 
+          Most coders today use AI is some aspect to help improve their workflow, and I believe learning to leverage that tool to your benefit without defaulting to reliance will be a key skill for programmers going forward. 
+          My goal is to start itegrating AI directly into the projects I create, whether that means exploring API access to various models, or (ambitiously) training a basic model myself, my next project will involve AI. 
+
+        </p>
+      </div>
+      <div></div>
+      <div className="row-span-1 col-span-1 p-5">
+        <p className={`${h_style} ${h_font}`}>
+          2. Continue to Develop Full-Stack Skills
+        </p>
+        <p>
+          Like most Web Develops, my starting point to the field was frontend development. While I'm a huge fan of React and its flexibility, I also find myself enjoying the process of integrating backend functionality, such as implementing a basic Express server to receive emails directly, more and more. 
+          There's also something very satisfying about executing a properly constructed API call. My hope going forward is to continue developing my backend skills with as much interest as much frontend skills. 
+
+        </p>
+      </div>
 
     </div>
   )
@@ -71,7 +110,7 @@ function About({
       <div id="aboutRef" className="absolute mt-6 " ref={ref}></div>
       {/* banner   */}
       <div  className='col-span-full row-span-1 mt-4 '>
-        <ScrollReveal delay={.2} triggerOnce={false} duration={1.5} direction='up' >
+        <ScrollReveal delay={.2} triggerOnce={true} duration={1.5} direction='up' >
           <div className='bg-linear-to-br from-amber-500 to-yellow-500  justify-self-center
           lg:h-16 lg:w-140 md:h-13 md:w-118 xs:h-11 xs:w-100 xs:max-w-[60%] h-1/2 max-w-[60%]'>
             <p className='text-white py-1 sm:ml-7 a6 sm:pt-2 weight-500 lg:text-8xl lg:w-160 md:text-7xl md:w-140 sm:text-6xl xs:w-[110%] xs:text-[9cqw] w-[110%] text-[8cqw] ml-3'>
@@ -98,6 +137,16 @@ function About({
           sendState={setActiveButton}
         ><HistoryText></HistoryText> </ExpandableDiv>
 
+        <ExpandableDiv
+          index="3"
+          label="Aspirations"
+          imgId='KvSDVHD'
+          local={false}
+          isActive={activeButton === "3"}
+          sendState={setActiveButton}
+        >
+          <AspirationsText></AspirationsText>
+        </ExpandableDiv>
 
         <ExpandableDiv
           index="2"
@@ -111,16 +160,6 @@ function About({
           <Resume></Resume>
         </ExpandableDiv>
 
-        <ExpandableDiv
-          index="3"
-          label="Aspirations"
-          imgId='KvSDVHD'
-          local={false}
-          isActive={activeButton === "3"}
-          sendState={setActiveButton}
-        >
-          {/* <GridPhoto /> */}
-        </ExpandableDiv>
       </div>
     </div>
 
