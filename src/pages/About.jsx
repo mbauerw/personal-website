@@ -48,13 +48,12 @@ const AspirationsText = () =>{
   const banner2 = "bg-gradient-to-bl from-amber-500 from-3% via-white via-20% to-white to-1%";
 
   return (
-    <div className={`w-full h-full grid grid-rows-[1fr_1fr_1fr_1fr_1fr] ${banner2}`}>
-      <div className="row-span-1 col-span-1"></div>
-      <div className="row-span-1 col-span-1 p-5">
+    <div className={`w-full h-full grid grid-rows-[3fr_3fr] justify-center ${banner2}`}>
+      <div className="row-span-1 col-span-1 px-5 content-center">
         <p className={`${h_style} ${h_font}`}>
           1. Stay Up to Date on AI Advancements
         </p>
-        <p>
+        <p className=" a6 text-lg">
           Whether we're ready or not, AI and its impact on our relationship with technology is here to stay. 
           I am personally very excited about the prospect of harnessing this powerful tool to enhance my productivity and expand my potential. 
           Most coders today use AI is some aspect to help improve their workflow, and I believe learning to leverage that tool to your benefit without defaulting to reliance will be a key skill for programmers going forward. 
@@ -62,13 +61,12 @@ const AspirationsText = () =>{
 
         </p>
       </div>
-      <div></div>
       <div className="row-span-1 col-span-1 p-5">
         <p className={`${h_style} ${h_font}`}>
           2. Continue to Develop Full-Stack Skills
         </p>
-        <p>
-          Like most Web Develops, my starting point to the field was frontend development. While I'm a huge fan of React and its flexibility, I also find myself enjoying the process of integrating backend functionality, such as implementing a basic Express server to receive emails directly, more and more. 
+        <p className=" a6 text-lg">
+          Like most Web Developers, my starting point to the field was frontend development. While I'm a huge fan of React and its flexibility, I also find myself enjoying the process of integrating backend functionality, such as implementing a basic Express server to receive emails directly, more and more. 
           There's also something very satisfying about executing a properly constructed API call. My hope going forward is to continue developing my backend skills with as much interest as much frontend skills. 
 
         </p>
