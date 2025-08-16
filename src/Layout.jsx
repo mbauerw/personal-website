@@ -26,10 +26,10 @@ function Layout( ) {
 
     // background images
     const backgrounds = [
-      'bg-[url("src/images/background/blueish_stars.jpg")]',
-      'bg-[url("src/images/background/purple_castle.jpg")]',
-      'bg-[url("src/images/background/time_lapse_sky_mountains.avif")]',
-      'bg-[url("src/images/background/misty_woods.avif")'
+      'bg-[url("/images/background/blueish_stars.jpg")]',
+      'bg-[url("/images/background/purple_castle.jpg")]',
+      'bg-[url("/images/background/time_lapse_sky_mountains.avif")]',
+      'bg-[url("/images/background/misty_woods.avif")'
     ]
 
     const [viewportSize, setViewportSize] = useState({

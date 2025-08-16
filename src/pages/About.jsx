@@ -55,9 +55,10 @@ const AspirationsText = () =>{
         </p>
         <p className=" a6 text-lg">
           Whether we're ready or not, AI and its impact on our relationship with technology is here to stay. 
-          I am personally very excited about the prospect of harnessing this powerful tool to enhance my productivity and expand my potential. 
+          I am personally very excited about the prospect of harnessing this tool to enhance my potential. 
           Most coders today use AI is some aspect to help improve their workflow, and I believe learning to leverage that tool to your benefit without defaulting to reliance will be a key skill for programmers going forward. 
-          My goal is to start itegrating AI directly into the projects I create, whether that means exploring API access to various models, or (ambitiously) training a basic model myself, my next project will involve AI. 
+          My goal is to start itegrating AI directly into the projects I create, not just as an efficient way to access information. 
+          Whether that means exploring API access to various models, or (ambitiously) training a basic model myself, my next project will involve AI. 
 
         </p>
       </div>
