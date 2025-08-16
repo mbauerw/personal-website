@@ -37,14 +37,14 @@ function Portrait({
         onClick={setSpin}
         style={{
           backgroundPosition: `${offset}px`,
-          width: `${width}px`, 
+          width: `${width }px`, 
           height: `${height}px`,
           maxHeight: '80%',
           maxWidth: '90%'
         }}     
         >
         <div 
-          className={`flex justify-center items-center rounded-full h-3/5 w-6/10 ${"bg-[url('/images/portrait_clouds.jpg')]"}  -mt-4 `}
+          className={`flex justify-center items-center rounded-full h-[55%] w-6/10 ${"bg-[url('/images/portrait_clouds.jpg')]"}  -mt-4 `}
           
         >
             <img
@@ -52,8 +52,8 @@ function Portrait({
             alt={alt}
             className="absolute rounded-full pointer-events-none"
             style={{
-              width: `${width-100}px`, 
-              height: `${height-140}px`,
+              width: `${width-60}px`, 
+              height: `${height-160}px`,
               maxHeight: '80%',
               maxWidth: '90%'
             }}
