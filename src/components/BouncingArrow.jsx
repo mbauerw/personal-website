@@ -24,7 +24,7 @@ const BouncingArrow = ({ref, onClick, className, title, circle}) => {
       <div className={`group flex flex-col justify-center items-center rounded-full h-90 w-90 transition-all transition-discrete duration-1400 cursor-pointer ${circle} ${className}`}
         onClick={() => onClick(ref)}>
         <div className="h-1/2 flex justify-center items-center pb-10">
-          <h1 className={`text-8xl p3 font-bold transition-all transition-discrete duration-1400 ${text_white}`}>{title}</h1>
+          <h1 className={`text-8xl a6 font-bold transition-all transition-discrete duration-1400 ${text_white}`}>{title}</h1>
         </div>
         
       </div>

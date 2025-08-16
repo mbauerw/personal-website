@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&family=Source+Code+Pro:wght@300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Crimson+Text:wght@400;600;700&family=Fira+Code:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Special+Elite&family=IBM+Plex+Mono&family=Roboto+Mono&family=Source+Code+Pro&display=swap');
+
 
 
 /* Usage */
@@ -131,6 +133,51 @@ body {
 
 /* --------------- Fonts -------------------*/
 
+.typewriter-style {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  background-color: #fdfdf7; /* off-white paper look */
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.typewriter-cutive {
+  font-family: 'Cutive Mono', monospace;
+}
+
+.typewriter-special {
+  font-family: 'Special Elite', monospace;
+}
+
+.typewriter-ibm {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.typewriter-roboto {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.typewriter-source {
+  font-family: 'Source Code Pro', monospace;
+}
+
+/* Optional styling to make the typewriter look pop */
+.typewriter-style {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  background-color: #fdfdf7; /* off-white paper look */
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.typewriter {
+  font-family: 'Special Elite', 'Cutive Mono', monospace;
+}
+
 .p1 {
   font-family: "Times New Roman", Times, serif;
 }
@@ -165,7 +212,7 @@ body {
 .a3 { font-family: Helvetica, Arial, sans-serif; }
 .a4 { font-family: 'Times New Roman', Times, serif; }
 .a5 { font-family: Georgia, serif; }
-.a6 { font-family: 'Courier New', Courier, monospace; }
+.a6 { font-family: 'Courier New', monospace; }
 .a7 { font-family: Verdana, Geneva, sans-serif; }
 .a8 { font-family: 'Trebuchet MS', Helvetica, sans-serif; }
 
