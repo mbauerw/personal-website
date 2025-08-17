@@ -13,8 +13,8 @@ import { VscGitCommit } from "react-icons/vsc";
 
 function ContactSection() {
 
-  const fontStyle = 'p3 text-white dark:text-gray-300'
-  const iconStyle = 'p3 text-white dark:text-gray-200'
+  const fontStyle = 'a6 text-white dark:text-gray-300'
+  const iconStyle = 'a6 text-white dark:text-gray-200'
   const bgStyle = ""
 
 
@@ -24,10 +24,10 @@ function ContactSection() {
       <section className="h-full max-w-[85%] mx-auto px-5 py-20 dark:bg-slate-800 bg-slate-800">
         {/* Section Header */}
         <div className="text-center mb-15">
-          <h2 className="text-4xl font-bold dark:text-slate-200 text-gray-900 mb-4 p3">
+          <h2 className="text-4xl font-bold dark:text-slate-200 text-gray-900 mb-4 a6">
             Get In Touch
           </h2>
-          <p className="text-xl dark:text-slate-300 text-slate-600 max-w-2xl mx-auto p3">
+          <p className="text-xl dark:text-slate-300 text-slate-600 max-w-2xl mx-auto a6">
             Have a question or want to work together? I'd love to hear from you.
             Send me a message and I'll respond as soon as possible.
           </p>

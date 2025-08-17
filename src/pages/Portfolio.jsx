@@ -95,8 +95,8 @@ function Portfolio({
         />
       <div className="max-w-[80vw] min-h-[130vh] mx-auto mt-12 pt-14 bg-gray-800/98 z-3 px-10 rounded-xl ">
         <div className="text-center pb-12">
-          <h2 className="text-5xl p3 md:text-5xl text-stone-100 mb-2 font-bold">My Stuff</h2>
-          <p className="text-lg p3  text-stone-100">Explore my latest projects and creative work</p>
+          <h2 className="text-5xl a6 md:text-5xl text-stone-100 mb-2 font-bold">My Stuff</h2>
+          <p className="text-lg a6  text-stone-100">Explore my latest projects and creative work</p>
         </div>
 
         <div className="grid grid-cols-[repeat(auto-fit,minmax(380px,1fr))] md:grid-rows-[repeat(auto-fit,minmax(350px,1fr))] gap-6 md:gap-10 py-3 pt-10">

@@ -57,7 +57,7 @@ const AspirationsText = () =>{
           Whether we're ready or not, AI and its impact on our relationship with technology is here to stay. 
           I am personally very excited about the prospect of harnessing this tool to enhance my potential. 
           Most coders today use AI is some aspect to help improve their workflow, and I believe learning to leverage that tool to your benefit without defaulting to reliance will be a key skill for programmers going forward. 
-          My goal is to start itegrating AI directly into the projects I create, not just as an efficient way to access information. 
+          My goal is to start integrating AI directly into the projects I create and not just use it as an efficient way to access information. 
           Whether that means exploring API access to various models, or (ambitiously) training a basic model myself, my next project will involve AI. 
 
         </p>
@@ -127,7 +127,7 @@ function About({
       </div>
 
       <div className="xl:h-full h-250 w-full cols-span-1 flex xl:flex-row xl:justify-end flex-col justify-start items-center
-       gap-3 bg-none shadow-md rounded-sm  ">
+       gap-3 bg-none  rounded-sm  ">
         <ExpandableDiv
           index="1"
           label="History"
