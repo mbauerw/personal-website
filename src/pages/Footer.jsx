@@ -17,8 +17,8 @@ const Footer = ({className}) => {
           </div>
           
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8 mb-8">
-            <a href="mailto:jane@example.com" className="flex items-center text-gray-400 hover:text-gray-900 transition-colors">
-              <Mail className="w-5 h-5 mr-2" />
+            <a href="mailto:max.bauer.wd@gmail.com" className="flex items-center text-gray-400 hover:text-gray-900 transition-colors max-w-[92vw] overflow-hidden">
+              <Mail className="xs:!w-5 xs:!h-5 mr-2" />
               max.bauer.wd@gmail.com
             </a>
             <div className="flex space-x-4">

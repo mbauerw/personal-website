@@ -19,7 +19,7 @@ function Portfolio({
 
   const isInView = useInView(ref, {
     threshold: 0,
-    once: false,
+    once: true,
     margin: "0px 0px 0px 0px"
   });
 
@@ -32,7 +32,7 @@ function Portfolio({
       const totalDistance = windowHeight + elementHeight;
       const progress = (windowHeight - rect.top) / totalDistance;
       
-      const screenMultiplier = window.innerWidth < 768 ? 0.5 : 1;
+      const screenMultiplier = window.innerWidth < 768 ? 0.2 : 1;
       const maxOffset = elementHeight * .2 * screenMultiplier;
       return (progress - 0.5) * maxOffset * speed;
     }

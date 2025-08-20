@@ -33,7 +33,7 @@ function Blank({
       const totalDistance = windowHeight + elementHeight;
       const progress = (windowHeight - rect.top) / totalDistance;
       
-      const screenMultiplier = window.innerWidth < 768 ? 0.5 : 1;
+      const screenMultiplier = window.innerWidth < 768 ? 0.7 : 1;
       const maxOffset = elementHeight * .2 * screenMultiplier;
       return (progress - 0.5) * maxOffset * speed;
     }

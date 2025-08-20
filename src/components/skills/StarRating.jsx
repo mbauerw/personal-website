@@ -20,7 +20,7 @@ const StarRating = ({ rating, skillName }) => {
         return (
           <span
             key={index}
-            className={`w-6 h-6 cursor-pointer transition-all duration-200 ease-in-out drop-shadow-sm select-none
+            className={`md:!w-6 md:!h-6 xs:!h-5 xs:!w-5 w-4 h-5 cursor-pointer transition-all duration-200 ease-in-out drop-shadow-sm select-none
               ${isHovered ? '#ff6b35' : (isFilled ? '#ffd700' : '#e2e8f0')}`}
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}

@@ -10,9 +10,9 @@ function ExpandableDiv({
   isActive,
   contentClick, 
   height="xl:h-[84vh] h-24 min-h-24 ",
-  width="xl:w-24 xl:min-w-24 w-[95vw]",
+  width="xl:w-24 xl:min-w-24 w-[92vw] max-w-[92vw]",
   expandedHeight="xl:h-[84vh] h-full ",
-  expandedWidth="xl:w-full w-[95vw]",
+  expandedWidth="xl:w-full w-[92vw] max-w-[92vw]",
   children,
   className}
   ) {

@@ -28,7 +28,7 @@ const ContactInfo = forwardRef(({ height = "h-full", width = "w-full", fontStyle
       <div className="w-4/5 flex justify-start">
         <p>
           <a href="tel:+1234567890" className={`text-white hover:text-purple-600 transition-colors duration-200 text-2xl g4 ${fontStyle}`}>
-            +1 (234) 567-8900
+            +1 (517) 802-1485
           </a>
         </p>
 
